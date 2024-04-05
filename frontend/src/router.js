@@ -17,6 +17,10 @@ export default createRouter({
       component: () => import('@/views/Servers.vue'),
     },
     {
+      path: '/hosting',
+      component: () => import('@/views/Hosting.vue'),
+    },
+    {
       path: '/rules',
       component: () => import('@/views/Rules.vue'),
     },

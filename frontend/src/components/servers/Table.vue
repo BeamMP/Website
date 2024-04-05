@@ -10,9 +10,15 @@
       </thead>
       <tbody>
         <template v-for="item in data" :key="item.id">
-          <tr class="bg-slate-300" @click="selectRow(item.id)" v-bind:class="(item.raw.official)?'bg-orange-300':''">
-            <td v-for="column in columns" :key="column.key" class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-600">
-              <template v-if="column.key == 'name'">
+          <tr @click="selectRow(item.id)" class="servers-table-row">
+            <td v-for="column in columns" :key="column.key" class="px-6 py-1 whitespace-no-wrap text-sm leading-5 text-gray-600" :style="item.style" >
+              <template v-if="column.key == 'location'">
+                <span style="display:flex;width: 125px;">
+                  <img :src="`/src/assets/flags/${item.cc}.png`" alt="" style="padding-right: 10px;">
+                  <span style="position: absolute;left: 105px;">{{ item[column.key] }}</span>
+                </span>
+              </template>
+              <template v-else-if="column.key == 'name'">
                 <span v-for="(value, name) in item[column.key]" :style="value.f">{{ value.s }}</span>
               </template>
               <template v-else>
@@ -22,7 +28,7 @@
           </tr>
           <tr v-if="selectedRow == item.id">
             <td :colspan="columns.length">
-              <ExpandedRowDetails :rowData="getExpandedRowData(selectedRow)" />
+              <ExpandedRowDetails :rowData="getExpandedRowData(item)" />
             </td>
           </tr>
         </template>
@@ -61,9 +67,8 @@ export default {
         this.selectedRow = id;
       }
     },
-    getExpandedRowData(id) {
-      // Find the row data for the expanded row
-      return this.data.find(item => item.id === id) || {};
+    getExpandedRowData(item) {
+      return item || {}
     },
   },
 };
@@ -72,5 +77,8 @@ export default {
 <style scoped>
 .table-container {
   overflow-x: auto;
+}
+.servers-table-row:hover {
+  background-color: rgba(0, 0, 0, 0.25);
 }
 </style>

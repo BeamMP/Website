@@ -1,6 +1,6 @@
 <template>
   <div class="expanded-row-details">
-    <h1 style="padding-left:10px;">
+    <h1 style="padding-left:10px;display:flex;">
       <template v-if="rowData.raw.official">
         <img src="/src/assets/beammp-logo.png" alt="" style="height: 23px; padding-right: 10px;"> [Official Server]  
       </template>
@@ -9,8 +9,10 @@
       </template>
       <span v-for="(value, name) in rowData.name" :style="value.f">{{ value.s }}</span>
     </h1>
-    <div class="row">
-      <div class="col">
+    <div class="columns-2">
+      <div>
+        <h2 class="text-xl">Information:</h2>
+        <hr/>
         <table class="description-table">
           <tr>
             <td>Owner:</td>
@@ -20,29 +22,24 @@
             <td>Map:</td>
             <td>{{rowData.map || ""}}</td>
           </tr>
-          <tr>
-            <td>Players:</td>
-            <td>{{rowData.players|| ""}}</td>
-          </tr>
-          <tr>
-            <td valign="top">Description:</td>
-            <td><span v-for="(value, name) in formatDescriptionName(rowData.raw.sdesc)" :style="value.f">{{ value.s }}</span></td>
-          </tr>
         </table>
       </div>
-      <div class="col">
-        <ul class="serverItemDetails">
-          <li>Mods: {{modCount(rowData.raw.modlist|| "")}}</li>
-          <li>Mod Names: {{modList(rowData.raw.modlist|| "")}}</li>
-          <li>Total Mods Size: {{formatBytes(rowData.raw.modstotalsize) || "0"}}</li>
-        </ul>
+      <div>
+        <div>
+          <h2 class="text-xl">Description:</h2>
+          <hr/>
+          <p><span v-for="(value, name) in formatDescriptionName(rowData.raw.sdesc)" :style="value.f">{{ value.s }}</span></p>
+        </div>
+        <div>
+          <h2 class="text-xl">Mods ({{modCount(rowData.raw.modlist|| "")}}):</h2>
+          <hr/>
+          <p>{{modList(rowData.raw.modlist|| "")}} ({{formatBytes(rowData.raw.modstotalsize) || "0B"}})</p>
+        </div>
       </div>
     </div>
-    <div class="row" style="padding-left: 10px;">
-      
-    </div>
     <div class="row">
-      <h4></h4>
+      <h1 class="text-xl">Players ({{rowData.players|| "0"}}):</h1>
+      <hr/>
       <p>{{listPlayers(rowData.raw.playerslist|| "")}}</p>
     </div>
   </div>
@@ -113,7 +110,7 @@ export default {
         var re = new RegExp(";", 'g');
         s = s.replace(re, ', ');
         s = s.substring(0, s.length -2);
-        return "Current players: " + s
+        return s
       } else {
         return "No players..."
       }

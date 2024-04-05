@@ -322,13 +322,17 @@ export default {
           });
 
           serversArray.forEach(s => {
-            servers.push({id: i, location: this.getCountryName(s.location), name: this.formatServerName(s.sname), map: this.smoothMapName(s.map), players: `${s.players}/${s.maxplayers}`, raw: s})
+            servers.push({id: i, cc: s.location, location: this.getCountryName(s.location), name: this.formatServerName(s.sname), map: this.smoothMapName(s.map), players: `${s.players}/${s.maxplayers}`, raw: s, style: this.getRowStyle(s)})
             i++
           });
           
           
           this.tableData = servers//res.data
         })
+    },
+    getRowStyle(server) {
+      const s = false ? 'rgba(255, 215, 0, 0.35)!important' : server.featured ? 'rgba(0, 128, 0, 0.25)!important' : server.official ? 'rgba(255, 106, 0, 0.25)!important' : server.partner ? 'rgba(0, 123, 195, 0.3)!important' : 'rgba(0, 0, 0, 0)!important';
+      return `background: ${s}`
     },
     stripCustomFormatting(name) {
       var serverStyleArray = [

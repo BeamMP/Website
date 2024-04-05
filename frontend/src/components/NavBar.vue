@@ -122,6 +122,7 @@ const navigation = [
   { name: 'Docs', href: 'https://docs.beammp.com/', current: false },
   { name: 'Stats', href: '/stats', current: false },
   { name: 'Servers', href: '/servers', current: false },
+  { name: 'Hosting', href: '/hosting', current: false },
   { name: 'Events', href: 'https://forum.beammp.com/c/important/events/25', current: false },
   { name: 'Store', href: 'https://store.beammp.com/', current: false },
   { name: 'GitHub', href: 'https://github.com/BeamMP', current: false },
