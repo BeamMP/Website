@@ -4,7 +4,7 @@
 
     <!-- Timeseries Graph -->
     <div v-if="dataLoaded">
-      <Plotly :data="graphData" :layout="graphLayout" />
+      <!--<Plotly :data="graphData" :layout="graphLayout" />-->
     </div>
 
     <!-- Metrics -->
@@ -17,12 +17,12 @@
 </template>
 
 <script>
-import Plotly from '@/components/stats/Plotly.vue'
+/*import Plotly from '@/components/stats/Plotly.vue'*/
 import axios from 'axios'
 
 export default {
   components: {
-    Plotly,
+    //Plotly,
   },
   data() {
     return {
@@ -101,6 +101,7 @@ export default {
       axios
         .get(`https://backend.beammp.com/stats-info?period=${this.timePeriod}`)
         .then(res => {
+          console.log(res)
           const data = [];
           var Labels = [];
           var Players = [];

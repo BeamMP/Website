@@ -7,7 +7,6 @@
         <a href="https://discord.2fast.racing/"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="@/assets/communities/2fast-logo.png" alt="2FastRacing" width="158" height="48" /></a>
         <a href="https://discord.beamcruise.com"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="@/assets/communities/beamcruise-logo.png" alt="Beam\\Cruise" width="158" height="48" /></a>
         <a href="https://discord.gg/b9G3fXKqpg"><img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="@/assets/communities/nuclear-logo.png" alt="CnR" width="158" height="48" /></a>
-        <img class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" src="@/assets/beammp-logo.png" alt="Community E" width="158" height="48" />
       </div>
     </div>
   </div>

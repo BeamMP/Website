@@ -2,10 +2,10 @@
   <div class="expanded-row-details">
     <h1 style="padding-left:10px;display:flex;">
       <template v-if="rowData.raw.official">
-        <img src="/src/assets/beammp-logo.png" alt="" style="height: 23px; padding-right: 10px;"> [Official Server]  
+        <img src="../assets/beammp-logo.png" alt="" style="height: 23px; padding-right: 10px;"> [Official Server]  
       </template>
       <template v-else>
-        <img src="/src/assets/beammp-logo.png" alt="" style="height: 23px; padding-right: 10px;">
+        <img src="../assets/beammp-logo.png" alt="" style="height: 23px; padding-right: 10px;">
       </template>
       <span v-for="(value, name) in rowData.name" :style="value.f">{{ value.s }}</span>
     </h1>

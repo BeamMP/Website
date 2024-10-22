@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div id="app" class="p-8">
+  <div id="app" class="">
     <Table :columns="columns" :data="tableData" />
   </div>
 </template>

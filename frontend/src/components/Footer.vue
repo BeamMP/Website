@@ -4,16 +4,16 @@
     <div class="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
       <div class="md:max-w-md lg:col-span-2">
         <a href="/" aria-label="Go home" title="Company" class="inline-flex items-center">
-          <img class="h-8 w-auto" src="../assets/beammp-logo.png" alt="BeamMP Logo" />
-          <span class="ml-4 text-xl font-bold tracking-wide text-gray-200 uppercase">BeamMP</span>
+          <img class="h-8 w-auto" src="../assets/BeamMP_wht.png" style="height: 100px;" alt="BeamMP Logo" />
+          <span class="sr-only ml-4 text-xl font-bold tracking-wide text-gray-200 uppercase">BeamMP</span>
         </a>
         <div class="mt-4 lg:max-w-sm">
           <p class="text-sm text-gray-300">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+            BeamMP is a multiplayer mod for the game BeamNG.drive as is in no way affiliated with BeamNG Gmbh.
           </p>
-          <p class="mt-4 text-sm text-gray-300">
+          <!--<p class="mt-4 text-sm text-gray-300">
             Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-          </p>
+          </p>-->
         </div>
       </div>
       <div class="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
@@ -82,6 +82,9 @@
             </li>
             <li>
               <a href="/terms" class="text-gray-300 transition-colors duration-300 hover:text-deep-purple-accent-400">Terms</a>
+            </li>
+            <li>
+              <a href="/terms" class="text-gray-300 transition-colors duration-300 hover:text-deep-purple-accent-400">Branding Resources</a>
             </li>
           </ul>
         </div>

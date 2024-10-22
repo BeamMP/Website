@@ -32,6 +32,13 @@
             </td>
           </tr>
         </template>
+        <template v-if="data == []">
+          <tr>
+            <td>
+              No Servers Found.
+            </td>
+          </tr>
+        </template>
       </tbody>
     </table>
   </div>
@@ -59,6 +66,9 @@ export default {
       selectedRow: null,
     };
   },
+  mounted() {
+    console.log(this.props)
+  }, 
   methods: {
     selectRow(id) {
       if (this.selectedRow === id) {
