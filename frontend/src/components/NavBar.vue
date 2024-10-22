@@ -4,7 +4,7 @@
       <div class="relative flex h-16 justify-between">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
           <!-- Mobile menu button -->
-          <DisclosureButton class="relative inline-flex items-center justify-center rounded-md p-2 text-zinc-400 hover:bg-zinc-100 hover:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-beammp-orange">
+          <DisclosureButton class="relative inline-flex items-center justify-center rounded-md p-2 text-zinc-400 hover:bg-beammp-orange hover:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-beammp-orange">
             <span class="absolute -inset-0.5" />
             <span class="sr-only">Open main menu</span>
             <Bars3Icon v-if="!open" class="block h-6 w-6" aria-hidden="true" />
@@ -46,7 +46,7 @@
           </button>-->
 
           <!-- Profile dropdown -->
-          <Menu as="div" class="relative ml-3">
+          <Menu as="div" class="relative ml-3" v-if="false">
             <div>
               <MenuButton class="relative flex rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-beammp-orange focus:ring-offset-2">
                 <span class="absolute -inset-1.5" />
@@ -68,6 +68,11 @@
               </MenuItems>
             </transition>
           </Menu>
+          <div class="flex-shrink-0" v-else>
+            <button type="button" class="relative inline-flex items-center gap-x-1.5 rounded-md bg-beammp-orange px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-beammp-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-beammp-orange ml-3">
+              Sign In
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -118,7 +123,10 @@ export default {
         { name: 'Store', href: 'https://store.beammp.com/', active: false },
         { name: 'GitHub', href: 'https://github.com/BeamMP', active: false },
         { name: 'Patreon', href: 'https://patreon.com/BeamMP', active: false },
-      ]
+      ],
+       user: [
+
+       ]
     };
   },
   methods: {
@@ -132,6 +140,9 @@ export default {
       }
     },
   },
+  mounted() {
+    console.log(this.user)
+  }
 };
 </script>
 
