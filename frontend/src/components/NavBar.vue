@@ -1,5 +1,5 @@
 <template>
-  <Disclosure as="nav" class="bg-gray-800" v-slot="{ open }">
+  <Disclosure as="nav" class="navbar-bg sticky top-0 z-40" v-slot="{ open }">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -25,8 +25,17 @@
           </div>
         </div>
 
+        <div class="flex items-center">
+          <div class="flex-shrink-0">
+            <button type="button" class="relative inline-flex items-center gap-x-1.5 rounded-md bg-orange px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+              <!--<PlusIcon class="-ml-0.5 h-5 w-5" aria-hidden="true" />-->
+              Patreon
+            </button>
+          </div>
+        </div>
+
         <!-- Mode Switcher Dropdown -->
-        <div class="flex items-center border-l border-slate-200 ml-6 pl-6 dark:border-slate-800">
+        <!--<div class="flex items-center border-l border-slate-200 ml-6 pl-6 dark:border-slate-800">
           <label class="sr-only" id="headlessui-listbox-label-:Rpkcr6:" data-headlessui-state="">Theme</label>
           <button type="button" id="headlessui-listbox-button-:R19kcr6:" aria-haspopup="true" aria-expanded="false" data-headlessui-state="" aria-labelledby="headlessui-listbox-label-:Rpkcr6: headlessui-listbox-button-:R19kcr6:" class="">
             <span class="dark:hidden">
@@ -51,7 +60,7 @@
               </svg>
             </span>
           </button>
-        </div>
+        </div>-->
 
         <!--<div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
           <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
@@ -97,23 +106,33 @@
   </Disclosure>
 </template>
 
+<style scoped>
+.navbar-bg {
+  background: #00000060;
+}
+.bg-orange {
+  background: var('beammp-orange');
+}
+</style>
+
 <script>
 export default {
   methods: {
-    setTheme(theme) {
-      if (theme === 'light') {
-        document.documentElement.classList.remove('dark');
-      } else if (theme === 'dark') {
-        document.documentElement.classList.add('dark');
-      } else if (theme === 'system') {
-        document.documentElement.classList.remove('dark');
-      }
-    },
+    //setTheme(theme) {
+    //  if (theme === 'light') {
+    //    document.documentElement.classList.remove('dark');
+    //  } else if (theme === 'dark') {
+    //    document.documentElement.classList.add('dark');
+    //  } else if (theme === 'system') {
+    //    document.documentElement.classList.remove('dark');
+    //  }
+    //},
   },
 };
 </script>
 
 <script setup>
+
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline'
 
