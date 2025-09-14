@@ -1,11 +1,11 @@
 {
   "name": "beammp-website",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "BeamMP Website",
   "main": "index.js",
   "scripts": {
-    "docker-build": "docker build -t 192.168.100.6:5000/beammp/website:latest -t 192.168.100.6:5000/beammp/website:1.1.2 .",
-    "docker-push": "docker push 192.168.100.6:5000/beammp/website:latest"
+    "docker-build": "docker build -t registry.beammp.com/beammp/website:latest -t registry.beammp.com/beammp/website:v1.1.3 .",
+    "docker-push": "docker push registry.beammp.com/beammp/website:latest && docker push registry.beammp.com/beammp/website:v1.1.3"
   },
   "repository": {
     "type": "git",
