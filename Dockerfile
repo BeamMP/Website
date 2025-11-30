@@ -1,25 +1,25 @@
-FROM node:18.16.0-alpine3.17
+# Step 1: Build stage
+FROM node:22-alpine3.21 AS build
 
-# Create app directory
 WORKDIR /app
+COPY package*.json ./
+RUN npm ci
+COPY . .
+ENV NODE_ENV=development
+RUN npm run build
 
-RUN apk --no-cache add curl
+# Step 2: Serve stage
+FROM nginx:alpine
 
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
-COPY package*.json /app
+# Copy built files from the previous stage
+COPY --from=build /app/dist /usr/share/nginx/html
 
-# General Install of Deps
-# RUN npm install
-# If you are building your code for production
-RUN npm ci --only=production
+# Add a custom Nginx configuration
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Bundle app source
-COPY . /app
+# Expose port 80
+EXPOSE 80
 
-EXPOSE 3599
-
-HEALTHCHECK CMD curl --fail http://localhost:3599/ping || exit 1
-
-CMD [ "node", "index.js" ]
+RUN chmod +x /docker-entrypoint.sh
+ENTRYPOINT ["/docker-entrypoint.sh"]
+CMD ["nginx", "-g", "daemon off;"]

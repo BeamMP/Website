@@ -1,29 +1,37 @@
 {
-  "name": "website",
+  "name": "beammp-website",
+  "private": true,
   "version": "2.0.0",
-  "description": "BeamMP Website",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "docker-build": "docker build -t 192.168.100.6:5000/beammp/website:latest -t 192.168.100.6:5000/beammp/website:2.0.0 .",
-    "docker-push": "docker push 192.168.100.6:5000/beammp/website:latest"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --fix",
+    "format": "prettier --write \"src/**/*.{js,vue,css,json}\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BeamMP/Website.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/BeamMP/Website/issues"
-  },
-  "homepage": "https://github.com/BeamMP/BWebsite#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "chalk": "^3.0.0",
-    "dotenv": "^16.0.3",
-    "ejs": "^3.0.1",
-    "express": "^4.17.1",
-    "helmet": "^6.1.5",
-    "morgan": "^1.10.0"
+    "@tailwindcss/vite": "^4.1.17",
+    "@vueuse/core": "^14.1.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-vue-next": "^0.555.0",
+    "reka-ui": "^2.6.0",
+    "tailwind-merge": "^3.4.0",
+    "tailwindcss": "^4.1.17",
+    "tailwindcss-animate": "^1.0.7",
+    "vue": "^3.5.25",
+    "vue-router": "^4.6.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.2",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-vue": "^10.6.2",
+    "prettier": "^3.7.3",
+    "tw-animate-css": "^1.4.0",
+    "vite": "^7.2.4"
   }
 }
