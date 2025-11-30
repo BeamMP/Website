@@ -15,18 +15,22 @@ import {
 } from 'lucide-vue-next'
 
 const onlinePlayers = ref('...')
+const onlineServers = ref('...')
 const isLoading = ref(true)
 
 onMounted(async () => {
   try {
     const response = await fetch('https://backend.beammp.com/metrics')
+    // beammp_players_online 2783 beammp_public_servers 2959 beammp_all_servers 4663
     const data = await response.text()
     const values = data.split(' ')
     if (values.length >= 2) {
       onlinePlayers.value = values[1]
+      onlineServers.value = values[3]
     }
   } catch {
     onlinePlayers.value = 'N/A'
+    onlineServers.value = 'N/A'
   } finally {
     isLoading.value = false
   }

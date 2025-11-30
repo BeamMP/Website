@@ -24,21 +24,23 @@ function closeMobileMenu() {
 </script>
 
 <template>
-  <header
-    class="border-b border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-neutral-900/70 backdrop-blur sticky top-0 z-20"
-  >
+  <header class="border-b border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-neutral-900/70 backdrop-blur sticky top-0 z-20">
     <nav class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
       <RouterLink to="/" class="flex items-center gap-2 shrink-0" @click="closeMobileMenu">
-        <!-- Light mode logo -->
-        <img src="/beammp-logo.png" alt="BeamMP Logo" class="h-10 w-auto shrink-0 dark:hidden" />
-        <!-- Dark mode logo -->
+        <!-- Light mode logo (black) -->
         <img
-          src="/beammp-logo-dark.png"
+          src="/src/assets/BeamMP_blk.png"
           alt="BeamMP Logo"
-          class="h-10 w-auto shrink-0 hidden dark:block"
+          class="h-16 w-auto shrink-0 dark:hidden"
+        />
+        <!-- Dark mode logo (white) -->
+        <img
+          src="/src/assets/BeamMP_wht.png"
+          alt="BeamMP Logo"
+          class="h-16 w-auto shrink-0 hidden dark:block"
         />
       </RouterLink>
-
+      
       <!-- Desktop Navigation -->
       <!-- Switch to mobile earlier (avoid logo crowding) -->
       <div class="hidden lg:flex items-center gap-4">
@@ -50,12 +52,7 @@ function closeMobileMenu() {
                   href="https://forum.beammp.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  :class="
-                    cn(
-                      navigationMenuTriggerStyle(),
-                      'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white'
-                    )
-                  "
+                  :class="cn(navigationMenuTriggerStyle(), 'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white')"
                 >
                   Forum
                 </a>
@@ -67,12 +64,7 @@ function closeMobileMenu() {
                   href="https://docs.beammp.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  :class="
-                    cn(
-                      navigationMenuTriggerStyle(),
-                      'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white'
-                    )
-                  "
+                  :class="cn(navigationMenuTriggerStyle(), 'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white')"
                 >
                   Docs
                 </a>
@@ -82,12 +74,7 @@ function closeMobileMenu() {
               <NavigationMenuLink as-child>
                 <RouterLink
                   to="/communities"
-                  :class="
-                    cn(
-                      navigationMenuTriggerStyle(),
-                      'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white'
-                    )
-                  "
+                  :class="cn(navigationMenuTriggerStyle(), 'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white')"
                 >
                   Communities
                 </RouterLink>
@@ -97,12 +84,7 @@ function closeMobileMenu() {
               <NavigationMenuLink as-child>
                 <RouterLink
                   to="/servers"
-                  :class="
-                    cn(
-                      navigationMenuTriggerStyle(),
-                      'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white'
-                    )
-                  "
+                  :class="cn(navigationMenuTriggerStyle(), 'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white')"
                 >
                   Servers
                 </RouterLink>
@@ -112,12 +94,7 @@ function closeMobileMenu() {
               <NavigationMenuLink as-child>
                 <RouterLink
                   to="/stats"
-                  :class="
-                    cn(
-                      navigationMenuTriggerStyle(),
-                      'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white'
-                    )
-                  "
+                  :class="cn(navigationMenuTriggerStyle(), 'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white')"
                 >
                   Statistics
                 </RouterLink>
@@ -129,12 +106,7 @@ function closeMobileMenu() {
                   href="https://github.com/BeamMP/BeamMP"
                   target="_blank"
                   rel="noopener noreferrer"
-                  :class="
-                    cn(
-                      navigationMenuTriggerStyle(),
-                      'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white'
-                    )
-                  "
+                  :class="cn(navigationMenuTriggerStyle(), 'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white')"
                 >
                   GitHub
                 </a>
@@ -146,12 +118,7 @@ function closeMobileMenu() {
                   href="https://www.patreon.com/BeamMP"
                   target="_blank"
                   rel="noopener noreferrer"
-                  :class="
-                    cn(
-                      navigationMenuTriggerStyle(),
-                      'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white'
-                    )
-                  "
+                  :class="cn(navigationMenuTriggerStyle(), 'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white')"
                 >
                   Patreon
                 </a>
@@ -165,10 +132,10 @@ function closeMobileMenu() {
       <!-- Mobile Menu Button and Theme Toggle -->
       <div class="flex lg:hidden items-center gap-2">
         <ThemeToggle />
-        <button
+        <button 
+          @click="toggleMobileMenu"
           class="p-2 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md transition-colors"
           aria-label="Toggle menu"
-          @click="toggleMobileMenu"
         >
           <Menu v-if="!mobileMenuOpen" class="w-6 h-6" />
           <X v-else class="w-6 h-6" />
@@ -185,8 +152,8 @@ function closeMobileMenu() {
       leave-from-class="opacity-100 translate-y-0"
       leave-to-class="opacity-0 -translate-y-2"
     >
-      <div
-        v-if="mobileMenuOpen"
+      <div 
+        v-if="mobileMenuOpen" 
         class="md:hidden border-t border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900"
       >
         <div class="px-4 py-3 space-y-1">
