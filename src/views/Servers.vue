@@ -1,8 +1,8 @@
 <template>
   <div class="servers-container">
     <div class="servers-header">
-      <h1 class="servers-title">BeamMP Servers</h1>
-      <p class="servers-subtitle">Join thousands of players in multiplayer BeamNG.drive</p>
+      <h1 class="servers-title">{{ $t('message.servers.title') }}</h1>
+      <p class="servers-subtitle">{{ $t('message.servers.description') }}</p>
     </div>
 
     <div class="servers-filters">
@@ -10,7 +10,7 @@
         <input
           v-model="searchQuery"
           type="text"
-          placeholder="Search servers..."
+          :placeholder="$t('message.servers.filters.search')"
           class="search-input"
         />
       </div>
@@ -18,51 +18,51 @@
       <div class="filter-group">
         <label class="filter-label">
           <input v-model="filters.hideEmpty" type="checkbox" />
-          Hide Empty
+          {{ $t('message.servers.filters.hide_empty') }}
         </label>
         <label class="filter-label">
           <input v-model="filters.hideFull" type="checkbox" />
-          Hide Full
+          {{ $t('message.servers.filters.hide_full') }}
         </label>
-        <label class="filter-label">
+        <!--<label class="filter-label">
           <input v-model="filters.hidePassword" type="checkbox" />
-          Hide Password
-        </label>
+          {{ $t('message.servers.filters.hide_password') }}
+        </label>-->
       </div>
 
       <div class="filter-group">
-        <span class="filter-heading">Show only:</span>
+        <span class="filter-heading">{{ $t('message.servers.show_only') }}</span>
         <label class="filter-label">
           <input v-model="filters.official" type="checkbox" />
-          Official
+          {{ $t('message.servers.filters.show_official') }}
         </label>
         <label class="filter-label">
           <input v-model="filters.partner" type="checkbox" />
-          Partner
+          {{ $t('message.servers.filters.show_partner') }}
         </label>
         <label class="filter-label">
           <input v-model="filters.featured" type="checkbox" />
-          Featured
+          {{ $t('message.servers.filters.show_featured') }}
         </label>
       </div>
 
       <div class="server-count">
-        {{ filteredServers.length }} servers found ({{ totalPlayers }} players online)
+        {{ $t('message.servers.server_count', { count: filteredServers.length }) }} ({{ $t('message.servers.players_found', { count: totalPlayers }) }})
       </div>
     </div>
 
-    <div v-if="loading" class="loading">Loading servers...</div>
+    <div v-if="loading" class="loading">{{ $t('message.servers.loading_servers') }}</div>
     <div v-else-if="error" class="error">{{ error }}</div>
     <div v-else class="table-wrapper">
       <table class="servers-table">
         <thead>
           <tr>
-            <th class="col-location">Location</th>
-            <th class="col-name">Server Name</th>
-            <th class="col-map">Map</th>
-            <th class="col-players">Players</th>
-            <th class="col-mods">Mods</th>
-            <th class="col-status">Status</th>
+            <th class="col-location">{{ $t('message.servers.filters.location') }}</th>
+            <th class="col-name">{{ $t('message.servers.filters.name') }}</th>
+            <th class="col-map">{{ $t('message.servers.filters.map') }}</th>
+            <th class="col-players">{{ $t('message.servers.filters.players') }}</th>
+            <th class="col-mods">{{ $t('message.servers.filters.mods') }}</th>
+            <th class="col-status">{{ $t('message.servers.filters.status') }}</th>
           </tr>
         </thead>
         <tbody>
@@ -400,253 +400,7 @@ function formatBytes(bytes) {
   return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]
 }
 
-const isoCountries = {
-  AF: 'Afghanistan',
-  AX: 'Aland Islands',
-  AL: 'Albania',
-  DZ: 'Algeria',
-  AS: 'American Samoa',
-  AD: 'Andorra',
-  AO: 'Angola',
-  AI: 'Anguilla',
-  AQ: 'Antarctica',
-  AG: 'Antigua And Barbuda',
-  AR: 'Argentina',
-  AM: 'Armenia',
-  AW: 'Aruba',
-  AU: 'Australia',
-  AT: 'Austria',
-  AZ: 'Azerbaijan',
-  BS: 'Bahamas',
-  BH: 'Bahrain',
-  BD: 'Bangladesh',
-  BB: 'Barbados',
-  BY: 'Belarus',
-  BE: 'Belgium',
-  BZ: 'Belize',
-  BJ: 'Benin',
-  BM: 'Bermuda',
-  BT: 'Bhutan',
-  BO: 'Bolivia',
-  BA: 'Bosnia And Herzegovina',
-  BW: 'Botswana',
-  BV: 'Bouvet Island',
-  BR: 'Brazil',
-  IO: 'British Indian Ocean Territory',
-  BN: 'Brunei Darussalam',
-  BG: 'Bulgaria',
-  BF: 'Burkina Faso',
-  BI: 'Burundi',
-  KH: 'Cambodia',
-  CM: 'Cameroon',
-  CA: 'Canada',
-  CV: 'Cape Verde',
-  KY: 'Cayman Islands',
-  CF: 'Central African Republic',
-  TD: 'Chad',
-  CL: 'Chile',
-  CN: 'China',
-  CX: 'Christmas Island',
-  CC: 'Cocos (Keeling) Islands',
-  CO: 'Colombia',
-  KM: 'Comoros',
-  CG: 'Congo',
-  CD: 'Congo, Democratic Republic',
-  CK: 'Cook Islands',
-  CR: 'Costa Rica',
-  CI: "Cote D'Ivoire",
-  HR: 'Croatia',
-  CU: 'Cuba',
-  CY: 'Cyprus',
-  CZ: 'Czech Republic',
-  DK: 'Denmark',
-  DJ: 'Djibouti',
-  DM: 'Dominica',
-  DO: 'Dominican Republic',
-  EC: 'Ecuador',
-  EG: 'Egypt',
-  SV: 'El Salvador',
-  GQ: 'Equatorial Guinea',
-  ER: 'Eritrea',
-  EE: 'Estonia',
-  ET: 'Ethiopia',
-  FK: 'Falkland Islands (Malvinas)',
-  FO: 'Faroe Islands',
-  FJ: 'Fiji',
-  FI: 'Finland',
-  FR: 'France',
-  GF: 'French Guiana',
-  PF: 'French Polynesia',
-  TF: 'French Southern Territories',
-  GA: 'Gabon',
-  GM: 'Gambia',
-  GE: 'Georgia',
-  DE: 'Germany',
-  GH: 'Ghana',
-  GI: 'Gibraltar',
-  GR: 'Greece',
-  GL: 'Greenland',
-  GD: 'Grenada',
-  GP: 'Guadeloupe',
-  GU: 'Guam',
-  GT: 'Guatemala',
-  GG: 'Guernsey',
-  GN: 'Guinea',
-  GW: 'Guinea-Bissau',
-  GY: 'Guyana',
-  HT: 'Haiti',
-  HM: 'Heard Island & Mcdonald Islands',
-  VA: 'Holy See (Vatican City State)',
-  HN: 'Honduras',
-  HK: 'Hong Kong',
-  HU: 'Hungary',
-  IS: 'Iceland',
-  IN: 'India',
-  ID: 'Indonesia',
-  IR: 'Iran, Islamic Republic Of',
-  IQ: 'Iraq',
-  IE: 'Ireland',
-  IM: 'Isle Of Man',
-  IL: 'Israel',
-  IT: 'Italy',
-  JM: 'Jamaica',
-  JP: 'Japan',
-  JE: 'Jersey',
-  JO: 'Jordan',
-  KZ: 'Kazakhstan',
-  KE: 'Kenya',
-  KI: 'Kiribati',
-  KR: 'Korea',
-  KW: 'Kuwait',
-  KG: 'Kyrgyzstan',
-  LA: "Lao People's Democratic Republic",
-  LV: 'Latvia',
-  LB: 'Lebanon',
-  LS: 'Lesotho',
-  LR: 'Liberia',
-  LY: 'Libyan Arab Jamahiriya',
-  LI: 'Liechtenstein',
-  LT: 'Lithuania',
-  LU: 'Luxembourg',
-  MO: 'Macao',
-  MK: 'Macedonia',
-  MG: 'Madagascar',
-  MW: 'Malawi',
-  MY: 'Malaysia',
-  MV: 'Maldives',
-  ML: 'Mali',
-  MT: 'Malta',
-  MH: 'Marshall Islands',
-  MQ: 'Martinique',
-  MR: 'Mauritania',
-  MU: 'Mauritius',
-  YT: 'Mayotte',
-  MX: 'Mexico',
-  FM: 'Micronesia, Federated States Of',
-  MD: 'Moldova',
-  MC: 'Monaco',
-  MN: 'Mongolia',
-  ME: 'Montenegro',
-  MS: 'Montserrat',
-  MA: 'Morocco',
-  MZ: 'Mozambique',
-  MM: 'Myanmar',
-  NA: 'Namibia',
-  NR: 'Nauru',
-  NP: 'Nepal',
-  NL: 'Netherlands',
-  AN: 'Netherlands Antilles',
-  NC: 'New Caledonia',
-  NZ: 'New Zealand',
-  NI: 'Nicaragua',
-  NE: 'Niger',
-  NG: 'Nigeria',
-  NU: 'Niue',
-  NF: 'Norfolk Island',
-  MP: 'Northern Mariana Islands',
-  NO: 'Norway',
-  OM: 'Oman',
-  PK: 'Pakistan',
-  PW: 'Palau',
-  PS: 'Palestinian Territory, Occupied',
-  PA: 'Panama',
-  PG: 'Papua New Guinea',
-  PY: 'Paraguay',
-  PE: 'Peru',
-  PH: 'Philippines',
-  PN: 'Pitcairn',
-  PL: 'Poland',
-  PT: 'Portugal',
-  PR: 'Puerto Rico',
-  QA: 'Qatar',
-  RE: 'Reunion',
-  RO: 'Romania',
-  RU: 'Russian Federation',
-  RW: 'Rwanda',
-  BL: 'Saint Barthelemy',
-  SH: 'Saint Helena',
-  KN: 'Saint Kitts And Nevis',
-  LC: 'Saint Lucia',
-  MF: 'Saint Martin',
-  PM: 'Saint Pierre And Miquelon',
-  VC: 'Saint Vincent And Grenadines',
-  WS: 'Samoa',
-  SM: 'San Marino',
-  ST: 'Sao Tome And Principe',
-  SA: 'Saudi Arabia',
-  SN: 'Senegal',
-  RS: 'Serbia',
-  SC: 'Seychelles',
-  SL: 'Sierra Leone',
-  SG: 'Singapore',
-  SK: 'Slovakia',
-  SI: 'Slovenia',
-  SB: 'Solomon Islands',
-  SO: 'Somalia',
-  ZA: 'South Africa',
-  GS: 'South Georgia And Sandwich Isl.',
-  ES: 'Spain',
-  LK: 'Sri Lanka',
-  SD: 'Sudan',
-  SR: 'Suriname',
-  SJ: 'Svalbard And Jan Mayen',
-  SZ: 'Swaziland',
-  SE: 'Sweden',
-  CH: 'Switzerland',
-  SY: 'Syrian Arab Republic',
-  TW: 'Taiwan',
-  TJ: 'Tajikistan',
-  TZ: 'Tanzania',
-  TH: 'Thailand',
-  TL: 'Timor-Leste',
-  TG: 'Togo',
-  TK: 'Tokelau',
-  TO: 'Tonga',
-  TT: 'Trinidad And Tobago',
-  TN: 'Tunisia',
-  TR: 'Turkey',
-  TM: 'Turkmenistan',
-  TC: 'Turks And Caicos Islands',
-  TV: 'Tuvalu',
-  UG: 'Uganda',
-  UA: 'Ukraine',
-  AE: 'United Arab Emirates',
-  GB: 'United Kingdom',
-  US: 'United States',
-  UM: 'United States Outlying Islands',
-  UY: 'Uruguay',
-  UZ: 'Uzbekistan',
-  VU: 'Vanuatu',
-  VE: 'Venezuela',
-  VN: 'Viet Nam',
-  VG: 'Virgin Islands, British',
-  VI: 'Virgin Islands, U.S.',
-  WF: 'Wallis And Futuna',
-  EH: 'Western Sahara',
-  YE: 'Yemen',
-  ZM: 'Zambia',
-  ZW: 'Zimbabwe',
-}
+const isoCountries = i18n.global.messages[locale].message.countries_iso
 
 function getCountryName(code) {
   return isoCountries[code] || code

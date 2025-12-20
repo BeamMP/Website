@@ -525,16 +525,15 @@ function onLeaveServers() {
   <section class="max-w-6xl mx-auto px-4 py-10">
     <div class="mb-8">
       <h1 class="text-4xl font-extrabold tracking-tight text-neutral-900 dark:text-white">
-        BeamMP Statistics
+        {{ $t('message.statistics.title') }}
       </h1>
       <p class="mt-3 text-neutral-600 dark:text-neutral-300 max-w-2xl">
-        Live snapshot metrics from active servers and a player volume timeline. Releases can be
-        annotated on the chart.
+        {{ $t('message.statistics.description') }}
       </p>
     </div>
 
     <div v-if="loading" class="py-16 text-center text-neutral-600 dark:text-neutral-300">
-      Loading…
+      {{ $t('message.statistics.loading') }}
     </div>
     <div v-else-if="error" class="py-16 text-center text-red-600">{{ error }}</div>
 
@@ -545,29 +544,29 @@ function onLeaveServers() {
           class="rounded-lg border border-neutral-200 dark:border-neutral-800 p-4 bg-white/70 dark:bg-neutral-900/60"
         >
           <div class="text-xs uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
-            Current Players
+            {{ $t('message.statistics.current_players') }}
           </div>
           <div class="mt-1 text-3xl font-semibold">{{ totalPlayers }}</div>
           <div class="mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-            Peak: {{ peakPlayers }}
+            {{ $t('message.statistics.peak', { count: peakPlayers }) }}
           </div>
         </div>
         <div
           class="rounded-lg border border-neutral-200 dark:border-neutral-800 p-4 bg-white/70 dark:bg-neutral-900/60"
         >
           <div class="text-xs uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
-            Current Servers
+            {{ $t('message.statistics.current_servers') }}
           </div>
           <div class="mt-1 text-3xl font-semibold">{{ serverCount }}</div>
           <div class="mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-            Peak: {{ peakServers }}
+            {{ $t('message.statistics.peak', { count: peakServers }) }}
           </div>
         </div>
         <div
           class="rounded-lg border border-neutral-200 dark:border-neutral-800 p-4 bg-white/70 dark:bg-neutral-900/60"
         >
           <div class="text-xs uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
-            Avg Players / Server
+            {{ $t('message.statistics.avg_players_per_server') }}
           </div>
           <div class="mt-1 text-3xl font-semibold">{{ avgPlayers }}</div>
         </div>
@@ -579,7 +578,7 @@ function onLeaveServers() {
           class="rounded-lg border border-neutral-200 dark:border-neutral-800 p-3 bg-white/70 dark:bg-neutral-900/60"
         >
           <div class="text-xs uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
-            Official Servers
+            {{ $t('message.statistics.official_servers') }}
           </div>
           <div class="mt-1 text-2xl font-semibold">{{ officialCount }}</div>
         </div>
@@ -587,7 +586,7 @@ function onLeaveServers() {
           class="rounded-lg border border-neutral-200 dark:border-neutral-800 p-3 bg-white/70 dark:bg-neutral-900/60"
         >
           <div class="text-xs uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
-            Partner Servers
+            {{ $t('message.statistics.partner_servers') }}
           </div>
           <div class="mt-1 text-2xl font-semibold">{{ partnerCount }}</div>
         </div>
@@ -598,7 +597,7 @@ function onLeaveServers() {
         class="rounded-lg border border-neutral-200 dark:border-neutral-800 p-4 bg-white/70 dark:bg-neutral-900/60"
       >
         <div class="flex items-center justify-between gap-4 mb-3">
-          <h2 class="text-lg font-semibold">Player Volume Over Time</h2>
+          <h2 class="text-lg font-semibold">{{ $t('message.statistics.player_volume') }}</h2>
           <div class="flex items-center gap-2">
             <button
               v-for="r in ranges"
@@ -646,8 +645,7 @@ function onLeaveServers() {
           </div>
         </div>
         <p class="mt-2 text-xs text-neutral-500 dark:text-neutral-400">
-          Release markers are shown as orange vertical lines (e.g., v3.0.0, v4.0.0). Hover over data
-          points for details.
+          {{ $t('message.statistics.hint') }}
         </p>
       </div>
 
@@ -656,7 +654,7 @@ function onLeaveServers() {
         class="rounded-lg border border-neutral-200 dark:border-neutral-800 p-4 bg-white/70 dark:bg-neutral-900/60"
       >
         <div class="flex items-center justify-between gap-4 mb-3">
-          <h2 class="text-lg font-semibold">Server Count Over Time</h2>
+          <h2 class="text-lg font-semibold">{{ $t('message.statistics.server_volume') }}</h2>
         </div>
         <div class="relative">
           <canvas
@@ -689,7 +687,7 @@ function onLeaveServers() {
           </div>
         </div>
         <p class="mt-2 text-xs text-neutral-500 dark:text-neutral-400">
-          Server count follows similar trends. Release markers indicate major version launches.
+          {{ $t('message.statistics.server_hint') }}
         </p>
       </div>
     </div>

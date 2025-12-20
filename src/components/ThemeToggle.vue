@@ -45,7 +45,7 @@ onMounted(() => {
           ? 'bg-white shadow-sm text-neutral-900 dark:bg-neutral-700 dark:text-white'
           : 'text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-200',
       ]"
-      title="Light mode"
+      :title="$t('message.theme.light')"
       @click="setTheme('light')"
     >
       <Sun class="w-4 h-4" />
@@ -57,7 +57,7 @@ onMounted(() => {
           ? 'bg-white shadow-sm text-neutral-900 dark:bg-neutral-700 dark:text-white'
           : 'text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-200',
       ]"
-      title="System theme"
+      :title="$t('message.theme.system')"
       @click="setTheme('system')"
     >
       <Monitor class="w-4 h-4" />
@@ -69,7 +69,7 @@ onMounted(() => {
           ? 'bg-white shadow-sm text-neutral-900 dark:bg-neutral-700 dark:text-white'
           : 'text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-200',
       ]"
-      title="Dark mode"
+      :title="$t('message.theme.dark')"
       @click="setTheme('dark')"
     >
       <Moon class="w-4 h-4" />

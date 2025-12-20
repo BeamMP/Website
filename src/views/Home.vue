@@ -13,6 +13,8 @@ import {
   Shield,
   Rocket,
 } from 'lucide-vue-next'
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 
 const onlinePlayers = ref('...')
 const onlineServers = ref('...')
@@ -39,53 +41,49 @@ onMounted(async () => {
 const features = [
   {
     icon: Server,
-    title: 'Stable Servers',
-    description:
-      'BeamMP allows for stable servers, with a variety of servers located across the globe.',
+    title: t('message.home.features.stable_servers.title'),
+    description: t('message.home.features.stable_servers.description'),
   },
   {
     icon: Package,
-    title: 'BeamNG.drive',
-    description:
-      "BeamMP uses the same maps, vehicles & mods so you don't need to learn anything new!",
+    title: t('message.home.features.beamng.title'),
+    description: t('message.home.features.beamng.description'),
   },
   {
     icon: Zap,
-    title: 'Standalone',
-    description:
-      "BeamMP doesn't modify your original installation, so you can play either singleplayer or multiplayer.",
+    title: t('message.home.features.standalone.title'),
+    description: t('message.home.features.standalone.description'),
   },
   {
     icon: Globe,
-    title: 'Sync Quality',
-    description:
-      'BeamMP updates your vehicle position ~100 times per second, allowing for a smooth overall experience.',
+    title: t('message.home.features.sync.title'),
+    description: t('message.home.features.sync.description'),
   },
 ]
 
 const communities = [
   {
-    name: 'Racing Communities',
+    name: t('message.home.communities.racing.name'),
     icon: Rocket,
-    description: 'Competitive racing leagues and time trials with players worldwide',
+    description: t('message.home.communities.racing.description'),
     color: 'from-red-500 to-orange-500',
   },
   {
-    name: 'Roleplay Servers',
+    name: t('message.home.communities.roleplay.name'),
     icon: Gamepad2,
-    description: 'Immersive roleplay experiences from police chases to delivery services',
+    description: t('message.home.communities.roleplay.description'),
     color: 'from-blue-500 to-cyan-500',
   },
   {
-    name: 'Crash & Derby',
+    name: t('message.home.communities.crash.name'),
     icon: Shield,
-    description: 'Demolition derbies and destruction-focused gameplay modes',
+    description: t('message.home.communities.crash.description'),
     color: 'from-purple-500 to-pink-500',
   },
   {
-    name: 'Free Roam',
+    name: t('message.home.communities.freeroam.name'),
     icon: Globe,
-    description: 'Casual multiplayer sessions exploring maps with friends',
+    description: t('message.home.communities.freeroam.description'),
     color: 'from-green-500 to-emerald-500',
   },
 ]
@@ -93,60 +91,53 @@ const communities = [
 const devFeatures = [
   {
     icon: Code,
-    title: 'Lua API',
-    description: 'Powerful server-side Lua scripting for custom game modes and features',
-    link: 'https://docs.beammp.com/scripting/mod-reference/',
+    title: t('message.home.devFeatures.lua.title'),
+    description: t('message.home.devFeatures.lua.description'),
+    link: 'https://docs.beammp.com/' + (locale == 'en' ? '' : locale + '/') + 'scripting/mod-reference/',
   },
   {
     icon: BookOpen,
-    title: 'Documentation',
-    description: 'Comprehensive guides and API references for server development',
-    link: 'https://docs.beammp.com',
+    title: t('message.home.devFeatures.docs.title'),
+    description: t('message.home.devFeatures.docs.description'),
+    link: 'https://docs.beammp.com' + (locale == 'en' ? '' : locale + '/'),
   },
   {
     icon: Wrench,
-    title: 'Open Source',
-    description: 'Community-driven development with source available on GitHub',
+    title: t('message.home.devFeatures.openSource.title'),
+    description: t('message.home.devFeatures.openSource.description'),
     link: 'https://github.com/BeamMP',
   },
 ]
 
 const stats = [
-  { label: 'Active Players', value: onlinePlayers, suffix: '+' },
-  { label: 'Global Servers', value: '500', suffix: '+' },
-  { label: 'Total Downloads', value: '2M', suffix: '+' },
+  { label: t('message.home.metrics.active_players'), value: onlinePlayers, suffix: '+' },
+  { label: t('message.home.metrics.public_servers'), value: '500', suffix: '+' },
+  { label: t('message.home.metrics.all_servers'), value: '2M', suffix: '+' },
 ]
-
 const faqs = [
   {
-    question: 'The server list is not showing up!',
-    answer:
-      'Try restarting BeamMP as this can sometimes happen. If this fails to fix your issue please create a topic on our forum or visit the support channel on our discord.',
+    question: t('message.home.faq["0"].question'),
+    answer: t('message.home.faq["0"].answer'),
   },
   {
-    question: "How do I open a ticket in case something doesn't work or I have questions?",
-    answer:
-      'Please check the #how-to-use channel in Discord and on our forum. Please give an accurate description of what you have done so the support team will help you in a fast and effective way.',
+    question: t('message.home.faq["1"].question'),
+    answer: t('message.home.faq["1"].answer'),
   },
   {
-    question: "Help! I'm getting error codes",
-    answer:
-      'Please head over to our forum and see if anyone has had the issue before. It is likely that someone else has at some point and therefore there will also probably be a solution posted with it too in the replies. Alternatively visit our discord where the larger portion of community is currently based.',
+    question: t('message.home.faq["2"].question'),
+    answer: t('message.home.faq["2"].answer'),
   },
   {
-    question: 'Does this work with pirated versions of BeamNG.drive?',
-    answer:
-      "We don't know if it works with pirated versions of BeamNG.drive, but we will not provide any support to non legit copies of the game. Nor will we change to support it.",
+    question: t('message.home.faq["3"].question'),
+    answer: t('message.home.faq["3"].answer'),
   },
   {
-    question: 'How do I host a server?',
-    answer:
-      'The server files required for hosting your own server can be found at the top of this page below the client download. You will also require an authentication key which can be found from keymaster. Further information around the setup can be found on our wiki.',
+    question: t('message.home.faq["4"].question'),
+    answer: t('message.home.faq["4"].answer'),
   },
   {
-    question: 'Can I use mods?',
-    answer:
-      'Mods are supported. These are installed on the server. See our wiki for more information.',
+    question: t('message.home.faq["5"].question'),
+    answer: t('message.home.faq["5"].answer'),
   },
 ]
 </script>
@@ -171,12 +162,9 @@ const faqs = [
       <!-- Hero Content -->
       <div class="relative max-w-6xl mx-auto px-4 py-32 md:py-40">
         <div class="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
-          <h1 class="text-5xl md:text-7xl font-bold leading-tight text-white">
-            Multiplayer for <span class="text-beammp-orange">BeamNG.drive</span>
-          </h1>
+          <h1 class="text-5xl md:text-7xl font-bold leading-tight text-white" v-html="$t('message.home.hero.title', { game: 'BeamNG.drive' })"></h1>
           <p class="text-xl md:text-2xl text-neutral-200">
-            Experience the ultimate soft-body physics with friends. Race, roleplay, or just cruise
-            together.
+            {{ $t('message.home.hero.subtitle') }}
           </p>
 
           <!-- CTA Buttons -->
@@ -187,14 +175,14 @@ const faqs = [
               class="group flex items-center gap-3 bg-linear-to-r from-beammp-orange to-red-600 hover:from-red-600 hover:to-beammp-orange px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-beammp-orange/50"
             >
               <Download class="w-6 h-6" />
-              Download Now
+              {{ $t('message.home.hero.download_now') }}
             </a>
             <a
               href="/servers"
               class="group flex items-center gap-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 px-8 py-4 rounded-lg font-semibold text-lg transition-all text-white"
             >
               <Server class="w-6 h-6" />
-              Browse Servers
+              {{ $t('message.home.hero.browse_servers') }}
             </a>
           </div>
 
@@ -244,9 +232,9 @@ const faqs = [
     <section class="py-16 px-4 bg-neutral-50 dark:bg-neutral-900/30">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold mb-4">Join a Thriving Community</h2>
+          <h2 class="text-4xl font-bold mb-4">{{ $t('message.home.communities.join') }}</h2>
           <p class="text-lg text-neutral-600 dark:text-neutral-400">
-            Discover diverse gameplay experiences across hundreds of unique servers
+            {{ $t('message.home.communities.description') }}
           </p>
         </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -276,10 +264,9 @@ const faqs = [
     <section class="py-16 px-4">
       <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div class="space-y-6 animate-fade-in order-2 md:order-1">
-          <h2 class="text-4xl font-bold">Find Your Perfect Server</h2>
+          <h2 class="text-4xl font-bold">{{ $t('message.home.find.title') }}</h2>
           <p class="text-lg text-neutral-600 dark:text-neutral-400">
-            Browse hundreds of active servers with different game modes, mods, and communities. From
-            competitive racing to casual free roam, there's something for everyone.
+            {{ $t('message.home.find.description') }}
           </p>
           <ul class="space-y-4">
             <li class="flex items-start gap-3">
@@ -289,9 +276,9 @@ const faqs = [
                 <div class="w-2 h-2 bg-beammp-blue rounded-full" />
               </div>
               <div>
-                <div class="font-semibold">Custom Game Modes</div>
+                <div class="font-semibold">{{ $t('message.home.find.points.custom') }}</div>
                 <div class="text-sm text-neutral-600 dark:text-neutral-400">
-                  Unique experiences created by the community
+                  {{ $t('message.home.find.points.custom_desc') }}
                 </div>
               </div>
             </li>
@@ -302,9 +289,9 @@ const faqs = [
                 <div class="w-2 h-2 bg-beammp-orange rounded-full" />
               </div>
               <div>
-                <div class="font-semibold">Active Moderation</div>
+                <div class="font-semibold">{{ $t('message.home.find.points.moderation') }}</div>
                 <div class="text-sm text-neutral-600 dark:text-neutral-400">
-                  Safe and friendly gaming environment
+                  {{ $t('message.home.find.points.moderation_desc') }}
                 </div>
               </div>
             </li>
@@ -315,9 +302,9 @@ const faqs = [
                 <div class="w-2 h-2 bg-beammp-green rounded-full" />
               </div>
               <div>
-                <div class="font-semibold">Global Network</div>
+                <div class="font-semibold">{{ $t('message.home.find.points.global') }}</div>
                 <div class="text-sm text-neutral-600 dark:text-neutral-400">
-                  Servers in every region for low latency
+                  {{ $t('message.home.find.points.global_desc') }}
                 </div>
               </div>
             </li>
@@ -326,7 +313,7 @@ const faqs = [
             href="/servers"
             class="inline-flex items-center gap-2 bg-beammp-blue hover:bg-beammp-blue/90 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
           >
-            Browse All Servers
+            {{ $t('message.home.find.browse_all_servers') }}
             <Server class="w-5 h-5" />
           </a>
         </div>
@@ -342,9 +329,9 @@ const faqs = [
     <section class="py-16 px-4 bg-neutral-50 dark:bg-neutral-900/30">
       <div class="max-w-6xl mx-auto">
         <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold mb-4">Built for Developers</h2>
+          <h2 class="text-4xl font-bold mb-4">{{ $t('message.home.devFeatures.title') }}</h2>
           <p class="text-lg text-neutral-600 dark:text-neutral-400">
-            Create custom game modes, host your own server, and contribute to the project
+            {{ $t('message.home.devFeatures.description') }}
           </p>
         </div>
         <div class="grid md:grid-cols-3 gap-8">
@@ -366,7 +353,7 @@ const faqs = [
             <div
               class="mt-4 text-beammp-blue dark:text-beammp-orange font-semibold flex items-center gap-2"
             >
-              Learn More
+              {{ $t('message.home.devFeatures.learn_more') }}
               <svg
                 class="w-4 h-4 group-hover:translate-x-1 transition-transform"
                 fill="none"
@@ -389,9 +376,9 @@ const faqs = [
           class="mt-12 bg-linear-to-br from-neutral-800 to-neutral-900 dark:from-neutral-950 dark:to-neutral-900 rounded-xl p-8 md:p-12 text-white"
         >
           <div class="max-w-3xl mx-auto text-center space-y-6">
-            <h3 class="text-3xl font-bold">Ready to Host Your Own Server?</h3>
+            <h3 class="text-3xl font-bold">{{ $t('message.home.devFeatures.host.title') }}</h3>
             <p class="text-neutral-300">
-              Download the server files and create your own unique BeamMP experience
+              {{ $t('message.home.devFeatures.host.description') }}
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <a
@@ -403,7 +390,7 @@ const faqs = [
                     d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"
                   />
                 </svg>
-                Windows Server
+                {{ $t('message.home.devFeatures.host.windows') }}
                 <Download class="w-5 h-5" />
               </a>
               <a
@@ -415,7 +402,7 @@ const faqs = [
                     d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.84-.41 1.74-.348 2.642.893 13.117 23.57 6.98 21.94-5.859-.932-7.344-4.59-9.256-7.094-9.547-.31-.036-.623-.05-.935-.05-.007 0-.015 0-.023 0-.007 0-.015 0-.023 0z"
                   />
                 </svg>
-                Linux Builds
+                {{ $t('message.home.devFeatures.host.linux') }}
                 <Download class="w-5 h-5" />
               </a>
             </div>
@@ -426,7 +413,7 @@ const faqs = [
 
     <!-- FAQ Section -->
     <section class="space-y-8 py-8">
-      <h2 class="text-4xl font-bold text-center mb-12">FAQ</h2>
+      <h2 class="text-4xl font-bold text-center mb-12">{{ $t('message.home.faq.title') }}</h2>
       <div class="space-y-6 max-w-4xl mx-auto">
         <details
           v-for="(faq, index) in faqs"

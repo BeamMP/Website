@@ -54,7 +54,7 @@ function closeMobileMenu() {
                   rel="noopener noreferrer"
                   :class="cn(navigationMenuTriggerStyle(), 'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white')"
                 >
-                  Forum
+                  {{ $t('message.nav.forums') }}
                 </a>
               </NavigationMenuLink>
             </NavigationMenuItem>
@@ -66,7 +66,7 @@ function closeMobileMenu() {
                   rel="noopener noreferrer"
                   :class="cn(navigationMenuTriggerStyle(), 'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white')"
                 >
-                  Docs
+                  {{ $t('message.nav.docs') }}
                 </a>
               </NavigationMenuLink>
             </NavigationMenuItem>
@@ -76,7 +76,7 @@ function closeMobileMenu() {
                   to="/communities"
                   :class="cn(navigationMenuTriggerStyle(), 'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white')"
                 >
-                  Communities
+                  {{ $t('message.nav.communities') }}
                 </RouterLink>
               </NavigationMenuLink>
             </NavigationMenuItem>
@@ -86,7 +86,7 @@ function closeMobileMenu() {
                   to="/servers"
                   :class="cn(navigationMenuTriggerStyle(), 'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white')"
                 >
-                  Servers
+                  {{ $t('message.nav.servers') }}
                 </RouterLink>
               </NavigationMenuLink>
             </NavigationMenuItem>
@@ -96,7 +96,7 @@ function closeMobileMenu() {
                   to="/stats"
                   :class="cn(navigationMenuTriggerStyle(), 'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white')"
                 >
-                  Statistics
+                  {{ $t('message.nav.statistics') }}
                 </RouterLink>
               </NavigationMenuLink>
             </NavigationMenuItem>
@@ -108,7 +108,7 @@ function closeMobileMenu() {
                   rel="noopener noreferrer"
                   :class="cn(navigationMenuTriggerStyle(), 'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white')"
                 >
-                  GitHub
+                  {{ $t('message.nav.github') }}
                 </a>
               </NavigationMenuLink>
             </NavigationMenuItem>
@@ -120,7 +120,7 @@ function closeMobileMenu() {
                   rel="noopener noreferrer"
                   :class="cn(navigationMenuTriggerStyle(), 'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white')"
                 >
-                  Patreon
+                  {{ $t('message.nav.patreon') }}
                 </a>
               </NavigationMenuLink>
             </NavigationMenuItem>
@@ -157,13 +157,6 @@ function closeMobileMenu() {
         class="md:hidden border-t border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900"
       >
         <div class="px-4 py-3 space-y-1">
-          <RouterLink
-            to="/about"
-            class="block px-4 py-3 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md transition-colors"
-            @click="closeMobileMenu"
-          >
-            About
-          </RouterLink>
           <a
             href="https://forum.beammp.com"
             target="_blank"
@@ -171,7 +164,7 @@ function closeMobileMenu() {
             class="block px-4 py-3 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md transition-colors"
             @click="closeMobileMenu"
           >
-            Forum
+            {{ $t('message.nav.forums') }}
           </a>
           <a
             href="https://docs.beammp.com"
@@ -180,28 +173,28 @@ function closeMobileMenu() {
             class="block px-4 py-3 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md transition-colors"
             @click="closeMobileMenu"
           >
-            Docs
+            {{ $t('message.nav.docs') }}
           </a>
           <RouterLink
             to="/communities"
             class="block px-4 py-3 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md transition-colors"
             @click="closeMobileMenu"
           >
-            Communities
+            {{ $t('message.nav.communities') }}
           </RouterLink>
           <RouterLink
             to="/servers"
             class="block px-4 py-3 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md transition-colors"
             @click="closeMobileMenu"
           >
-            Servers
+            {{ $t('message.nav.servers') }}
           </RouterLink>
           <RouterLink
             to="/stats"
             class="block px-4 py-3 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md transition-colors"
             @click="closeMobileMenu"
           >
-            Statistics
+            {{ $t('message.nav.statistics') }}
           </RouterLink>
           <a
             href="https://github.com/BeamMP/BeamMP"
@@ -210,7 +203,7 @@ function closeMobileMenu() {
             class="block px-4 py-3 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md transition-colors"
             @click="closeMobileMenu"
           >
-            GitHub
+            {{ $t('message.nav.github') }}
           </a>
           <a
             href="https://www.patreon.com/BeamMP"
@@ -219,7 +212,7 @@ function closeMobileMenu() {
             class="block px-4 py-3 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md transition-colors"
             @click="closeMobileMenu"
           >
-            Patreon
+            {{ $t('message.nav.patreon') }}
           </a>
         </div>
       </div>

@@ -79,7 +79,7 @@ import { RouterLink } from 'vue-router'
             rel="noopener noreferrer"
             class="text-xs text-orange-600 hover:text-orange-700 underline-offset-2 hover:underline dark:text-orange-400 dark:hover:text-orange-300"
           >
-            Support on Patreon
+            {{ $t("message.footer.support_on_patreon") }}
           </a>
         </div>
 
@@ -93,7 +93,7 @@ import { RouterLink } from 'vue-router'
               to="/about"
               class="text-neutral-700 hover:text-beammp-blue transition-colors dark:text-neutral-500 dark:hover:text-blue-400"
             >
-              About
+              {{ $t("message.footer.about") }}
             </RouterLink>
             <span>&middot;</span>
             <a
@@ -102,7 +102,7 @@ import { RouterLink } from 'vue-router'
               rel="noopener noreferrer"
               class="text-neutral-700 hover:text-beammp-blue transition-colors dark:text-neutral-500 dark:hover:text-blue-400"
             >
-              Privacy Policy
+              {{ $t("message.footer.privacy_policy") }}
             </a>
             <span>&middot;</span>
             <a
@@ -111,7 +111,7 @@ import { RouterLink } from 'vue-router'
               rel="noopener noreferrer"
               class="text-neutral-700 hover:text-beammp-blue transition-colors dark:text-neutral-500 dark:hover:text-blue-400"
             >
-              Terms &amp; Conditions
+              {{ $t("message.footer.terms_conditions") }}
             </a>
           </div>
         </div>

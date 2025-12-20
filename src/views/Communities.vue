@@ -129,11 +129,10 @@ const communities = [
     <!-- Page Header -->
     <section class="text-center space-y-4">
       <h1 class="text-5xl md:text-6xl font-bold">
-        <span class="text-beammp-orange">BeamMP</span> Communities
+        {{ $t('message.communities.title') }}
       </h1>
       <p class="text-xl text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto">
-        Discover thriving communities built around BeamMP. From competitive racing leagues to casual
-        free roam sessions, find your perfect group to play with.
+        {{ $t('message.communities.description') }}
       </p>
     </section>
 
@@ -251,9 +250,9 @@ const communities = [
     <!-- CTA Section -->
     <section class="text-center py-16 bg-neutral-50 dark:bg-neutral-900/30 -mx-4 px-4 rounded-xl">
       <div class="max-w-2xl mx-auto space-y-6">
-        <h2 class="text-3xl md:text-4xl font-bold">Want to Start Your Own Community?</h2>
+        <h2 class="text-3xl md:text-4xl font-bold">{{ $t('message.communities.starting') }}</h2>
         <p class="text-lg text-neutral-600 dark:text-neutral-400">
-          Host your own BeamMP server and build a community around your favorite game modes
+          {{ $t('message.communities.starting.description') }}
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
           <a
@@ -263,7 +262,7 @@ const communities = [
             class="inline-flex items-center gap-2 bg-beammp-orange hover:bg-beammp-orange/90 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
           >
             <component :is="Shield" class="w-5 h-5" />
-            Server Setup Guide
+            {{ $t('message.communities.starting.setup_guide') }}
           </a>
           <a
             href="https://discord.gg/beammp"
@@ -272,7 +271,7 @@ const communities = [
             class="inline-flex items-center gap-2 bg-neutral-700 hover:bg-neutral-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
           >
             <Users class="w-5 h-5" />
-            Join Our Discord
+            {{ $t('message.communities.starting.join_discord') }}
           </a>
         </div>
       </div>
