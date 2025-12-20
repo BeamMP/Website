@@ -1,10 +1,14 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useRouter, useRoute } from 'vue-router'
 import { LANGUAGES, loadLocaleMessages } from '@/i18n'
+import { switchLocale, getCurrentLocale } from '@/utils/locale'
 import { ChevronDown } from 'lucide-vue-next'
 
 const { locale } = useI18n()
+const router = useRouter()
+const route = useRoute()
 const isOpen = ref(false)
 
 const currentLanguage = () => {
@@ -22,6 +26,11 @@ const selectLanguage = async (langCode) => {
   locale.value = langCode
   localStorage.setItem('lang', langCode)
   isOpen.value = false
+
+  // Navigate to the new locale route
+  const currentPath = route.fullPath
+  const newPath = switchLocale(langCode, currentPath)
+  router.push(newPath)
 }
 
 const toggleDropdown = () => {
@@ -29,7 +38,7 @@ const toggleDropdown = () => {
 }
 
 onMounted(async () => {
-  const saved = localStorage.getItem('lang')
+  const saved = localStorage.getItem('lang') || getCurrentLocale()
   if (saved && saved !== locale.value) {
     try {
       await loadLocaleMessages(window.i18n, saved)
@@ -45,7 +54,7 @@ onMounted(async () => {
   <div class="relative">
     <button
       class="flex items-center gap-2 px-3 py-2 rounded-lg bg-neutral-200 dark:bg-neutral-800/50 hover:bg-neutral-300 dark:hover:bg-neutral-800 transition-colors text-neutral-900 dark:text-white text-sm font-medium"
-      style="height: 40px;"
+      style="height: 40px"
       :aria-expanded="isOpen"
       :aria-label="$t('message.nav.language')"
       @click="toggleDropdown"

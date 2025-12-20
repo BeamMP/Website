@@ -7,6 +7,7 @@ import './style.css'
 //const i18n = createI18n({
 const initialLocale = localStorage.getItem('lang') || 'en'
 const i18n = setupI18n({
+  legacy: false,
   locale: initialLocale,
   fallbackLocale: 'en',
   messages: {

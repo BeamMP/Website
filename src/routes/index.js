@@ -1,10 +1,12 @@
 import { loadLocaleMessages, setI18nLanguage, SUPPORT_LOCALES } from '@/i18n'
 import { createRouter, createWebHistory } from 'vue-router'
 import NotFound from '@/views/NotFound.vue'
+import { RouterView } from 'vue-router'
 
-const routes = [
+// Base routes without locale prefix
+const baseRoutes = [
   {
-    path: '/',
+    path: '',
     name: 'Home',
     component: () => import('@/views/Home.vue'),
     meta: {
@@ -14,7 +16,7 @@ const routes = [
     },
   },
   {
-    path: '/about',
+    path: 'about',
     name: 'About',
     component: () => import('@/views/About.vue'),
     meta: {
@@ -23,18 +25,8 @@ const routes = [
       requiresAuth: false,
     },
   },
-  /*{
-    path: '/contact',
-    name: 'Contact',
-    component: Contact,
-    meta: {
-      title: 'Contact - BeamMP',
-      description: 'Get in touch with us',
-      requiresAuth: false
-    }
-  },*/
   {
-    path: '/communities',
+    path: 'communities',
     name: 'Communities',
     component: () => import('@/views/Communities.vue'),
     meta: {
@@ -44,7 +36,7 @@ const routes = [
     },
   },
   {
-    path: '/servers',
+    path: 'servers',
     name: 'Servers',
     component: () => import('@/views/Servers.vue'),
     meta: {
@@ -54,13 +46,35 @@ const routes = [
     },
   },
   {
-    path: '/stats',
+    path: 'stats',
     name: 'Statistics',
     component: () => import('@/views/Statistics.vue'),
     meta: {
       title: 'Statistics - BeamMP',
       description: 'View BeamMP network statistics',
       requiresAuth: false,
+    },
+  },
+]
+
+const routes = [
+  {
+    path: `/:locale(${SUPPORT_LOCALES.join('|')})`,
+    component: RouterView,
+    beforeEnter: (to) => {
+      console.log('Entering locale route:', to.params.locale)
+      // Validate locale
+      if (!SUPPORT_LOCALES.includes(to.params.locale)) {
+        return false
+      }
+    },
+    children: baseRoutes,
+  },
+  {
+    path: '/',
+    redirect: () => {
+      const locale = localStorage.getItem('lang') || 'en'
+      return `/${locale}`
     },
   },
   {
@@ -80,14 +94,16 @@ const router = createRouter({
   routes,
 })
 
-// Global navigation guard for meta data
+// Global navigation guard for meta data and locale
 router.beforeEach(async (to, from, next) => {
   const paramsLocale = to.params.locale || 'en'
+  const i18n = window.i18n
 
-  // use locale if paramsLocale is not in SUPPORT_LOCALES
-  /*if (!SUPPORT_LOCALES.includes(paramsLocale)) {
-    return next(`/${locale}`)
-  }*/
+  // Ensure i18n is available
+  if (!i18n) {
+    next()
+    return
+  }
 
   // load locale messages
   if (!i18n.global.availableLocales.includes(paramsLocale)) {
@@ -96,6 +112,9 @@ router.beforeEach(async (to, from, next) => {
 
   // set i18n language
   setI18nLanguage(i18n, paramsLocale)
+
+  // Store current locale in localStorage
+  localStorage.setItem('lang', paramsLocale)
 
   // Set page title
   document.title = to.meta.title || 'BeamMP'

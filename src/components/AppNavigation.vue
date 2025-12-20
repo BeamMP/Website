@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import { RouterLink } from 'vue-router'
+import { RouterLink, useRoute } from 'vue-router'
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -12,8 +12,10 @@ import { cn } from '@/lib/utils'
 import ThemeToggle from '@/components/ThemeToggle.vue'
 import LanguageSelector from '@/components/LanguageSelector.vue'
 import { Menu, X } from 'lucide-vue-next'
+import { getLocalizedPath } from '@/utils/locale'
 
 const mobileMenuOpen = ref(false)
+const route = useRoute()
 
 function toggleMobileMenu() {
   mobileMenuOpen.value = !mobileMenuOpen.value
@@ -22,12 +24,21 @@ function toggleMobileMenu() {
 function closeMobileMenu() {
   mobileMenuOpen.value = false
 }
+
+// Generate localized route
+function localRoute(path) {
+  return getLocalizedPath(path, route.params.locale)
+}
 </script>
 
 <template>
   <header class="border-b border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-neutral-900/70 backdrop-blur sticky top-0 z-20">
     <nav class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-      <RouterLink to="/" class="flex items-center gap-2 shrink-0" @click="closeMobileMenu">
+      <RouterLink
+        :to="localRoute('')"
+        class="flex items-center gap-2 shrink-0"
+        @click="closeMobileMenu"
+      >
         <!-- Light mode logo (black) -->
         <img
           src="/src/assets/BeamMP_blk.png"
@@ -74,7 +85,7 @@ function closeMobileMenu() {
             <NavigationMenuItem>
               <NavigationMenuLink as-child>
                 <RouterLink
-                  to="/communities"
+                  :to="localRoute('communities')"
                   :class="cn(navigationMenuTriggerStyle(), 'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white')"
                 >
                   {{ $t('message.nav.communities') }}
@@ -84,7 +95,7 @@ function closeMobileMenu() {
             <NavigationMenuItem>
               <NavigationMenuLink as-child>
                 <RouterLink
-                  to="/servers"
+                  :to="localRoute('servers')"
                   :class="cn(navigationMenuTriggerStyle(), 'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white')"
                 >
                   {{ $t('message.nav.servers') }}
@@ -94,7 +105,7 @@ function closeMobileMenu() {
             <NavigationMenuItem>
               <NavigationMenuLink as-child>
                 <RouterLink
-                  to="/stats"
+                  :to="localRoute('stats')"
                   :class="cn(navigationMenuTriggerStyle(), 'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white')"
                 >
                   {{ $t('message.nav.statistics') }}
@@ -138,9 +149,9 @@ function closeMobileMenu() {
         <LanguageSelector />
         <ThemeToggle />
         <button
-          @click="toggleMobileMenu"
           class="p-2 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md transition-colors"
           aria-label="Toggle menu"
+          @click="toggleMobileMenu"
         >
           <Menu v-if="!mobileMenuOpen" class="w-6 h-6" />
           <X v-else class="w-6 h-6" />
@@ -181,21 +192,21 @@ function closeMobileMenu() {
             {{ $t('message.nav.docs') }}
           </a>
           <RouterLink
-            to="/communities"
+            :to="localRoute('communities')"
             class="block px-4 py-3 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md transition-colors"
             @click="closeMobileMenu"
           >
             {{ $t('message.nav.communities') }}
           </RouterLink>
           <RouterLink
-            to="/servers"
+            :to="localRoute('servers')"
             class="block px-4 py-3 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md transition-colors"
             @click="closeMobileMenu"
           >
             {{ $t('message.nav.servers') }}
           </RouterLink>
           <RouterLink
-            to="/stats"
+            :to="localRoute('stats')"
             class="block px-4 py-3 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md transition-colors"
             @click="closeMobileMenu"
           >
