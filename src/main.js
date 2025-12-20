@@ -5,8 +5,9 @@ import App from './App.vue'
 import './style.css'
 
 //const i18n = createI18n({
+const initialLocale = localStorage.getItem('lang') || 'en'
 const i18n = setupI18n({
-  locale: 'en',
+  locale: initialLocale,
   fallbackLocale: 'en',
   messages: {
     en: await import('./locales/en.json'),

@@ -10,6 +10,7 @@ import {
 } from '@/components/ui/navigation-menu'
 import { cn } from '@/lib/utils'
 import ThemeToggle from '@/components/ThemeToggle.vue'
+import LanguageSelector from '@/components/LanguageSelector.vue'
 import { Menu, X } from 'lucide-vue-next'
 
 const mobileMenuOpen = ref(false)
@@ -126,13 +127,17 @@ function closeMobileMenu() {
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
-        <ThemeToggle />
+        <div class="flex items-center gap-2">
+          <LanguageSelector />
+          <ThemeToggle />
+        </div>
       </div>
 
       <!-- Mobile Menu Button and Theme Toggle -->
       <div class="flex lg:hidden items-center gap-2">
+        <LanguageSelector />
         <ThemeToggle />
-        <button 
+        <button
           @click="toggleMobileMenu"
           class="p-2 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md transition-colors"
           aria-label="Toggle menu"
@@ -152,8 +157,8 @@ function closeMobileMenu() {
       leave-from-class="opacity-100 translate-y-0"
       leave-to-class="opacity-0 -translate-y-2"
     >
-      <div 
-        v-if="mobileMenuOpen" 
+      <div
+        v-if="mobileMenuOpen"
         class="md:hidden border-t border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900"
       >
         <div class="px-4 py-3 space-y-1">

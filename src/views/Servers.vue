@@ -57,12 +57,12 @@
       <table class="servers-table">
         <thead>
           <tr>
-            <th class="col-location">{{ $t('message.servers.filters.location') }}</th>
-            <th class="col-name">{{ $t('message.servers.filters.name') }}</th>
-            <th class="col-map">{{ $t('message.servers.filters.map') }}</th>
-            <th class="col-players">{{ $t('message.servers.filters.players') }}</th>
-            <th class="col-mods">{{ $t('message.servers.filters.mods') }}</th>
-            <th class="col-status">{{ $t('message.servers.filters.status') }}</th>
+            <th class="col-location">{{ $t('message.servers.table_headers.location') }}</th>
+            <th class="col-name">{{ $t('message.servers.table_headers.name') }}</th>
+            <th class="col-map">{{ $t('message.servers.table_headers.map') }}</th>
+            <th class="col-players">{{ $t('message.servers.table_headers.players') }}</th>
+            <th class="col-mods">{{ $t('message.servers.table_headers.mods') }}</th>
+            <th class="col-status">{{ $t('message.servers.table_headers.status') }}</th>
           </tr>
         </thead>
         <tbody>
@@ -216,6 +216,7 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 const servers = ref([])
 const loading = ref(true)
@@ -232,10 +233,19 @@ const filters = ref({
   featured: false,
 })
 
+const { locale } = useI18n()
+const regionDisplay = computed(() => {
+  try {
+    return new Intl.DisplayNames([locale.value], { type: 'region' })
+  } catch {
+    return new Intl.DisplayNames(['en'], { type: 'region' })
+  }
+})
+
 onMounted(async () => {
   try {
-    //const response = await fetch('/servers.json')
-    const response = await fetch('https://backend.beammp.com/servers-info');
+    const response = await fetch('/servers.json')
+    //const response = await fetch('https://backend.beammp.com/servers-info')
     console.log(response)
     if (!response.ok) throw new Error('Failed to fetch servers')
     const data = await response.json()
@@ -400,10 +410,10 @@ function formatBytes(bytes) {
   return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]
 }
 
-const isoCountries = i18n.global.messages[locale].message.countries_iso
-
 function getCountryName(code) {
-  return isoCountries[code] || code
+  if (!code) return ''
+  const name = regionDisplay.value.of(code)
+  return name || code
 }
 
 function getCountryFlag(code) {
