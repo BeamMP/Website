@@ -45,6 +45,7 @@ onMounted(async () => {
   <div class="relative">
     <button
       class="flex items-center gap-2 px-3 py-2 rounded-lg bg-neutral-200 dark:bg-neutral-800/50 hover:bg-neutral-300 dark:hover:bg-neutral-800 transition-colors text-neutral-900 dark:text-white text-sm font-medium"
+      style="height: 40px;"
       :aria-expanded="isOpen"
       :aria-label="$t('message.nav.language')"
       @click="toggleDropdown"
