@@ -1,13 +1,560 @@
 <!doctype html>
 <html lang="en" style="overflow-x: hidden;">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/ico+xml" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BeamMP Website</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/ico+xml" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BeamMP - Multiplayer for BeamNG.drive</title>
+  <meta name="description"
+    content="BeamMP is a multiplayer mod for BeamNG.drive. Join thousands of players online and experience BeamNG.drive with friends!">
+
+</head>
+
+<body>
+  <!-- Vue App Container (shown when JS is enabled) -->
+  <div id="app"></div>
+
+  <!-- No-JS Fallback (shown when JS is disabled) -->
+  <noscript>
+    <style>
+      /* CSS Variables for Light/Dark Theme */
+      :root {
+        --bg-primary: #ffffff;
+        --bg-secondary: #f5f5f5;
+        --text-primary: #1a1a1a;
+        --text-secondary: #666666;
+        --border-color: #e5e5e5;
+        --beammp-blue: #4470B6;
+        --beammp-orange: #F36D24;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg-primary: #1a1a1a;
+          --bg-secondary: #2a2a2a;
+          --text-primary: #ffffff;
+          --text-secondary: #a0a0a0;
+          --border-color: rgba(255, 255, 255, 0.1);
+        }
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        line-height: 1.6;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      /* Header/Navigation */
+      header {
+        border-bottom: 1px solid var(--border-color);
+        background-color: var(--bg-primary);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        backdrop-filter: blur(10px);
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 4rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      .logo img {
+        height: 4rem;
+        width: auto;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .logo-light {
+          display: none;
+        }
+
+        .logo-dark {
+          display: block;
+        }
+      }
+
+      @media (prefers-color-scheme: light) {
+        .logo-light {
+          display: block;
+        }
+
+        .logo-dark {
+          display: none;
+        }
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 1.5rem;
+        list-style: none;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .nav-links a {
+        color: var(--text-primary);
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 0.375rem;
+        transition: background-color 0.2s;
+      }
+
+      .nav-links a:hover {
+        background-color: var(--bg-secondary);
+      }
+
+      /* Hero Section */
+      .hero {
+        text-align: center;
+        padding: 4rem 1rem;
+        background: linear-gradient(135deg, var(--beammp-blue) 0%, var(--beammp-orange) 100%);
+        color: white;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        opacity: 0.95;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background-color: white;
+        color: var(--beammp-blue);
+        padding: 0.875rem 2rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-weight: 600;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Stats Section */
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        padding: 3rem 1rem;
+        background-color: var(--bg-secondary);
+      }
+
+      .stat-card {
+        text-align: center;
+        padding: 2rem;
+        background-color: var(--bg-primary);
+        border-radius: 0.5rem;
+        border: 1px solid var(--border-color);
+      }
+
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--beammp-blue);
+        margin-bottom: 0.5rem;
+      }
+
+      .stat-label {
+        color: var(--text-secondary);
+        font-size: 1rem;
+      }
+
+      /* Features Section */
+      .features {
+        padding: 4rem 1rem;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 3rem;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+      }
+
+      .feature-card {
+        padding: 2rem;
+        border: 1px solid var(--border-color);
+        border-radius: 0.5rem;
+        background-color: var(--bg-primary);
+      }
+
+      .feature-icon {
+        width: 3rem;
+        height: 3rem;
+        margin-bottom: 1rem;
+        color: var(--beammp-blue);
+      }
+
+      .feature-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+      }
+
+      .feature-description {
+        color: var(--text-secondary);
+      }
+
+      /* Info Section */
+      .info {
+        padding: 4rem 1rem;
+        background-color: var(--bg-secondary);
+      }
+
+      .info-content {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .info-content h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .info-content p {
+        font-size: 1.125rem;
+        color: var(--text-secondary);
+        margin-bottom: 2rem;
+      }
+
+      .button-group {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .button {
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-weight: 500;
+        transition: transform 0.2s;
+      }
+
+      .button-primary {
+        background-color: var(--beammp-blue);
+        color: white;
+      }
+
+      .button-secondary {
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        border: 1px solid var(--border-color);
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+      }
+
+      /* Footer */
+      footer {
+        margin-top: auto;
+        padding: 2rem 1rem;
+        border-top: 1px solid var(--border-color);
+        background-color: var(--bg-primary);
+      }
+
+      .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .social-link {
+        color: var(--text-secondary);
+        transition: color 0.2s;
+        text-decoration: none;
+      }
+
+      .social-link:hover {
+        color: var(--beammp-blue);
+      }
+
+      .footer-legal {
+        text-align: center;
+        color: var(--text-secondary);
+        font-size: 0.875rem;
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .footer-links a {
+        color: var(--text-secondary);
+        text-decoration: none;
+      }
+
+      .footer-links a:hover {
+        color: var(--beammp-blue);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+
+        .nav-links {
+          display: none;
+        }
+
+        .section-title {
+          font-size: 2rem;
+        }
+      }
+
+      /* JS Warning */
+      .js-notice {
+        background-color: #fff3cd;
+        color: #856404;
+        padding: 1rem;
+        text-align: center;
+        font-weight: 500;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .js-notice {
+          background-color: #664d03;
+          color: #ffecb5;
+        }
+      }
+
+      /* Hide noscript content when JS loads */
+      .noscript-page {
+        display: block;
+      }
+
+      /* SVG Icons */
+      .icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    </style>
+
+    <div class="noscript-page">
+      <!-- Header -->
+      <header>
+        <nav>
+          <a href="/" class="logo">
+            <img src="/src/assets/BeamMP_blk.png" alt="BeamMP Logo" class="logo-light">
+            <img src="/src/assets/BeamMP_wht.png" alt="BeamMP Logo" class="logo-dark">
+          </a>
+          <ul class="nav-links">
+            <li><a href="https://forum.beammp.com">Forums</a></li>
+            <li><a href="https://docs.beammp.com">Docs</a></li>
+            <li><a href="https://github.com/BeamMP/BeamMP">GitHub</a></li>
+            <li><a href="https://www.patreon.com/BeamMP">Patreon</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- JS Notice -->
+      <div class="js-notice">
+        ⚠️ JavaScript is disabled. For the best experience, please enable JavaScript in your browser.
+      </div>
+
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container">
+          <h1>BeamMP</h1>
+          <p>Multiplayer for BeamNG.drive</p>
+          <a href="https://github.com/BeamMP/BeamMP/releases" class="cta-button">
+            Download Now
+          </a>
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section class="container stats">
+        <div class="stat-card">
+          <div class="stat-number">2000+</div>
+          <div class="stat-label">Online Players</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">3000+</div>
+          <div class="stat-label">Active Servers</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Certified Fun!</div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="features">
+        <div class="container">
+          <h2 class="section-title">Why Choose BeamMP?</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="8" x="2" y="2" rx="2" ry="2" />
+                  <rect width="20" height="8" x="2" y="14" rx="2" ry="2" />
+                  <line x1="6" x2="6.01" y1="6" y2="6" />
+                  <line x1="6" x2="6.01" y1="18" y2="18" />
+                </svg>
+              </div>
+              <h3 class="feature-title">Stable & Reliable</h3>
+              <p class="feature-description">Enjoy smooth multiplayer gameplay with our optimized server infrastructure.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.2 7.8l-7.7 7.7-4-4-5.7 5.7" />
+                  <path d="M15 7h6v6" />
+                </svg>
+              </div>
+              <h3 class="feature-title">Easy to Use</h3>
+              <p class="feature-description">Simple installation and setup process. Get playing within minutes!</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                  <path d="M2 12h20" />
+                </svg>
+              </div>
+              <h3 class="feature-title">Global Community</h3>
+              <p class="feature-description">Join thousands of players worldwide in various game modes and communities.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+              </div>
+              <h3 class="feature-title">Mod Support</h3>
+              <p class="feature-description">Create custom servers with Lua scripting and mod support.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Info Section -->
+      <section class="info">
+        <div class="container">
+          <div class="info-content">
+            <h2>Get Started Today</h2>
+            <p>BeamMP is completely free and open source. Download the mod, join a server, and start playing with
+              friends!</p>
+            <div class="button-group">
+              <a href="https://github.com/BeamMP/BeamMP/releases" class="button button-primary">Download</a>
+              <a href="https://docs.beammp.com" class="button button-secondary">Documentation</a>
+              <a href="https://forum.beammp.com" class="button button-secondary">Forums</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <div class="footer-content">
+          <div class="social-links">
+            <a href="https://github.com/BeamMP" class="social-link" aria-label="GitHub">GitHub</a>
+            <span>•</span>
+            <a href="https://discord.gg/beammp" class="social-link" aria-label="Discord">Discord</a>
+            <span>•</span>
+            <a href="https://www.youtube.com/@beammpofficial" class="social-link" aria-label="YouTube">YouTube</a>
+            <span>•</span>
+            <a href="https://x.com/beammpofficial" class="social-link" aria-label="X">X</a>
+            <span>•</span>
+            <a href="https://www.reddit.com/r/BeamMP" class="social-link" aria-label="Reddit">Reddit</a>
+            <span>•</span>
+            <a href="https://www.patreon.com/BeamMP" class="social-link" style="color: var(--beammp-orange);">Support on
+              Patreon</a>
+          </div>
+          <div class="footer-legal">
+            <p>&copy; 2019 - 2025 | BeamMP Mod Team All Rights Reserved</p>
+            <div class="footer-links">
+              <a href="https://forum.beammp.com/topic/95/privacy-policy-v1-0">Privacy Policy</a>
+              <span>•</span>
+              <a href="https://forum.beammp.com/topic/94/terms-of-use-v1-0">Terms of Use</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </noscript>
+
+  <!-- Vue.js Application Script -->
+  <script type="module" src="/src/main.js"></script>
+
+  <!-- Hide noscript content when JS is available -->
+  <script>
+    // Hide noscript content as soon as JS executes
+    document.addEventListener('DOMContentLoaded', function () {
+      const noscriptDivs = document.querySelectorAll('.noscript-page');
+      noscriptDivs.forEach(div => div.style.display = 'none');
+    });
+  </script>
+</body>
+
 </html>
