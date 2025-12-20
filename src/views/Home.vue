@@ -221,7 +221,7 @@ const faqs = [
           >
             <component
               :is="feature.icon"
-              class="w-10 h-10 text-beammp-blue mb-4 group-hover:scale-110 transition-transform dark:text-blue-400"
+              class="w-10 h-10 text-beammp-orange mb-4 group-hover:scale-110 transition-transform dark:text-beammp-orange"
             />
             <h3 class="text-xl font-semibold mb-2">{{ feature.title }}</h3>
             <p class="text-neutral-600 dark:text-neutral-400 text-sm">{{ feature.description }}</p>
