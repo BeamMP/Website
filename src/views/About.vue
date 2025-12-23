@@ -54,7 +54,9 @@
 
     <!-- How to Get Involved -->
     <div class="rounded-lg border border-neutral-200 dark:border-neutral-800 p-6 mb-10">
-      <h3 class="text-xl font-semibold text-neutral-900 dark:text-white mb-3">{{ $t('message.about.get_involved.title') }}</h3>
+      <h3 class="text-xl font-semibold text-neutral-900 dark:text-white mb-3">
+        {{ $t('message.about.get_involved.title') }}
+      </h3>
       <p class="text-neutral-700 dark:text-neutral-300 mb-4">
         {{ $t('message.about.get_involved.description') }}
         <a

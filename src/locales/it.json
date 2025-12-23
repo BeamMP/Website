@@ -10,6 +10,7 @@
       "forums": "Forum",
       "docs": "Docs",
       "communities": "Community",
+      "partners": "Partner",
       "servers": "Server",
       "statistics": "Statistiche",
       "github": "GitHub",
@@ -117,7 +118,14 @@
           "title": "Pronto a ospitare il tuo server?",
           "description": "Scarica i file del server e crea la tua esperienza unica su BeamMP",
           "windows": "Server Windows",
-          "linux": "Build Linux"
+          "linux": "Build Linux",
+          "partners": {
+            "description": "Inizia rapidamente con i nostri partner di hosting affidabili - configurazione semplice, supporto 24/7 e prestazioni ottimizzate.",
+            "view_partners": "Visualizza partner di hosting"
+          },
+          "self_host": {
+            "title": "O ospitalo tu stesso"
+          }
         }
       },
       "faq": {
@@ -162,6 +170,13 @@
         "setup_guide": "Guida di configurazione server",
         "join_discord": "Unisciti a Discord"
       }
+    },
+    "partners": {
+      "title": "Partner di hosting",
+      "description": "Scegli tra i nostri partner di hosting di fiducia. Configurazione semplice, prestazioni ottimizzate e supporto per mantenere il tuo server BeamMP sempre operativo.",
+      "from_price": "Da {price}",
+      "visit_website": "Visita il sito",
+      "error_loading": "Impossibile caricare i partner"
     },
     "servers": {
       "title": "Server",

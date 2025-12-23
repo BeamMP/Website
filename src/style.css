@@ -5,6 +5,15 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --color-beammp-orange: #F36D24;
+  --color-beammp-white: #FFFFFF;
+  --color-beammp-black: #000000;
+  --color-beammp-gray: #333333;
+  --color-beammp-green: #1D9749;
+  --color-beammp-blue: #4470B6;
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);

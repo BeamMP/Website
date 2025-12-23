@@ -55,6 +55,16 @@ const baseRoutes = [
       requiresAuth: false,
     },
   },
+  {
+    path: 'partners',
+    name: 'Partners',
+    component: () => import('@/views/Partners.vue'),
+    meta: {
+      title: 'Partners - BeamMP',
+      description: 'Explore trusted hosting partners for BeamMP servers',
+      requiresAuth: false,
+    },
+  },
 ]
 
 const routes = [

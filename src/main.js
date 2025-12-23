@@ -22,7 +22,4 @@ window.locale = i18n.global.locale
 
 import router from './routes'
 
-createApp(App)
-  .use(i18n)
-  .use(router)
-  .mount('#app')
+createApp(App).use(i18n).use(router).mount('#app')

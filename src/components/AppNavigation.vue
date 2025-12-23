@@ -32,7 +32,9 @@ function localRoute(path) {
 </script>
 
 <template>
-  <header class="border-b border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-neutral-900/70 backdrop-blur sticky top-0 z-20">
+  <header
+    class="border-b border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-neutral-900/70 backdrop-blur sticky top-0 z-20"
+  >
     <nav class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
       <RouterLink
         :to="localRoute('')"
@@ -52,7 +54,7 @@ function localRoute(path) {
           class="h-16 w-auto shrink-0 hidden dark:block"
         />
       </RouterLink>
-      
+
       <!-- Desktop Navigation -->
       <!-- Switch to mobile earlier (avoid logo crowding) -->
       <div class="hidden lg:flex items-center gap-4">
@@ -60,11 +62,77 @@ function localRoute(path) {
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuLink as-child>
+                <RouterLink
+                  :to="localRoute('communities')"
+                  :class="
+                    cn(
+                      navigationMenuTriggerStyle(),
+                      'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white'
+                    )
+                  "
+                >
+                  {{ $t('message.nav.communities') }}
+                </RouterLink>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuLink as-child>
+                <RouterLink
+                  :to="localRoute('partners')"
+                  :class="
+                    cn(
+                      navigationMenuTriggerStyle(),
+                      'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white'
+                    )
+                  "
+                >
+                  {{ $t('message.nav.partners') }}
+                </RouterLink>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuLink as-child>
+                <RouterLink
+                  :to="localRoute('servers')"
+                  :class="
+                    cn(
+                      navigationMenuTriggerStyle(),
+                      'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white'
+                    )
+                  "
+                >
+                  {{ $t('message.nav.servers') }}
+                </RouterLink>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuLink as-child>
+                <RouterLink
+                  :to="localRoute('stats')"
+                  :class="
+                    cn(
+                      navigationMenuTriggerStyle(),
+                      'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white'
+                    )
+                  "
+                >
+                  {{ $t('message.nav.statistics') }}
+                </RouterLink>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuLink as-child>
                 <a
                   href="https://forum.beammp.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  :class="cn(navigationMenuTriggerStyle(), 'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white')"
+                  aria-label="External link"
+                  :class="
+                    cn(
+                      navigationMenuTriggerStyle(),
+                      'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white'
+                    )
+                  "
                 >
                   {{ $t('message.nav.forums') }}
                 </a>
@@ -76,40 +144,16 @@ function localRoute(path) {
                   href="https://docs.beammp.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  :class="cn(navigationMenuTriggerStyle(), 'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white')"
+                  aria-label="External link"
+                  :class="
+                    cn(
+                      navigationMenuTriggerStyle(),
+                      'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white'
+                    )
+                  "
                 >
                   {{ $t('message.nav.docs') }}
                 </a>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink as-child>
-                <RouterLink
-                  :to="localRoute('communities')"
-                  :class="cn(navigationMenuTriggerStyle(), 'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white')"
-                >
-                  {{ $t('message.nav.communities') }}
-                </RouterLink>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink as-child>
-                <RouterLink
-                  :to="localRoute('servers')"
-                  :class="cn(navigationMenuTriggerStyle(), 'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white')"
-                >
-                  {{ $t('message.nav.servers') }}
-                </RouterLink>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink as-child>
-                <RouterLink
-                  :to="localRoute('stats')"
-                  :class="cn(navigationMenuTriggerStyle(), 'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white')"
-                >
-                  {{ $t('message.nav.statistics') }}
-                </RouterLink>
               </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
@@ -118,7 +162,13 @@ function localRoute(path) {
                   href="https://github.com/BeamMP/BeamMP"
                   target="_blank"
                   rel="noopener noreferrer"
-                  :class="cn(navigationMenuTriggerStyle(), 'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white')"
+                  aria-label="External link"
+                  :class="
+                    cn(
+                      navigationMenuTriggerStyle(),
+                      'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white'
+                    )
+                  "
                 >
                   {{ $t('message.nav.github') }}
                 </a>
@@ -130,7 +180,13 @@ function localRoute(path) {
                   href="https://www.patreon.com/BeamMP"
                   target="_blank"
                   rel="noopener noreferrer"
-                  :class="cn(navigationMenuTriggerStyle(), 'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white')"
+                  aria-label="External link"
+                  :class="
+                    cn(
+                      navigationMenuTriggerStyle(),
+                      'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white'
+                    )
+                  "
                 >
                   {{ $t('message.nav.patreon') }}
                 </a>
@@ -173,6 +229,34 @@ function localRoute(path) {
         class="md:hidden border-t border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900"
       >
         <div class="px-4 py-3 space-y-1">
+          <RouterLink
+            :to="localRoute('communities')"
+            class="block px-4 py-3 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md transition-colors"
+            @click="closeMobileMenu"
+          >
+            {{ $t('message.nav.communities') }}
+          </RouterLink>
+          <RouterLink
+            :to="localRoute('partners')"
+            class="block px-4 py-3 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md transition-colors"
+            @click="closeMobileMenu"
+          >
+            {{ $t('message.nav.partners') }}
+          </RouterLink>
+          <RouterLink
+            :to="localRoute('servers')"
+            class="block px-4 py-3 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md transition-colors"
+            @click="closeMobileMenu"
+          >
+            {{ $t('message.nav.servers') }}
+          </RouterLink>
+          <RouterLink
+            :to="localRoute('stats')"
+            class="block px-4 py-3 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md transition-colors"
+            @click="closeMobileMenu"
+          >
+            {{ $t('message.nav.statistics') }}
+          </RouterLink>
           <a
             href="https://forum.beammp.com"
             target="_blank"
@@ -191,27 +275,6 @@ function localRoute(path) {
           >
             {{ $t('message.nav.docs') }}
           </a>
-          <RouterLink
-            :to="localRoute('communities')"
-            class="block px-4 py-3 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md transition-colors"
-            @click="closeMobileMenu"
-          >
-            {{ $t('message.nav.communities') }}
-          </RouterLink>
-          <RouterLink
-            :to="localRoute('servers')"
-            class="block px-4 py-3 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md transition-colors"
-            @click="closeMobileMenu"
-          >
-            {{ $t('message.nav.servers') }}
-          </RouterLink>
-          <RouterLink
-            :to="localRoute('stats')"
-            class="block px-4 py-3 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md transition-colors"
-            @click="closeMobileMenu"
-          >
-            {{ $t('message.nav.statistics') }}
-          </RouterLink>
           <a
             href="https://github.com/BeamMP/BeamMP"
             target="_blank"
