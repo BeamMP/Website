@@ -185,13 +185,13 @@ const faqs = [
               <Download class="w-6 h-6" />
               {{ $t('message.home.hero.download_now') }}
             </a>
-            <a
-              href="/servers"
+            <RouterLink
+              :to="`/${$i18n.locale}/servers`"
               class="group flex items-center gap-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 px-8 py-4 rounded-lg font-semibold text-lg transition-all text-white"
             >
               <Server class="w-6 h-6" />
               {{ $t('message.home.hero.browse_servers') }}
-            </a>
+            </RouterLink>
           </div>
 
           <!-- Stats -->
