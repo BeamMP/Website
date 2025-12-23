@@ -70,5 +70,11 @@
     "website": "https://winheberg.fr/offres/gaming/beammp",
     "from": "$2.99/mo",
     "logo": "https://winheberg.fr/img/logo-white.png"
+  },
+  {
+    "name": "Wabbanode",
+    "website": "https://wabbanode.com/games/beammp-server-hosting",
+    "from": "$5.96/mo",
+    "logo": "https://wabbanode.com/_nuxt/wabba_logo.UPNIVeXa.webp"
   }
 ]
