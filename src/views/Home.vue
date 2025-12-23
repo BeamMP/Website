@@ -319,13 +319,13 @@ const faqs = [
               </div>
             </li>
           </ul>
-          <a
-            href="/servers"
+          <RouterLink
+            :to="`/${$i18n.locale}/servers`"
             class="inline-flex items-center gap-2 bg-beammp-blue hover:bg-beammp-blue/90 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
           >
             {{ $t('message.home.find.browse_all_servers') }}
             <Server class="w-5 h-5" />
-          </a>
+          </RouterLink>
         </div>
         <div
           class="rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 shadow-2xl animate-slide-in order-1 md:order-2"
