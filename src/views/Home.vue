@@ -259,7 +259,7 @@ const faqs = [
             />
             <component
               :is="community.icon"
-              class="w-12 h-12 mb-4 text-neutral-700 dark:text-neutral-300 group-hover:scale-110 transition-transform"
+              class="w-12 h-12 mb-4 text-neutral-700 group-hover:scale-110 transition-transform text-beammp-orange dark:text-beammp-orange"
             />
             <h3 class="text-xl font-bold mb-2">{{ community.name }}</h3>
             <p class="text-sm text-neutral-600 dark:text-neutral-400">

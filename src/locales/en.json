@@ -153,12 +153,12 @@
         "4": {
           "question": "How do I host a server?",
           "answer":
-            "The server files required for hosting your own server can be found at the top of this page below the client download. You will also require an authentication key which can be found from keymaster. Further information around the setup can be found on our wiki."
+            "The server files required for hosting your own server can be found at the top of this page below the client download. You will also require an authentication key which can be found from keymaster. Further information around the setup can be found on our docs."
         },
         "5": {
           "question": "Can I use mods?",
           "answer":
-            "Mods are supported. These are installed on the server. See our wiki for more information."
+            "Mods are supported. These are installed on the server. See our docs for more information."
         }
       },
       "stats": {
