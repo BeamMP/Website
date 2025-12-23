@@ -10,7 +10,20 @@ async function loadPartners() {
     const res = await fetch('/partners.json', { cache: 'no-store' })
     if (!res.ok) throw new Error(`Failed to load partners (${res.status})`)
     const data = await res.json()
-    partners.value = Array.isArray(data) ? data : []
+    const partnersArray = Array.isArray(data) ? data : []
+    
+    // Create a seed based on the current date (YYYY-MM-DD)
+    const today = new Date().toISOString().split('T')[0]
+    const seed = today.split('-').reduce((acc, val) => acc + parseInt(val), 0)
+    
+    // Simple seeded shuffle using the date as seed
+    const shuffled = [...partnersArray]
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(((seed * (i + 1) * 9301 + 49297) % 233280) / 233280 * (i + 1))
+      ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+    }
+    
+    partners.value = shuffled
   } catch (e) {
     error.value = e.message || 'Unable to fetch partners'
   } finally {
