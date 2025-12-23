@@ -408,6 +408,30 @@
           justify-content: center;
         }
       }
+
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 155px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        text-align: left;
+        color: black;
+        border-radius: 6px;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown-content > div {
+        color: black;
+        border-bottom: solid 1px #e5e5e5;
+      }
     </style>
       <!-- Warning Banner -->
       <div class="warning-banner">
@@ -598,21 +622,75 @@
             <h3>Ready to Host Your Own Server?</h3>
             <p>Check out our trusted hosting partners or download the server software to host it yourself.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                <a
-                  href="https://github.com/BeamMP/BeamMP-Server/releases/latest/download/BeamMP-Server.exe"
-                  class="btn-white flex items-center justify-center gap-3 bg-neutral-800 hover:bg-neutral-700 dark:bg-neutral-700 dark:hover:bg-neutral-600 text-white border border-neutral-600 dark:border-neutral-600 px-6 py-3 rounded-lg font-semibold transition-all"
-                >
-                  Windows
-                  <svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download-icon lucide-download"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
-                </a>
-                <a
-                  href="https://github.com/BeamMP/BeamMP-Server/releases/latest"
-                  class="btn-white flex items-center justify-center gap-3 bg-neutral-800 hover:bg-neutral-700 dark:bg-neutral-700 dark:hover:bg-neutral-600 text-white border border-neutral-600 dark:border-neutral-600 px-6 py-3 rounded-lg font-semibold transition-all"
-                >
-                  Linux Builds
-                  <svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download-icon lucide-download"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
-                </a>
-              </div>
+              <a
+                href="https://github.com/BeamMP/BeamMP-Server/releases/latest/download/BeamMP-Server.exe"
+                class="btn-white flex items-center justify-center gap-3 bg-neutral-800 hover:bg-neutral-700 dark:bg-neutral-700 dark:hover:bg-neutral-600 text-white border border-neutral-600 dark:border-neutral-600 px-6 py-3 rounded-lg font-semibold transition-all"
+              >
+                Windows
+                <svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download-icon lucide-download"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
+              </a>
+              <span
+                class="dropdown btn-white flex items-center justify-center gap-3 bg-neutral-800 hover:bg-neutral-700 dark:bg-neutral-700 dark:hover:bg-neutral-600 text-white border border-neutral-600 dark:border-neutral-600 px-6 py-3 rounded-lg font-semibold transition-all"
+              >
+                Linux Builds
+                <div class="dropdown-content">
+                  <div>
+                    <span style="color: #666; font-size: 0.85rem; padding: 0.5rem 1rem; display: block; font-weight: 600;">x86_64</span>
+                  </div>
+                  <div style="padding: 0.5rem 1rem;">
+                    <a href="https://github.com/BeamMP/BeamMP-Server/releases/latest/download/BeamMP-Server.debian.11.x86_64" style="color: #333; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0;">
+                      Debian 11
+                      <svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download-icon lucide-download"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
+                    </a>
+                  </div>
+                  <div style="padding: 0.5rem 1rem;">
+                    <a href="https://github.com/BeamMP/BeamMP-Server/releases/latest/download/BeamMP-Server.debian.12.x86_64" style="color: #333; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0;">
+                      Debian 12
+                      <svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download-icon lucide-download"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
+                    </a>
+                  </div>
+                  <div style="padding: 0.5rem 1rem;">
+                    <a href="https://github.com/BeamMP/BeamMP-Server/releases/latest/download/BeamMP-Server.ubuntu.22.04.x86_64" style="color: #333; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0;">
+                      Ubuntu 22.04
+                      <svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download-icon lucide-download"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
+                    </a>
+                  </div>
+                  <div style="padding: 0.5rem 1rem;">
+                    <a href="https://github.com/BeamMP/BeamMP-Server/releases/latest/download/BeamMP-Server.ubuntu.24.04.x86_64" style="color: #333; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0;">
+                      Ubuntu 24.04
+                      <svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download-icon lucide-download"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
+                    </a>
+                  </div>
+                  <div>
+                    <span style="color: #666; font-size: 0.85rem; padding: 0.5rem 1rem; display: block; font-weight: 600;">arm64</span>
+                  </div>
+                  <div style="padding: 0.5rem 1rem;">
+                    <a href="https://github.com/BeamMP/BeamMP-Server/releases/latest/download/BeamMP-Server.debian.11.arm64" style="color: #333; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0;">
+                      Debian 11
+                      <svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download-icon lucide-download"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
+                    </a>
+                  </div>
+                  <div style="padding: 0.5rem 1rem;">
+                    <a href="https://github.com/BeamMP/BeamMP-Server/releases/latest/download/BeamMP-Server.debian.12.arm64" style="color: #333; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0;">
+                      Debian 12
+                      <svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download-icon lucide-download"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
+                    </a>
+                  </div>
+                  <div style="padding: 0.5rem 1rem;">
+                    <a href="https://github.com/BeamMP/BeamMP-Server/releases/latest/download/BeamMP-Server.ubuntu.22.04.arm64" style="color: #333; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0;">
+                      Ubuntu 22.04
+                      <svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download-icon lucide-download"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
+                    </a>
+                  </div>
+                  <div style="padding: 0.5rem 1rem;">
+                    <a href="https://github.com/BeamMP/BeamMP-Server/releases/latest/download/BeamMP-Server.ubuntu.24.04.arm64" style="color: #333; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0;">
+                      Ubuntu 24.04
+                      <svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download-icon lucide-download"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>
+                    </a>
+                  </div>
+                </div>
+              <span/>
+            </div>
           </div>
         </div>
       </section>
