@@ -105,8 +105,8 @@ The individual language progress is as follows:
 
 | Language              | Badge                                                                                                                           |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| French                | [![gitlocalized ](https://gitlocalize.com/repo/10617/fr-FR/badge.svg)](https://gitlocalize.com/repo/10617/fr-FR?utm_source=badge) |
-| German                | [![gitlocalized ](https://gitlocalize.com/repo/10617/de-DE/badge.svg)](https://gitlocalize.com/repo/10617/de-DE?utm_source=badge) |
-| Italian               | [![gitlocalized ](https://gitlocalize.com/repo/10617/it/badge.svg)](https://gitlocalize.com/repo/10617/it?utm_source=badge)       |
-| Russian               | [![gitlocalized ](https://gitlocalize.com/repo/10617/ru/badge.svg)](https://gitlocalize.com/repo/10617/ru?utm_source=badge)       |
-| Spanish               | [![gitlocalized ](https://gitlocalize.com/repo/10617/es-ES/badge.svg)](https://gitlocalize.com/repo/10617/es-ES?utm_source=badge) |
+| French                | [![gitlocalized ](https://gitlocalize.com/repo/10617/fr/badge.svg)](https://gitlocalize.com/repo/10617/fr?utm_source=badge) |
+| German                | [![gitlocalized ](https://gitlocalize.com/repo/10617/de/badge.svg)](https://gitlocalize.com/repo/10617/de?utm_source=badge) |
+| Italian               | [![gitlocalized ](https://gitlocalize.com/repo/10617/it/badge.svg)](https://gitlocalize.com/repo/10617/it?utm_source=badge) |
+| Russian               | [![gitlocalized ](https://gitlocalize.com/repo/10617/ru/badge.svg)](https://gitlocalize.com/repo/10617/ru?utm_source=badge) |
+| Spanish               | [![gitlocalized ](https://gitlocalize.com/repo/10617/es/badge.svg)](https://gitlocalize.com/repo/10617/es?utm_source=badge) |
