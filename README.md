@@ -1,6 +1,6 @@
-# BeamMP Website (Frontend)
+# BeamMP Website
 
-This repository is home for the BeamMP website, this is a rebuild of the website from the ground up using Vue+Vite. We are also making use of Tailwindcss v4.
+This repository is home for the BeamMP website. The website features support for translations too now!
 
 **Tech Stack**
 - **Framework:** Vue 3 (`vue`, `vue-router`)
@@ -59,27 +59,6 @@ Vite will print the local dev URL (usually `http://localhost:5173`).
 - `vite.config.js` – Vite configuration
 - `components.json` – Shadcn-Vue component registry
 
-## Styling and UI
-- **Tailwind CSS 4** is set up via `tailwind.config.js` and imported in `src/style.css`.
-- **reka-ui** and shadcn-vue-style patterns are used for accessible, composable UI.
-- **lucide-vue-next** provides icons.
-
-## Adding New UI Components (shadcn-vue)
-We’re standardizing on shadcn-vue-compatible components for consistency. Use the CLI to add new components:
-
-```powershell
-npx shadcn-vue@latest add <component>
-
-# examples
-npx shadcn-vue@latest add button
-npx shadcn-vue@latest add navigation-menu
-```
-
-The CLI reads `components.json` and will scaffold files under `src/components/ui/`.
-
-## Routing
-Use `vue-router` for navigation. Keep routes co-located with views and prefer lazy-loaded routes for large pages.
-
 ## Contributing
 We welcome contributions! Here’s how to get started.
 
@@ -115,15 +94,19 @@ We welcome contributions! Here’s how to get started.
 - Open a PR describing the problem, solution, screenshots if UI changes, and any follow-ups.
 - Link related issues. Keep PRs small; big changes should be split.
 
-## Environment & Configuration
-- Tailwind and Vite are preconfigured. If you need globals, add them in `vite.config.js`.
-- For icons, use `lucide-vue-next` and keep icon size consistent via props/classes.
-- If adding new pages, prefer code-splitting with dynamic imports.
 
-## FAQ
-- “Why Vite?” Fast dev server, optimized builds, and great Vue tooling.
-- “Can I use Yarn or pnpm?” Yes—adjust commands accordingly.
-- “Design system?” We favor shadcn-vue patterns + Tailwind + reka-ui primitives for consistent UI.
+# Translations
+BeamMP makes an effort to be maintained for multiple languages. 
+The current progress of this sits at: 
+[![gitlocalized ](https://gitlocalize.com/repo/10617/whole_project/badge.svg)](https://gitlocalize.com/repo/10617?utm_source=badge) 
+We use [GitLocalize](https://gitlocalize.com/) for managing this. You can contribute if you wish here: https://gitlocalize.com/repo/10617.
 
-## License
-Unless otherwise noted in the root repository, this project follows the BeamMP website’s standard license. If clarifications are needed, open an issue and we will update this section.
+The individual language progress is as follows:
+
+| Language              | Badge                                                                                                                           |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| French                | [![gitlocalized ](https://gitlocalize.com/repo/10617/fr-FR/badge.svg)](https://gitlocalize.com/repo/10617/fr-FR?utm_source=badge) |
+| German                | [![gitlocalized ](https://gitlocalize.com/repo/10617/de-DE/badge.svg)](https://gitlocalize.com/repo/10617/de-DE?utm_source=badge) |
+| Italian               | [![gitlocalized ](https://gitlocalize.com/repo/10617/it/badge.svg)](https://gitlocalize.com/repo/10617/it?utm_source=badge)       |
+| Russian               | [![gitlocalized ](https://gitlocalize.com/repo/10617/ru/badge.svg)](https://gitlocalize.com/repo/10617/ru?utm_source=badge)       |
+| Spanish               | [![gitlocalized ](https://gitlocalize.com/repo/10617/es-ES/badge.svg)](https://gitlocalize.com/repo/10617/es-ES?utm_source=badge) |
