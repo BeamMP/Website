@@ -7,6 +7,8 @@ const servers = ref([])
 
 // Backend endpoints (use null to fall back to synthetic data)
 const STATS_ENDPOINT = null // e.g., 'https://backend.beammp.com/stats-timeseries'
+const MOD_RELEASES_ENDPOINT = 'https://api.github.com/repos/BeamMP/BeamMP/releases' // e.g., 'https://backend.beammp.com/releases'
+const SERVER_RELEASES_ENDPOINT = 'https://api.github.com/repos/BeamMP/BeamMP-Server/releases' // e.g., 'https://backend.beammp.com/server-releases'
 
 // All-time high tracking
 const peakPlayers = ref(0)
@@ -33,14 +35,52 @@ const selectedRangeKey = ref('7d')
 const selectedRange = computed(() => ranges.find((r) => r.key === selectedRangeKey.value))
 
 // Release markers (fill with real dates/labels as desired)
-const releases = ref([
-  { date: '2025-11-24', label: 'v4.0.0' },
-  { date: '2025-11-27', label: 'v4.1.0' },
-  { date: '2025-11-29', label: 'v4.2.0' },
+const mod_releases = ref([
+  //{ date: '2025-11-24', label: 'v4.0.0' },
+  //{ date: '2025-11-27', label: 'v4.1.0' },
+  //{ date: '2025-11-29', label: 'v4.2.0' },
+])
+
+const server_releases = ref([
+  //{ date: '2025-11-25', label: 'v4.0.0' },
+  //{ date: '2025-11-28', label: 'v4.1.0' },
+  //{ date: '2025-11-30', label: 'v4.2.0' },
 ])
 
 // Load time-series from backend or generate synthetic
 async function loadTimeSeries(points, stepHours) {
+  if (MOD_RELEASES_ENDPOINT) {
+    try {
+      const res = await fetch(MOD_RELEASES_ENDPOINT)
+      if (res.ok) {
+        const r = await res.json()
+        r.forEach((rel) => {
+          const existing = mod_releases.value.find((e) => e.label === rel.tag_name)
+          if (!existing) {
+            mod_releases.value.push({ date: rel.published_at, label: rel.tag_name })
+          }
+        })
+      }
+    } catch (e) {
+      console.error('Failed to load releases:', e)
+    }
+  }
+  if (SERVER_RELEASES_ENDPOINT) {
+    try {
+      const res = await fetch(SERVER_RELEASES_ENDPOINT)
+      if (res.ok) {
+        const r = await res.json()
+        r.forEach((rel) => {
+          const existing = server_releases.value.find((e) => e.label === rel.tag_name)
+          if (!existing) {
+            server_releases.value.push({ date: rel.published_at, label: rel.tag_name })
+          }
+        })
+      }
+    } catch (e) {
+      console.error('Failed to load releases:', e)
+    }
+  }
   if (STATS_ENDPOINT) {
     try {
       const res = await fetch(STATS_ENDPOINT)
@@ -256,7 +296,7 @@ function drawPlayers() {
   ctx.strokeStyle = 'rgba(255,106,0,0.8)'
   ctx.fillStyle = 'rgba(255,106,0,0.9)'
   ctx.lineWidth = 1
-  const rels = (releases.value || [])
+  const rels = (mod_releases.value || [])
     .map((r) => ({ ...r, time: new Date(r.date).getTime() }))
     .filter((r) => !isNaN(r.time) && r.time >= minT && r.time <= maxT)
   releaseMarkersPlayers = []
@@ -380,7 +420,7 @@ function drawServers() {
   ctx.strokeStyle = 'rgba(255,106,0,0.8)'
   ctx.fillStyle = 'rgba(255,106,0,0.9)'
   ctx.lineWidth = 1
-  const rels = (releases.value || [])
+  const rels = (server_releases.value || [])
     .map((r) => ({ ...r, time: new Date(r.date).getTime() }))
     .filter((r) => !isNaN(r.time) && r.time >= minT && r.time <= maxT)
   releaseMarkersServers = []
