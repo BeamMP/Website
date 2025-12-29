@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import {
   Download,
   Zap,
@@ -38,7 +38,7 @@ onMounted(async () => {
   }
 })
 
-const features = [
+const features = computed(() => [
   {
     icon: Server,
     title: t('message.home.features.stable_servers.title'),
@@ -59,9 +59,9 @@ const features = [
     title: t('message.home.features.sync.title'),
     description: t('message.home.features.sync.description'),
   },
-]
+])
 
-const communities = [
+const communities = computed(() => [
   {
     name: t('message.home.communities.racing.name'),
     icon: Rocket,
@@ -86,9 +86,9 @@ const communities = [
     description: t('message.home.communities.freeroam.description'),
     color: 'from-green-500 to-emerald-500',
   },
-]
+])
 
-const devFeatures = [
+const devFeatures = computed(() => [
   {
     icon: Code,
     title: t('message.home.devFeatures.lua.title'),
@@ -96,7 +96,7 @@ const devFeatures = [
     link:
       'https://docs.beammp.com/' +
       // eslint-disable-next-line no-undef
-      (locale == 'en' ? '' : locale + '/') +
+      (locale.value == 'en' ? '' : locale.value + '/') +
       'scripting/mod-reference/',
   },
   {
@@ -104,7 +104,7 @@ const devFeatures = [
     title: t('message.home.devFeatures.docs.title'),
     description: t('message.home.devFeatures.docs.description'),
     // eslint-disable-next-line no-undef
-    link: 'https://docs.beammp.com' + (locale == 'en' ? '' : locale + '/'),
+    link: 'https://docs.beammp.com/' + (locale.value == 'en' ? '' : locale.value + '/'),
   },
   {
     icon: Wrench,
@@ -112,14 +112,14 @@ const devFeatures = [
     description: t('message.home.devFeatures.openSource.description'),
     link: 'https://github.com/BeamMP',
   },
-]
+])
 
-const stats = [
+const stats = computed(() => [
   { label: t('message.home.metrics.active_players'), value: onlinePlayers, suffix: '+' },
   { label: t('message.home.metrics.public_servers'), value: '500', suffix: '+' },
   { label: t('message.home.metrics.all_servers'), value: '2M', suffix: '+' },
-]
-const faqs = [
+])
+const faqs = computed(() => [
   {
     question: t('message.home.faq["0"].question'),
     answer: t('message.home.faq["0"].answer'),
@@ -144,7 +144,7 @@ const faqs = [
     question: t('message.home.faq["5"].question'),
     answer: t('message.home.faq["5"].answer'),
   },
-]
+])
 </script>
 
 <template>

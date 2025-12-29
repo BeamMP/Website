@@ -1,6 +1,14 @@
 <script setup>
 import { Github, Facebook, Instagram, createLucideIcon } from 'lucide-vue-next'
-import { RouterLink } from 'vue-router'
+import { getLocalizedPath } from '@/utils/locale'
+import { RouterLink, useRoute } from 'vue-router'
+
+const route = useRoute()
+
+// Generate localized route
+function localRoute(path) {
+  return getLocalizedPath(path, route.params.locale)
+}
 
 const XIcon = createLucideIcon('X', [
   [
@@ -183,7 +191,7 @@ const TikTokIcon = createLucideIcon('TikTok', [
           <p>&copy; 2019 - {{ new Date().getFullYear() }} | BeamMP Mod Team All Rights Reserved</p>
           <div class="flex gap-3">
             <RouterLink
-              to="/about"
+              :to="localRoute('about')"
               class="text-neutral-700 hover:text-beammp-blue transition-colors dark:text-neutral-500 dark:hover:text-blue-400"
             >
               {{ $t('message.footer.about') }}

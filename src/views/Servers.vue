@@ -463,15 +463,17 @@ function joinServer(server) {
 }
 
 .servers-filters {
-  background: var(--card-bg, #f9f9f9);
-  border: 1px solid var(--border-color, #e0e0e0);
-  border-radius: 8px;
-  padding: 20px;
+  background: var(--filters-bg);
+  border: 1px solid var(--filters-border);
+  border-radius: 12px;
+  padding: 24px;
   margin-bottom: 30px;
+  box-shadow: var(--filters-shadow);
+  backdrop-filter: blur(10px);
 }
 
 .filter-group {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .filter-group:last-child {
@@ -482,30 +484,87 @@ function joinServer(server) {
   width: 100%;
   padding: 12px 16px;
   font-size: 1rem;
-  border: 1px solid var(--border-color, #d0d0d0);
-  border-radius: 6px;
+  border: 2px solid var(--border-color, #e0e0e0);
+  border-radius: 8px;
   background: var(--input-bg, #fff);
   color: var(--text-color, #1a1a1a);
-  transition: border-color 0.2s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
 }
 
 .search-input:focus {
   outline: none;
-  border-color: var(--primary-color, #5d9cec);
+  border-color: #ff6a00;
+  box-shadow: 0 0 0 3px rgba(255, 106, 0, 0.1);
+}
+
+.search-input::placeholder {
+  color: var(--placeholder-color, var(--text-muted, #999));
+}
+
+.filter-heading {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-color, #1a1a1a);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.7;
 }
 
 .filter-label {
   display: inline-flex;
   align-items: center;
-  margin-right: 20px;
+  margin-right: 24px;
+  margin-bottom: 12px;
   font-size: 0.95rem;
   cursor: pointer;
   color: var(--text-color, #1a1a1a);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.filter-label:hover {
+  color: #ff6a00;
 }
 
 .filter-label input[type='checkbox'] {
-  margin-right: 6px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
   cursor: pointer;
+  border: 2px solid var(--checkbox-border, #d0d0d0);
+  border-radius: 6px;
+  background: var(--checkbox-bg, #fff);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
+  position: relative;
+}
+
+.filter-label input[type='checkbox']:hover {
+  border-color: #ff6a00;
+  box-shadow: 0 0 0 3px var(--checkbox-hover-shadow, rgba(255, 106, 0, 0.1));
+}
+
+.filter-label input[type='checkbox']:checked {
+  background: linear-gradient(135deg, #ff6a00 0%, #ff8c26 100%);
+  border-color: #ff6a00;
+  box-shadow: 0 2px 8px rgba(255, 106, 0, 0.3);
+}
+
+.filter-label input[type='checkbox']:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
 }
 
 .server-count {
@@ -894,20 +953,27 @@ function joinServer(server) {
   color: var(--text-muted, #666);
 }
 
-/* Dark mode support */
+:global(.dark) .servers-container,
 @media (prefers-color-scheme: dark) {
   .servers-container {
     --text-color: #e0e0e0;
-    --text-muted: #999;
+    --text-muted: #999999;
     --card-bg: #2a2a2a;
     --border-color: #404040;
     --input-bg: #1a1a1a;
     --tag-bg: #404040;
     --primary-color: #5d9cec;
     --header-bg: #1f1f1f;
-    --hover-bg: #333;
+    --hover-bg: #333333;
     --active-bg: #2a3f5f;
     --details-bg: #252525;
+    --filters-bg: linear-gradient(135deg, rgba(30, 30, 30, 0.95) 0%, rgba(20, 20, 20, 0.98) 100%);
+    --filters-border: rgba(255, 106, 0, 0.2);
+    --filters-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --checkbox-bg: rgba(255, 255, 255, 0.05);
+    --checkbox-border: rgba(255, 255, 255, 0.15);
+    --checkbox-hover-shadow: rgba(255, 106, 0, 0.15);
+    --placeholder-color: #666666;
   }
 }
 
@@ -963,3 +1029,23 @@ function joinServer(server) {
   }
 }
 </style>
+  
+    /* Light theme defaults */
+    --text-color: #1a1a1a;
+    --text-muted: #666666;
+    --card-bg: #ffffff;
+    --border-color: #e0e0e0;
+    --input-bg: #ffffff;
+    --tag-bg: #e8e8e8;
+    --primary-color: #5d9cec;
+    --header-bg: #f5f5f5;
+    --hover-bg: #f9f9f9;
+    --active-bg: #f0f7ff;
+    --details-bg: #fafafa;
+    --filters-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(249, 249, 249, 0.95) 100%);
+    --filters-border: var(--border-color, #e0e0e0);
+    --filters-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --checkbox-bg: #ffffff;
+    --checkbox-border: #d0d0d0;
+    --checkbox-hover-shadow: rgba(255, 106, 0, 0.1);
+    --placeholder-color: var(--text-muted, #999999);

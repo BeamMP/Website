@@ -33,31 +33,30 @@ function localRoute(path) {
 
 <template>
   <header
-    class="border-b border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-neutral-900/70 backdrop-blur sticky top-0 z-20"
+    class="border-b border-neutral-200 dark:border-neutral-800 bg-white/80 dark:bg-neutral-900/70 backdrop-blur sticky top-0 z-20 overflow-hidden"
   >
-    <nav class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+    <nav class="max-w-7xl mx-auto px-3 sm:px-4 h-16 flex items-center justify-between gap-2 sm:gap-4">
       <RouterLink
         :to="localRoute('')"
-        class="flex items-center gap-2 shrink-0"
+        class="flex items-center gap-2 flex-shrink-0"
         @click="closeMobileMenu"
       >
         <!-- Light mode logo (black) -->
         <img
           src="/src/assets/BeamMP_blk.png"
           alt="BeamMP Logo"
-          class="h-16 w-auto shrink-0 dark:hidden"
+          class="h-12 sm:h-14 w-auto flex-shrink-0 dark:hidden"
         />
         <!-- Dark mode logo (white) -->
         <img
           src="/src/assets/BeamMP_wht.png"
           alt="BeamMP Logo"
-          class="h-16 w-auto shrink-0 hidden dark:block"
+          class="h-12 sm:h-14 w-auto flex-shrink-0 hidden dark:block"
         />
       </RouterLink>
 
       <!-- Desktop Navigation -->
-      <!-- Switch to mobile earlier (avoid logo crowding) -->
-      <div class="hidden lg:flex items-center gap-4">
+      <div class="hidden xl:flex items-center gap-1 flex-1 justify-end overflow-x-auto">
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
@@ -194,14 +193,14 @@ function localRoute(path) {
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-1 sm:gap-2 flex-shrink-0">
           <LanguageSelector />
           <ThemeToggle />
         </div>
       </div>
 
       <!-- Mobile Menu Button and Theme Toggle -->
-      <div class="flex lg:hidden items-center gap-2">
+      <div class="flex xl:hidden items-center gap-1 sm:gap-2 flex-shrink-0">
         <LanguageSelector />
         <ThemeToggle />
         <button
@@ -226,7 +225,7 @@ function localRoute(path) {
     >
       <div
         v-if="mobileMenuOpen"
-        class="md:hidden border-t border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900"
+        class="xl:hidden border-t border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900"
       >
         <div class="px-4 py-3 space-y-1">
           <RouterLink
@@ -274,6 +273,15 @@ function localRoute(path) {
             @click="closeMobileMenu"
           >
             {{ $t('message.nav.docs') }}
+          </a>
+          <a
+            href="https://store.beammp.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block px-4 py-3 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md transition-colors"
+            @click="closeMobileMenu"
+          >
+            {{ $t('message.nav.store') }}
           </a>
           <a
             href="https://github.com/BeamMP/BeamMP"
