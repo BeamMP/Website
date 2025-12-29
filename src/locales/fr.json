@@ -23,7 +23,7 @@
       }
     },
     "footer": {
-      "support_on_patreon": "Soutenez-nous sur Patreon",
+      "support_on_patreon": "Soutenez-nous sur notre Patreon",
       "about": "À propos",
       "privacy_policy": "Politique de confidentialité",
       "terms_conditions": "Conditions générales"
@@ -36,7 +36,7 @@
     "home": {
       "hero": {
         "title": "Multijoueur pour BeamNG.drive",
-        "subtitle": "Profitez de la physique soft-body avec vos amis. Faites la course, du roleplay ou une balade ensemble.",
+        "subtitle": "Amusez-vous avec vos amis comme jamais. Courses, roleplay ou simples balades : tout est possible avec BeamMP !",
         "download_now": "Télécharger",
         "browse_servers": "Parcourir les serveurs"
       },
@@ -50,19 +50,19 @@
       "features": {
         "stable_servers": {
           "title": "Serveurs stables",
-          "description": "BeamMP permet des serveurs stables, avec une grande variété de serveurs à travers le monde."
+          "description": "BeamMP offre des serveurs stables et une grande variété de mondes à explorer partout dans le monde."
         },
         "beamng": {
           "title": "BeamNG.drive",
-          "description": "BeamMP utilise les mêmes cartes, véhicules et mods — pas besoin d'apprendre quoi que ce soit de nouveau !"
+          "description": "Les mêmes cartes, véhicules et mods que vous connaissez — BeamMP rend la transition simple et rapide !"
         },
         "standalone": {
           "title": "Indépendant",
-          "description": "BeamMP ne modifie pas votre installation originale, vous pouvez jouer en solo ou en multijoueur."
+          "description": "BeamMP préserve votre jeu original et vous permet de jouer en solo ou avec des amis."
         },
         "sync": {
           "title": "Qualité de synchronisation",
-          "description": "BeamMP met à jour la position de votre véhicule ~100 fois par seconde pour une expérience fluide."
+          "description": "Votre véhicule est synchronisé environ 100 fois par seconde sur BeamMP, pour une expérience de jeu fluide."
         }
       },
       "communities": {
@@ -74,7 +74,7 @@
         },
         "roleplay": {
           "name": "Serveurs roleplay",
-          "description": "Expériences immersives, des poursuites policières aux services de livraison"
+          "description": "Des expériences immersives variées, des interventions de police aux services de livraison."
         },
         "crash": {
           "name": "Crash & derby",
@@ -94,7 +94,7 @@
           "moderation": "Modération active",
           "moderation_desc": "Un environnement de jeu sûr et convivial",
           "global": "Réseau mondial",
-          "global_desc": "Serveurs dans le monde entier pour une faible latence"
+          "global_desc": "Serveurs mondiaux, latence minimale"
         },
         "browse_all_servers": "Parcourir tous les serveurs"
       },
@@ -103,7 +103,7 @@
         "description": "Créez des modes de jeu, hébergez votre serveur et contribuez au projet",
         "lua": {
           "title": "API Lua",
-          "description": "Puissant scripting côté serveur en Lua pour des fonctionnalités personnalisées"
+          "description": "Puissant scrip côté serveur en Lua pour des fonctionnalités personnalisées"
         },
         "docs": {
           "title": "Documentation",
@@ -111,7 +111,7 @@
         },
         "openSource": {
           "title": "Open source",
-          "description": "Développement communautaire avec code disponible sur GitHub"
+          "description": "Développement communautaire avec le code open source sur GitHub"
         },
         "learn_more": "En savoir plus",
         "host": {
@@ -132,11 +132,11 @@
         "title": "Foire aux questions",
         "0": {
           "question": "La liste des serveurs n'apparaît pas !",
-          "answer": "Essayez de redémarrer BeamMP. Si cela ne fonctionne pas, créez un sujet sur le forum ou rendez-vous sur le canal support de Discord."
+          "answer": "Essayez de redémarrer BeamMP. Si le problème persiste, créez un post sur notre forum ou ouvrez un ticket d’assistance sur notre serveur Discord."
         },
         "1": {
           "question": "Comment ouvrir un ticket si quelque chose ne fonctionne pas ?",
-          "answer": "Consultez le canal #how-to-use sur Discord et le forum. Décrivez précisément ce que vous avez fait pour que l'équipe support puisse vous aider rapidement et efficacement."
+          "answer": "Consultez le canal #how-to-use sur Discord ainsi que le forum. Décrivez précisément les actions effectuées afin que l’équipe support puisse vous aider rapidement et efficacement."
         },
         "2": {
           "question": "À l'aide ! Je reçois des codes d'erreur",
@@ -144,7 +144,7 @@
         },
         "3": {
           "question": "Est-ce compatible avec des versions piratées de BeamNG.drive ?",
-          "answer": "Nous ne savons pas si BeamNG.drive piraté fonctionne, et nous n'offrirons aucun support pour des copies non légitimes."
+          "answer": "Les versions piratées de BeamNG.drive ne sont pas prises en charge et ne bénéficieront d’aucun support."
         },
         "4": {
           "question": "Comment héberger un serveur ?",
@@ -168,7 +168,7 @@
         "title": "Envie de créer votre communauté ?",
         "description": "Hébergez votre serveur BeamMP et bâtissez une communauté autour de vos modes favoris",
         "setup_guide": "Guide de configuration du serveur",
-        "join_discord": "Rejoindre Discord"
+        "join_discord": "Rejoindre notre Discord"
       }
     },
     "partners": {
@@ -245,7 +245,7 @@
       },
       "get_involved": {
         "title": "Participer",
-        "description": "Participez de multiples façons — discussions, signalement, code, ou soutien financier via",
+        "description": "Participez de multiples façons — discussions, signalement, code, ou soutien financier via notre",
         "patreon": "Patreon",
         "forum": "Forums",
         "docs": "Docs",
@@ -254,7 +254,7 @@
       },
       "funding": {
         "title": "Financement et durabilité",
-        "description": "BeamMP repose sur le soutien de la communauté. Les dons couvrent l'infrastructure, la bande passante, les outils et le temps de développement. Si vous appréciez le projet, pensez à nous soutenir.",
+        "description": "BeamMP repose sur le soutien de la communauté. Les dons couvrent l'infrastructure, la bande passante, les outils et le temps de développement. Si vous appréciez le projet, pensez à nous soutenir via notre Patreon ou en visitant notre Merch !",
         "patreon": "Soutenez-nous sur Patreon",
         "learn": "En savoir plus sur GitHub"
       },
