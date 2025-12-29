@@ -68,14 +68,14 @@ onMounted(loadPartners)
         <div
           v-for="(p, idx) in partners"
           :key="idx"
-          class="group rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white/70 dark:bg-neutral-900/50 p-6 hover:border-beammp-blue dark:hover:border-beammp-orange hover:shadow-xl transition-all"
+          class="group rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-900/50 dark:bg-neutral-900/50 p-6 hover:border-beammp-blue dark:hover:border-beammp-orange hover:shadow-xl transition-all"
         >
           <div class="flex items-center justify-center h-16 mb-4">
             <img :src="p.logo" :alt="p.name" class="max-h-16 object-contain" />
           </div>
           <div class="space-y-1">
-            <h3 class="text-xl font-semibold">{{ p.name }}</h3>
-            <p class="text-sm text-neutral-600 dark:text-neutral-400">
+            <h3 class="text-xl text-white font-semibold">{{ p.name }}</h3>
+            <p class="text-sm text-neutral-200">
               {{ $t('message.partners.from_price', { price: p.from }) }}
             </p>
           </div>
