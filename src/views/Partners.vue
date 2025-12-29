@@ -68,33 +68,35 @@ onMounted(loadPartners)
         <div
           v-for="(p, idx) in partners"
           :key="idx"
-          class="group rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-900/50 dark:bg-neutral-900/50 p-6 hover:border-beammp-blue dark:hover:border-beammp-orange hover:shadow-xl transition-all"
+          class="shadow-md hover:-translate-y-1 duration-150 group rounded-xl border border-neutral-200 dark:border-neutral-800 dark:bg-neutral-900/50 hover:border-beammp-orange dark:hover:border-beammp-orange hover:shadow-xl transition-all"
         >
-          <div class="flex items-center justify-center h-16 mb-4">
+          <div class="flex items-center justify-center min-h-16 mb-4 p-6 bg-neutral-900/80 border-b border-beammp-orange border-b-2 rounded-t-xl" style="height: 114px;">
             <img :src="p.logo" :alt="p.name" class="max-h-16 object-contain" />
           </div>
-          <div class="space-y-1">
-            <h3 class="text-xl text-white font-semibold">{{ p.name }}</h3>
-            <p class="text-sm text-neutral-200">
-              {{ $t('message.partners.from_price', { price: p.from }) }}
-            </p>
+          <div class="p-6">
+            <div class="space-y-1">
+              <h3 class="text-xl text-neutral-900 dark:text-white font-semibold">{{ p.name }}</h3>
+              <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                {{ $t('message.partners.from_price', { price: p.from }) }}
+              </p>
+            </div>
+            <a
+              :href="p.website"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-6 inline-flex items-center justify-center gap-2 w-full bg-beammp-orange hover:bg-beammp-orange/90 text-white px-4 py-2 rounded-lg font-semibold transition-colors dark:bg-beammp-orange dark:hover:bg-beammp-orange/90"
+            >
+              {{ $t('message.partners.visit_website') }}
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </a>
           </div>
-          <a
-            :href="p.website"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="mt-6 inline-flex items-center justify-center gap-2 w-full bg-beammp-blue hover:bg-beammp-blue/90 text-white px-4 py-2 rounded-lg font-semibold transition-colors dark:bg-beammp-orange dark:hover:bg-beammp-orange/90"
-          >
-            {{ $t('message.partners.visit_website') }}
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </a>
         </div>
       </div>
     </div>
