@@ -51,7 +51,7 @@
       "features": {
         "stable_servers": {
           "title": "Stable Servers",
-          "description": "BeamMP allows for stable servers, with a variety of servers located across the globe."
+          "description": "BeamMP allows for a stable environment, with a variety of servers located across the globe."
         },
         "beamng": {
           "title": "BeamNG.drive",
@@ -68,7 +68,7 @@
       },
       "communities": {
         "join": "Join a Thriving Community",
-        "description": "Discover diverse gameplay experiences across hundreds of unique servers",
+        "description": "Discover diverse gameplay experiences across thousands of unique servers",
         "racing": {
           "name": "Racing Communities",
           "description": "Competitive racing leagues and time trials with players worldwide"

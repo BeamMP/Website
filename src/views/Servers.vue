@@ -1,8 +1,8 @@
 <template>
   <div class="servers-container">
     <div class="servers-header">
-      <h1 class="servers-title">{{ $t('message.servers.title') }}</h1>
-      <p class="servers-subtitle">{{ $t('message.servers.description') }}</p>
+      <h1 class="text-4xl font-bold">{{ $t('message.servers.title') }}</h1>
+      <p class="text-base servers-subtitle text-neutral-600 dark:text-neutral-400">{{ $t('message.servers.description') }}</p>
     </div>
 
     <div class="servers-filters">
@@ -16,11 +16,11 @@
       </div>
 
       <div class="filter-group">
-        <label class="filter-label">
+        <label class="filter-label text-neutral-600 dark:text-neutral-400">
           <input v-model="filters.hideEmpty" type="checkbox" />
           {{ $t('message.servers.filters.hide_empty') }}
         </label>
-        <label class="filter-label">
+        <label class="filter-label text-neutral-600 dark:text-neutral-400">
           <input v-model="filters.hideFull" type="checkbox" />
           {{ $t('message.servers.filters.hide_full') }}
         </label>
@@ -32,15 +32,15 @@
 
       <div class="filter-group">
         <span class="filter-heading">{{ $t('message.servers.show_only') }}</span>
-        <label class="filter-label">
+        <label class="filter-label text-neutral-600 dark:text-neutral-400">
           <input v-model="filters.official" type="checkbox" />
           {{ $t('message.servers.filters.show_official') }}
         </label>
-        <label class="filter-label">
+        <label class="filter-label text-neutral-600 dark:text-neutral-400">
           <input v-model="filters.partner" type="checkbox" />
           {{ $t('message.servers.filters.show_partner') }}
         </label>
-        <label class="filter-label">
+        <label class="filter-label text-neutral-600 dark:text-neutral-400">
           <input v-model="filters.featured" type="checkbox" />
           {{ $t('message.servers.filters.show_featured') }}
         </label>
@@ -449,13 +449,6 @@ function joinServer(server) {
   margin-bottom: 40px;
 }
 
-.servers-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin: 0 0 10px 0;
-  color: var(--text-color, #1a1a1a);
-}
-
 .servers-subtitle {
   font-size: 1.1rem;
   color: var(--text-muted, #666);
@@ -520,7 +513,6 @@ function joinServer(server) {
   margin-bottom: 12px;
   font-size: 0.95rem;
   cursor: pointer;
-  color: var(--text-color, #1a1a1a);
   font-weight: 500;
   transition: all 0.2s ease;
 }
@@ -981,14 +973,6 @@ function joinServer(server) {
 @media (max-width: 768px) {
   .servers-container {
     padding: 15px;
-  }
-
-  .servers-title {
-    font-size: 2rem;
-  }
-
-  .servers-subtitle {
-    font-size: 1rem;
   }
 
   .servers-filters {
