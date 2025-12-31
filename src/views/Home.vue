@@ -19,6 +19,8 @@ const { t } = useI18n()
 const onlinePlayers = ref('...')
 const onlineServers = ref('...')
 const isLoading = ref(true)
+const heroImageLoaded = ref(false)
+const heroImageSrc = ref('/landing-lq.jpg')
 
 onMounted(async () => {
   try {
@@ -35,6 +37,14 @@ onMounted(async () => {
     onlineServers.value = 'N/A'
   } finally {
     isLoading.value = false
+  }
+
+  // Load high-quality hero image
+  const img = new Image()
+  img.src = '/landing_hq.png'
+  img.onload = () => {
+    heroImageSrc.value = '/landing_hq.png'
+    heroImageLoaded.value = true
   }
 })
 
@@ -154,12 +164,12 @@ const faqs = computed(() => [
       <!-- Background Image with Overlay -->
       <div class="absolute inset-0 overflow-hidden">
         <img
-          src="/landing-1.jpg"
+          :src="heroImageSrc"
           alt="BeamMP Gameplay"
-          class="w-full h-full object-cover"
+          class="w-full h-full object-cover transition-all duration-500"
         />
         <div
-          class="absolute inset-0 bg-linear-to-b from-black/30 dark:from-black/70 via-black/40 dark:via-black/60 to-neutral-0 dark:to-neutral-950"
+          class="absolute inset-0 bg-linear-to-b from-white/30 dark:from-black/70 via-white/50 dark:via-black/60 to-white dark:to-neutral-950"
         />
         <!--<div class="absolute inset-0 bg-linear-to-r from-beammp-blue/20 to-beammp-orange/20" />-->
       </div>
@@ -168,10 +178,10 @@ const faqs = computed(() => [
       <div class="relative max-w-6xl mx-auto px-4 py-32 md:py-40">
         <div class="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
           <h1
-            class="text-5xl md:text-7xl font-bold leading-tight text-white"
+            class="text-5xl md:text-7xl font-bold leading-tight"
             v-html="$t('message.home.hero.title', { game: 'BeamNG.drive' })"
           />
-          <p class="text-xl md:text-2xl text-neutral-200">
+          <p class="text-xl md:text-2xl dark:text-neutral-200">
             {{ $t('message.home.hero.subtitle') }}
           </p>
 
@@ -187,7 +197,7 @@ const faqs = computed(() => [
             </a>
             <RouterLink
               :to="`/${$i18n.locale}/servers`"
-              class="group flex items-center gap-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 px-8 py-4 rounded-lg font-semibold text-lg transition-all text-white"
+              class="group flex items-center gap-3 dark:bg-white/10 bg-black/20 hover:bg-white/20 backdrop-blur-sm border border-white/30 px-8 py-4 rounded-lg font-semibold text-lg transition-all text-white"
             >
               <Server class="w-6 h-6" />
               {{ $t('message.home.hero.browse_servers') }}
@@ -207,7 +217,7 @@ const faqs = computed(() => [
                   {{ stat.value }} </span
                 >{{ stat.suffix }}
               </div>
-              <div class="text-sm md:text-base text-neutral-300 mt-1">{{ stat.label }}</div>
+              <div class="text-sm md:text-base text-neutral-700 dark:text-neutral-300 mt-1">{{ stat.label }}</div>
             </div>
           </div>
         </div>
