@@ -244,7 +244,7 @@ function localRoute(path) {
     >
       <div
         v-if="mobileMenuOpen"
-        class="md:hidden border-t border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900"
+        class="xl:hidden border-t border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900"
       >
         <div class="px-4 py-3 space-y-1">
           <RouterLink
