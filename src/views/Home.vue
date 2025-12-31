@@ -228,7 +228,7 @@ const faqs = computed(() => [
     <section class="py-16 px-4">
       <div class="max-w-6xl mx-auto">
         <h2 class="text-4xl font-bold text-center mb-12">
-          {{ $t('message.home.why_choose_beammp') }}
+          {{ $t('message.home.why_beammp') }}
         </h2>
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div

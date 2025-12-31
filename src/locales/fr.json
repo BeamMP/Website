@@ -46,7 +46,7 @@
         "public_servers": "Serveurs publics",
         "all_servers": "Tous les serveurs"
       },
-      "why_choose_beammp": "Pourquoi choisir BeamMP ?",
+      "why_beammp": "Pourquoi BeamMP ?",
       "features": {
         "stable_servers": {
           "title": "Serveurs stables",
