@@ -340,7 +340,7 @@ const faqs = computed(() => [
         <div
           class="rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 shadow-2xl animate-slide-in order-1 md:order-2"
         >
-          <img src="/beammpservers.png" alt="BeamMP Server Browser" class="w-full h-auto" />
+          <img src="/beammp_serverlist.png" alt="BeamMP Server Browser" class="w-full h-auto" />
         </div>
       </div>
     </section>
