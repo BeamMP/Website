@@ -38,4 +38,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: ${{ secrets.REGISTRY_URL }}/beammp/website:${{ github.REF_NAME }}, ${{ secrets.REGISTRY_URL }}/beammp/website:latest
+          tags: ${{ secrets.REGISTRY_URL }}/beammp/website:${{ github.REF_NAME }}, ${{ secrets.REGISTRY_URL }}/beammp/website:prod
