@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import { Sun, Moon, Monitor } from 'lucide-vue-next'
+import { Sun, Moon, Monitor, Smartphone, Tablet } from 'lucide-vue-next'
 
 const theme = ref('system')
 
@@ -60,7 +60,9 @@ onMounted(() => {
       :title="$t('message.theme.system')"
       @click="setTheme('system')"
     >
-      <Monitor class="w-4 h-4" />
+      <Smartphone class="w-4 h-4 md:hidden" />
+      <Tablet class="w-4 h-4 hidden md:block lg:hidden" />
+      <Monitor class="w-4 h-4 hidden lg:block" />
     </button>
     <button
       :class="[

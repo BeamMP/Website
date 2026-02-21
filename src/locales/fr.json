@@ -62,7 +62,7 @@
         },
         "sync": {
           "title": "Qualité de synchronisation",
-          "description": "Votre véhicule est synchronisé environ 100 fois par seconde sur BeamMP, pour une expérience de jeu fluide."
+          "description": "BeamMP met à jour la position de votre véhicule ~50 fois par seconde pour une expérience fluide."
         }
       },
       "communities": {

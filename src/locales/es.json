@@ -62,7 +62,7 @@
         },
         "sync": {
           "title": "Calidad de sincronización",
-          "description": "BeamMP actualiza la posición de tu vehículo ~100 veces por segundo, permitiendo una experiencia fluida."
+          "description": "BeamMP actualiza la posición de tu vehículo ~50 veces por segundo, permitiendo una experiencia fluida."
         }
       },
       "communities": {

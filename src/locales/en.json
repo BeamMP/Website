@@ -63,7 +63,7 @@
         },
         "sync": {
           "title": "Sync Quality",
-          "description": "BeamMP updates your vehicle position ~100 times per second, allowing for a smooth overall experience."
+          "description": "BeamMP updates your vehicle position ~50 times per second, allowing for a smooth overall experience."
         }
       },
       "communities": {
@@ -82,8 +82,8 @@
           "description": "Demolition derbies and destruction-focused gameplay modes"
         },
         "freeroam": {
-          "name": "Freeroam",
-          "description": "Casual multiplayer sessions exploring maps with friends"
+          "name": "Freeroam & Custom Servers",
+          "description": "Explore open-world servers or build your own with custom scripts, maps, and mods."
         }
       },
       "find": {
