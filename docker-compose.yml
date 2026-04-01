@@ -1,0 +1,8 @@
+services:
+  website:
+    build:
+      dockerfile: Dockerfile
+    container_name: website
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3000:80"
