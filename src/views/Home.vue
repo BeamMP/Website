@@ -18,6 +18,7 @@ const { t } = useI18n()
 
 const onlinePlayers = ref('...')
 const onlineServers = ref('...')
+const totalServers = ref('...')
 const isLoading = ref(true)
 const heroImageLoaded = ref(false)
 const heroImageSrc = ref('/landing-lq.jpg')
@@ -31,10 +32,12 @@ onMounted(async () => {
     if (values.length >= 2) {
       onlinePlayers.value = values[1]
       onlineServers.value = values[3]
+      totalServers.value = values[5]
     }
   } catch {
     onlinePlayers.value = 'N/A'
     onlineServers.value = 'N/A'
+    totalServers.value = 'N/A'
   } finally {
     isLoading.value = false
   }
@@ -126,8 +129,8 @@ const devFeatures = computed(() => [
 
 const stats = computed(() => [
   { label: t('message.home.metrics.active_players'), value: onlinePlayers, suffix: '+' },
-  { label: t('message.home.metrics.public_servers'), value: '500', suffix: '+' },
-  { label: t('message.home.metrics.all_servers'), value: '2M', suffix: '+' },
+  { label: t('message.home.metrics.public_servers'), value: onlineServers, suffix: '+' },
+  { label: t('message.home.metrics.all_servers'), value: totalServers, suffix: '+' },
 ])
 const faqs = computed(() => [
   {
