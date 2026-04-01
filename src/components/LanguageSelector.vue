@@ -60,7 +60,7 @@ onMounted(async () => {
       @click="toggleDropdown"
     >
       <img
-        :src="`/flags/${currentLanguage().flag}.png`"
+        :src="`/src/assets/flags/${currentLanguage().flag}.png`"
         :alt="currentLanguage().name"
         class="w-5 h-4 rounded-sm"
       />
