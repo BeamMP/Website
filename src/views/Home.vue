@@ -279,6 +279,7 @@ const faqs = computed(() => [
         </div>
         <div class="text-center mt-8">
           <RouterLink
+            style="display: none;"
             :to="`/${$i18n.locale}/communities`"
             class="inline-flex items-center gap-2 bg-beammp-orange hover:bg-beammp-orange/90 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
           >

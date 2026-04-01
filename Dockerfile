@@ -5,7 +5,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 COPY . .
-ENV NODE_ENV=development
+ENV NODE_ENV=production
 RUN npm run build
 
 # Step 2: Serve stage

@@ -60,7 +60,7 @@ function localRoute(path) {
       <div class="hidden xl:flex items-center gap-4">
         <NavigationMenu>
           <NavigationMenuList>
-            <NavigationMenuItem>
+            <!--<NavigationMenuItem>
               <NavigationMenuLink as-child>
                 <RouterLink
                   :to="localRoute('communities')"
@@ -74,7 +74,7 @@ function localRoute(path) {
                   {{ $t('message.nav.communities') }}
                 </RouterLink>
               </NavigationMenuLink>
-            </NavigationMenuItem>
+            </NavigationMenuItem>-->
             <NavigationMenuItem>
               <NavigationMenuLink as-child>
                 <RouterLink
@@ -90,7 +90,7 @@ function localRoute(path) {
                 </RouterLink>
               </NavigationMenuLink>
             </NavigationMenuItem>
-            <NavigationMenuItem>
+            <!--<NavigationMenuItem>
               <NavigationMenuLink as-child>
                 <RouterLink
                   :to="localRoute('servers')"
@@ -104,8 +104,8 @@ function localRoute(path) {
                   {{ $t('message.nav.servers') }}
                 </RouterLink>
               </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
+            </NavigationMenuItem>-->
+            <!--<NavigationMenuItem>
               <NavigationMenuLink as-child>
                 <RouterLink
                   :to="localRoute('stats')"
@@ -119,8 +119,8 @@ function localRoute(path) {
                   {{ $t('message.nav.statistics') }}
                 </RouterLink>
               </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
+            </NavigationMenuItem>-->
+            <!--<NavigationMenuItem>
               <NavigationMenuLink as-child>
                 <a
                   href="https://forum.beammp.com"
@@ -137,7 +137,7 @@ function localRoute(path) {
                   {{ $t('message.nav.forums') }}
                 </a>
               </NavigationMenuLink>
-            </NavigationMenuItem>
+            </NavigationMenuItem>-->
             <NavigationMenuItem>
               <NavigationMenuLink as-child>
                 <a
