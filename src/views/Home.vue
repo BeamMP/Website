@@ -20,7 +20,7 @@ const onlinePlayers = ref('...')
 const onlineServers = ref('...')
 const isLoading = ref(true)
 const heroImageLoaded = ref(false)
-const heroImageSrc = ref('/landing-lq.jpg')
+const heroImageSrc = ref('/src/assets/landing-lq.jpg')
 
 onMounted(async () => {
   try {

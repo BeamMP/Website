@@ -247,13 +247,13 @@ function localRoute(path) {
         class="xl:hidden border-t border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900"
       >
         <div class="px-4 py-3 space-y-1">
-          <RouterLink
+          <!--<RouterLink
             :to="localRoute('communities')"
             class="block px-4 py-3 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md transition-colors"
             @click="closeMobileMenu"
           >
             {{ $t('message.nav.communities') }}
-          </RouterLink>
+          </RouterLink>-->
           <RouterLink
             :to="localRoute('partners')"
             class="block px-4 py-3 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md transition-colors"
@@ -268,14 +268,14 @@ function localRoute(path) {
           >
             {{ $t('message.nav.servers') }}
           </RouterLink>
-          <RouterLink
+          <!--<RouterLink
             :to="localRoute('stats')"
             class="block px-4 py-3 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md transition-colors"
             @click="closeMobileMenu"
           >
             {{ $t('message.nav.statistics') }}
-          </RouterLink>
-          <a
+          </RouterLink>-->
+          <!--<a
             href="https://forum.beammp.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -283,7 +283,7 @@ function localRoute(path) {
             @click="closeMobileMenu"
           >
             {{ $t('message.nav.forums') }}
-          </a>
+          </a>-->
           <a
             href="https://docs.beammp.com"
             target="_blank"
