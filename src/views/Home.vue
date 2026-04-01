@@ -44,9 +44,9 @@ onMounted(async () => {
 
   // Load high-quality hero image
   const img = new Image()
-  img.src = '/landing_hq.png'
+  img.src = '/src/assets/landing_hq.png'
   img.onload = () => {
-    heroImageSrc.value = '/landing_hq.png'
+    heroImageSrc.value = '/src/assets/landing_hq.png'
     heroImageLoaded.value = true
   }
 })
