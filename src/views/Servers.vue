@@ -244,8 +244,8 @@ const regionDisplay = computed(() => {
 
 onMounted(async () => {
   try {
-    const response = await fetch('/servers.json')
-    //const response = await fetch('https://backend.beammp.com/servers-info')
+    //const response = await fetch('/servers.json')
+    const response = await fetch('https://backend.beammp.com/servers-info')
     console.log(response)
     if (!response.ok) throw new Error('Failed to fetch servers')
     const data = await response.json()
