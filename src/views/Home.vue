@@ -24,7 +24,13 @@ const totalServers = ref('...')
 const isLoading = ref(true)
 const heroImageLoaded = ref(false)
 const heroImageSrc = ref(landingLq)
-const installerDownloadUrl = `${import.meta.env.BASE_URL}installer/BeamMP_Installer.msi`
+const installerDownloadUrl = computed(() => {
+  const base = import.meta.env.BASE_URL || '/'
+  if (base === './') {
+    return '/installer/BeamMP_Installer.msi'
+  }
+  return `${base.replace(/\/$/, '')}/installer/BeamMP_Installer.msi`
+})
 
 onMounted(async () => {
   try {
