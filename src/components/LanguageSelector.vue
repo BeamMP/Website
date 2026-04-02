@@ -37,6 +37,10 @@ const toggleDropdown = () => {
   isOpen.value = !isOpen.value
 }
 
+const getFlagUrl = (flagName) => {
+  return new URL(`../assets/flags/${flagName}.png`, import.meta.url).href
+}
+
 onMounted(async () => {
   const saved = localStorage.getItem('lang') || getCurrentLocale()
   if (saved && saved !== locale.value) {
@@ -60,7 +64,7 @@ onMounted(async () => {
       @click="toggleDropdown"
     >
       <img
-        :src="`/src/assets/flags/${currentLanguage().flag}.png`"
+        :src="getFlagUrl(currentLanguage().flag)"
         :alt="currentLanguage().name"
         class="w-5 h-4 rounded-sm"
       />
@@ -85,7 +89,7 @@ onMounted(async () => {
           ]"
           @click="selectLanguage(code)"
         >
-          <img :src="`/flags/${lang.flag}.png`" :alt="lang.name" class="w-5 h-4 rounded-sm" />
+          <img :src="getFlagUrl(lang.flag)" :alt="lang.name" class="w-5 h-4 rounded-sm" />
           <span>{{ lang.name }}</span>
           <span v-if="locale === code" class="ml-auto text-neutral-500">✓</span>
         </button>

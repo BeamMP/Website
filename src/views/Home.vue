@@ -14,6 +14,8 @@ import {
   Rocket,
 } from 'lucide-vue-next'
 import { useI18n } from 'vue-i18n'
+import landingLq from '@/assets/landing-lq.jpg'
+import landingHq from '@/assets/landing_hq.png'
 const { t } = useI18n()
 
 const onlinePlayers = ref('...')
@@ -21,7 +23,7 @@ const onlineServers = ref('...')
 const totalServers = ref('...')
 const isLoading = ref(true)
 const heroImageLoaded = ref(false)
-const heroImageSrc = ref('/landing-lq.jpg')
+const heroImageSrc = ref(landingLq)
 
 onMounted(async () => {
   try {
@@ -44,9 +46,9 @@ onMounted(async () => {
 
   // Load high-quality hero image
   const img = new Image()
-  img.src = '/src/assets/landing_hq.png'
+  img.src = landingHq
   img.onload = () => {
-    heroImageSrc.value = '/src/assets/landing_hq.png'
+    heroImageSrc.value = landingHq
     heroImageLoaded.value = true
   }
 })
