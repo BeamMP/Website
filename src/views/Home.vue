@@ -24,6 +24,7 @@ const totalServers = ref('...')
 const isLoading = ref(true)
 const heroImageLoaded = ref(false)
 const heroImageSrc = ref(landingLq)
+const installerDownloadUrl = `${import.meta.env.BASE_URL}installer/BeamMP_Installer.msi`
 
 onMounted(async () => {
   try {
@@ -193,7 +194,7 @@ const faqs = computed(() => [
           <!-- CTA Buttons -->
           <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <a
-              href="/installer/BeamMP_Installer.msi"
+              :href="installerDownloadUrl"
               download
               class="group flex items-center gap-3 bg-linear-to-r from-beammp-orange to-red-600 hover:from-red-600 hover:to-beammp-orange px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-beammp-orange/50 text-white"
             >
