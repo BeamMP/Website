@@ -103,7 +103,7 @@ dist
 # TernJS port file
 .tern-port
 *.exe
-*.zip
+#*.zip
 
 # Logs
 frontend/logs
