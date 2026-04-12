@@ -1,0 +1,284 @@
+{
+  "message": {
+    "theme": {
+      "light": "Light mode",
+      "dark": "Dark mode",
+      "system": "System"
+    },
+    "nav": {
+      "home": "Home",
+      "forums": "Forums",
+      "docs": "Docs",
+      "communities": "Communities",
+      "partners": "Hosting Partners",
+      "servers": "Servers",
+      "statistics": "Statistics",
+      "store": "Merch Store",
+      "github": "GitHub",
+      "patreon": "Patreon",
+      "language": "Select Language",
+      "theme": {
+        "light": "Light Theme",
+        "dark": "Dark Theme",
+        "system": "System Theme"
+      }
+    },
+    "footer": {
+      "support_on_patreon": "Support us on Patreon",
+      "about": "About",
+      "privacy_policy": "Privacy Policy",
+      "terms_conditions": "Terms & Conditions"
+    },
+    "404": {
+      "title": "Page Not Found",
+      "description": "The page you requested doesn’t exist. It may have been moved or removed.",
+      "return_home": "Return Home"
+    },
+    "home": {
+      "hero": {
+        "title": "Multiplayer for BeamNG.Drive",
+        "subtitle": "Experience the ultimate soft-body physics with friends. Race, roleplay, or just cruise together.",
+        "download_now": "Download Now",
+        "browse_servers": "Browse Servers"
+      },
+      "metrics": {
+        "active_players": "Active Players",
+        "players_online": "Players Online",
+        "public_servers": "Public Servers",
+        "all_servers": "All Servers"
+      },
+      "why_beammp": "Why BeamMP?",
+      "features": {
+        "stable_servers": {
+          "title": "Stable Servers",
+          "description": "BeamMP allows for a stable environment, with a variety of servers located across the globe."
+        },
+        "beamng": {
+          "title": "BeamNG.drive",
+          "description": "BeamMP uses the same maps, vehicles & mods so you don't need to learn anything new!"
+        },
+        "standalone": {
+          "title": "Standalone",
+          "description": "BeamMP doesn't modify your original installation, so you can play either singleplayer or multiplayer."
+        },
+        "sync": {
+          "title": "Sync Quality",
+          "description": "BeamMP updates your vehicle position ~50 times per second, allowing for a smooth overall experience."
+        }
+      },
+      "communities": {
+        "join": "Join a Thriving Community",
+        "description": "Discover diverse gameplay experiences across thousands of unique servers",
+        "racing": {
+          "name": "Racing Communities",
+          "description": "Competitive racing leagues and time trials with players worldwide"
+        },
+        "roleplay": {
+          "name": "Roleplay Servers",
+          "description": "Immersive roleplay experiences from police chases to delivery services"
+        },
+        "crash": {
+          "name": "Crash & Derby",
+          "description": "Demolition derbies and destruction-focused gameplay modes"
+        },
+        "freeroam": {
+          "name": "Freeroam & Custom Servers",
+          "description": "Explore open-world servers or build your own with custom scripts, maps, and mods."
+        }
+      },
+      "find": {
+        "title": "Find Your Perfect Server",
+        "description": "Browse hundreds of active servers with different game modes, mods, and communities. From competitive racing to casual free roam, there's something for everyone.",
+        "points": {
+          "custom": "Custom Game Modes",
+          "custom_desc": "Unique experiences created by the community",
+          "moderation": "Active Moderation",
+          "moderation_desc": "Safe and friendly gaming environment",
+          "global": "Global Network",
+          "global_desc": "Servers located worldwide for low latency"
+        },
+        "browse_all_servers": "Browse All Servers"
+      },
+      "devFeatures": {
+        "title": "Built for Developers",
+        "description": "Create custom game modes, host your own server, and contribute to the project",
+        "lua": {
+          "title": "Lua API",
+          "description": "Powerful server-side Lua scripting for custom game modes and features"
+        },
+        "docs": {
+          "title": "Documentation",
+          "description": "Comprehensive guides and API references for server development"
+        },
+        "openSource": {
+          "title": "Open Source",
+          "description": "Community-driven development with source available on GitHub"
+        },
+        "learn_more": "Learn More",
+        "host": {
+          "title": "Ready to Host Your Own Server?",
+          "description": "Download the server files and create your own unique BeamMP experience",
+          "windows": "Windows Server",
+          "linux": "Linux Builds",
+          "partners": {
+            "description": "Get started quickly with our trusted hosting partners - hassle-free setup, 24/7 support, and optimized performance.",
+            "view_partners": "View Hosting Partners"
+          },
+          "self_host": {
+            "title": "Or Host It Yourself"
+          }
+        }
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "0": {
+          "question": "The server list is not showing up!",
+          "answer":
+            "Try restarting BeamMP as this can sometimes happen. If this fails to fix your issue please create a topic on our forum or visit the support channel on our discord."
+        },
+        "1": {
+          "question": "How do I open a ticket in case something doesn't work or I have questions?",
+          "answer":
+            "Please check the #how-to-use channel in Discord and on our forum. Please give an accurate description of what you have done so the support team will help you in a fast and effective way."
+        },
+        "2": {
+          "question": "Help! I'm getting error codes",
+          "answer":
+            "Please head over to our forum and see if anyone has had the issue before. It is likely that someone else has at some point and therefore there will also probably be a solution posted with it too in the replies. Alternatively visit our discord where the larger portion of community is currently based."
+        },
+        "3": {
+          "question": "Does this work with pirated versions of BeamNG.drive?",
+          "answer":
+            "We don't know if it works with pirated versions of BeamNG.drive, but we will not provide any support to non legit copies of the game. Nor will we change to support it."
+        },
+        "4": {
+          "question": "How do I host a server?",
+          "answer":
+            "The server files required for hosting your own server can be found at the top of this page below the client download. You will also require an authentication key which can be found from keymaster. Further information around the setup can be found on our docs."
+        },
+        "5": {
+          "question": "Can I use mods?",
+          "answer":
+            "Mods are supported. These are installed on the server. See our docs for more information."
+        }
+      },
+      "stats": {
+        "active_players": "Active Players",
+        "global_servers": "Global Servers",
+        "total_downloads": "Total Downloads"
+      }
+    },
+    "communities": {
+      "title": "Communities",
+      "description": "Discover thriving communities built around BeamMP. From competitive racing leagues to casual free roam sessions, find your perfect group to play with.",
+      "starting": {
+        "title": "Want to Start Your Own Community?",
+        "description": "Host your own BeamMP server and build a community around your favorite game modes",
+        "setup_guide": "Server Setup Guide",
+        "join_discord": "Join Our Discord"
+      }
+    },
+    "partners": {
+      "title": "Hosting Partners",
+      "description": "Choose from our trusted hosting partners. Simple setup, optimized performance, and support to keep your BeamMP server running smoothly.",
+      "from_price": "From {price}",
+      "visit_website": "Visit Website",
+      "error_loading": "Unable to fetch partners"
+    },
+    "servers": {
+      "title": "Servers",
+      "description": "Browse and join BeamMP servers from around the world. Find your favorite game modes, communities, and experiences all in one place.",
+      "show_only": "Show Only:",
+      "loading_servers": "Loading servers...",
+      "server_count": "0 servers found | 1 server found | {count} servers found",
+      "players_found": "0 players | 1 player | {count} players",
+      "filters": {
+        "hide_empty": "Hide Empty",
+        "hide_full": "Hide Full",
+        "search": "Search Servers...",
+        "hide_password": "Hide Password Protected",
+        "show_official": "Official",
+        "show_partner": "Partner",
+        "show_featured": "Featured"
+      },
+      "table_headers": {
+        "location": "Location",
+        "name": "Server Name",
+        "map": "Map",
+        "players": "Players",
+        "mods": "Mods",
+        "status": "Status"
+      }
+    },
+    "statistics": {
+      "title": "Statistics",
+      "description": "Live snapshot metrics from active servers and a player volume timeline. Releases can be annotated on the chart.",
+      "loading": "Loading…",
+      "peak": "Peak: {count}",
+      "current_players": "Current Players",
+      "current_servers": "Current Servers",
+      "avg_players_per_server": "AVG Players / Server",
+      "official_servers": "Official Servers",
+      "partner_servers": "Partner Servers",
+      "player_volume": "Player Volume Over Time",
+      "hint": "Release markers are shown as orange vertical lines (e.g., v3.0.0, v4.0.0). Hover over data points for details.",
+      "server_volume": "Server Volume Over Time",
+      "server_hint": "Server count follows similar trends. Release markers indicate major version launches."
+    },
+    "about":{
+      "title": "About BeamMP",
+      "description": "BeamMP brings multiplayer to BeamNG.drive. It’s built by and for the community, focusing on stability, performance, and an authentic driving experience shared with friends.",
+      "note": {
+        "title": "A Note from the Creator",
+        "content": "BeamMP started with a simple idea: I want to play BeamNG.drive with my brothers. What began as an experiment quickly grew into a community-driven project focused on implementing multiplayer, and fun. We care deeply about trying to provide the best experience possible, and making it easy for players to hop in and enjoy driving together. The project is open to contributors of all skill levels. Whether you write code, moderate a server, design scenarios, or help others get set up—your efforts are part of what makes BeamMP thrive. Thank you for being here and helping us build something special."
+      },
+      "provides": {
+        "title": "What BeamMP Provides",
+        "points": {
+          "0": "Multiplayer sessions for BeamNG.drive with server browser and filters",
+          "1": "Server-side moderation tools and configuration options",
+          "2": "Mod support with protection for paid content",
+          "3": "Active community channels (Forum, Discord) for help and collaboration"
+        }
+      },
+      "project": {
+        "title": "Project Values",
+        "points": {
+          "0": "Community-first: decisions guided by real player/server needs",
+          "1": "Reliability: prioritizing stability, sync fidelity, and performance where possible",
+          "2": "Openness: welcoming contributions, feedback, and transparency",
+          "3": "Safety: promoting fair play and respectful interactions"
+        }
+      },
+      "get_involved": {
+        "title": "Get Involved",
+        "description": "There are many ways to participate—join discussions, report issues, contribute code, or help to support the project financially via",
+        "patreon": "Patreon",
+        "forum": "Forums",
+        "docs": "Docs",
+        "github": "GitHub",
+        "discord": "Discord"
+      },
+      "funding": {
+        "title": "Funding & Sustainability",
+        "description": "BeamMP relies on community support. Donations help cover infrastructure, bandwidth, tooling, and development time. If you value the project and want to help it grow, please consider supporting us.",
+        "patreon": "Support us on Patreon",
+        "learn": "Learn more on GitHub"
+      },
+      "credits": {
+        "title": "Credits & Acknowledgements",
+        "description": "BeamMP is maintained by the Mod Team and an incredible group of community contributors. We’d also like to thank server owners, mod creators, testers, and everyone reporting issues—your time and passion keep the project moving forward.",
+        "desc_2": "Special thanks to the BeamNG.drive developers for creating such an amazing platform that makes multiplayer possible.",
+        "desc_3": "Also a heartfelt thank you to the following current and former community members for their significant contributions to BeamMP over the years:",
+        "mentions": {
+          "0": "Jojos38 (Co-Founder) - for their work early on with designing everything to help make the idea become a reality",
+          "1": "Jetta (jetta.cat) - for the logo design and creation.",
+          "2": "Anonymous275 & Lionkor - for their work in rebuilding the project in C++.",
+          "3": "Tixx - for their considerable contributions across the project codebase.",
+          "4": "And many more—thank you to everyone who has contributed in any way!"
+        },
+        "thank_you": "Together, we’re building something special. Thank you for being part of the BeamMP community!"
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Horizon Hosting",
+    "website": "https://hrzn.link/beammp",
+    "from": "$3.34/mo",
+    "logo": "https://hrznhosting.com/assets/logo.svg"
+  },
+  {
+    "name": "RackGenius",
+    "website": "https://rackgeni.us/beammp-plans",
+    "from": "$0.5/mo",
+    "logo": "https://rackgenius.com/rackgenius-logo.png"
+  },
+  {
+    "name": "Connect Hosting",
+    "website": "https://connecthosting.net/beammp",
+    "from": "$1.49/mo",
+    "logo": "https://connecthosting.net/img/logo.webp"
+  },
+  {
+    "name": "Assetto Hosting",
+    "website": "https://assettohosting.com/games/beamng",
+    "from": "$2.30/mo",
+    "logo": "https://assettohosting.com/_next/image?url=https%3A%2F%2Fstrapi.assettohosting.com%2Fuploads%2Flogo_2228c8bbfb.png&w=640&q=100"
+  },
+  {
+    "name": "Zap-Hosting",
+    "website": "https://zap-hosting.com/itsbeammp",
+    "from": "$6.46/mo",
+    "logo": "https://wormhole.ifyouwantmorepower.com/online/assets/beammp/zap-logo.png"
+  },
+  {
+    "name": "HostHavoc",
+    "website": "https://hosthavoc.com",
+    "from": "$3.75/mo",
+    "logo": "https://hosthavoc.com/images/logo.svg"
+  },
+  {
+    "name": "PedalHost",
+    "website": "https://pedal.host",
+    "from": "$1.31/mo",
+    "logo": "https://pedal.host/pedalhost_horizontal_light.svg"
+  },
+  {
+    "name": "Vyper Hosting",
+    "website": "https://vyperhosting.com/r/beammp",
+    "from": "$2.68/mo",
+    "logo": "https://vyperhosting.com/assets/logo.png"
+  },
+  {
+    "name": "BisecHosting",
+    "website": "https://bisecthosting.com/beammp-server-hosting",
+    "from": "$5.99/mo",
+    "logo": "https://www.bisecthosting.com/_ipx/q_100&s_140x46/images/logo-dark-theme.svg"
+  },
+  {
+    "name": "Four Season Hosting",
+    "website": "https://fourseasonshosting.com",
+    "from": "$3.00/mo",
+    "logo": "https://fourseasonshosting.com/_next/image?url=%2Flogo.png&w=256&q=75"
+  },
+  {
+    "name": "Vertuo Hosting",
+    "website": "https://vertuohosting.com",
+    "from": "$1.99/mo",
+    "logo": "https://vertuohosting.com/assets/img/logo.png"
+  },
+  {
+    "name": "Winheberg",
+    "website": "https://winheberg.fr/offres/gaming/beammp",
+    "from": "$2.99/mo",
+    "logo": "https://winheberg.fr/img/logo-white.png"
+  },
+  {
+    "name": "Wabbanode",
+    "website": "https://wabbanode.com/partner/beammp",
+    "from": "$5.96/mo",
+    "logo": "https://wabbanode.com/_nuxt/wabba_logo.UPNIVeXa.webp"
+  },
+  {
+    "name": "Iceline Hosting",
+    "website": "https://iceline-hosting.com/games/beammp",
+    "from": "$3.64/mo",
+    "logo": "https://iceline-hosting.com/_astro/logo.DTnWV5zL_157TDr.webp"
+  }
+]
