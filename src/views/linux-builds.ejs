@@ -1,0 +1,65 @@
+<!-- This page is only loaded on JS free clients -->
+
+<!-- Archetype to add a distribution (THERE MUST BE 2 SPACES BEFORE THE DISTRO NAME)
+	
+	<tr>
+		<td>Distro name</td>
+	</tr>
+	<tr>
+		<td>
+			&emsp;&#9562;<a href="direct link to .zip file on Github">  Distro name (architecture A)</a><br>
+			&emsp;&#9562;<a href="direct link to .zip file on Github">  Distro name (architecture B)</a><br>
+		</td>
+	</tr>
+-->
+
+<head>
+	<meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="abuseipdb-verification" content="K1hJK7Gv" />
+    <title>Linux Builds</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+	<link rel="stylesheet" type="text/css" href="css/styles-nojs.css"/>
+</head>
+<body>
+	<nav class="nav">
+		<%- include('includes/nav-nojs.ejs') %>
+	</nav>
+	
+	<h1 style="padding-top: 80px; padding-left: 10px;">List of Linux builds for BeamMP Server</h1>
+	
+	<div class="table-container">
+		<table>
+			<tbody>
+				<tr>
+					<td>Debian</td>
+				</tr>
+				<tr>
+					<td>
+						&emsp;&#9562;<a href="https://github.com/BeamMP/BeamMP-Server/releases/latest/download/BeamMP-Server.debian.11.arm64">  Debian 11 (arm64)</a><br>
+						&emsp;&#9562;<a href="https://github.com/BeamMP/BeamMP-Server/releases/latest/download/BeamMP-Server.debian.11.x86_64">  Debian 11 (x86/64)</a><br>
+						&emsp;&#9562;<a href="https://github.com/BeamMP/BeamMP-Server/releases/latest/download/BeamMP-Server.debian.12.arm64">  Debian 12 (arm64)</a><br>
+						&emsp;&#9562;<a href="https://github.com/BeamMP/BeamMP-Server/releases/latest/download/BeamMP-Server.debian.12.x86_64">  Debian 12 (x86/64)</a><br>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>Ubuntu</td>
+				</tr>
+				<tr>
+					<td>
+						&emsp;&#9562;<a href="https://github.com/BeamMP/BeamMP-Server/releases/latest/download/BeamMP-Server.ubuntu.20.04.arm64">  Ubuntu 20.04 (arm64)</a><br>
+						&emsp;&#9562;<a href="https://github.com/BeamMP/BeamMP-Server/releases/latest/download/BeamMP-Server.ubuntu.20.04.x86_64">  Ubuntu 20.04 (x86/64)</a><br>
+						&emsp;&#9562;<a href="https://github.com/BeamMP/BeamMP-Server/releases/latest/download/BeamMP-Server.ubuntu.22.04.arm64">  Ubuntu 22.04 (arm64)</a><br>
+						&emsp;&#9562;<a href="https://github.com/BeamMP/BeamMP-Server/releases/latest/download/BeamMP-Server.ubuntu.22.04.x86_64">  Ubuntu 22.04 (x86/64)</a><br>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	<%- include('includes/footer-nojs.ejs') %>
+</body>

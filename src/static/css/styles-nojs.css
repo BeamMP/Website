@@ -1,0 +1,44 @@
+.pageContainer, .footer-js {
+	display: none;
+}
+
+.nojs-warning {
+	position: absolute !important;
+	max-width: 400px !important;
+	text-align: center !important;
+	padding-top: 24px !important;
+	animation: blinker 2s ease-in-out infinite;
+}
+
+@keyframes blinker {  
+  50% { opacity: 0; }
+}
+
+.content-not-available {
+	display: grid;
+    position: relative;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 80px);
+    overflow: hidden;
+    color: #fefee1;
+}
+
+.content-not-available .content-not-available-introduction {
+    width: 100%;
+    position: absolute;
+    transition: transform .2s ease;
+    transform: translateX(0);
+	text-align: center;
+}
+
+.table-container {
+	margin-left: 10px;
+	height: 100%;
+}
+
+.table-container a{
+	color: #4FACFC;
+}
