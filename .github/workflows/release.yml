@@ -17,11 +17,6 @@ jobs:
           oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
           oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
           tags: tag:ci
-      - name: Install registry CA certificate
-        run: |
-            sudo mkdir -p /etc/docker/certs.d/${{ secrets.REGISTRY_URL }}
-            echo "${{ secrets.REGISTRY_CA_CERT }}" | base64 -d | sudo tee /etc/docker/certs.d/${{ secrets.REGISTRY_URL }}/ca.crt
-
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx
@@ -38,4 +33,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: ${{ secrets.REGISTRY_URL }}/beammp/website:${{ github.REF_NAME }}, ${{ secrets.REGISTRY_URL }}/beammp/website:prod
+          tags: ${{ secrets.REGISTRY_URL }}/beammp/website:${{ github.REF_NAME }}, ${{ secrets.REGISTRY_URL }}/beammp/website:latest
