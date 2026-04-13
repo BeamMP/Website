@@ -1,7 +1,7 @@
 import { nextTick } from 'vue'
 import { createI18n } from 'vue-i18n'
 
-export const SUPPORT_LOCALES = ['en', 'es', 'fr', 'de', 'it', 'ru']
+export const SUPPORT_LOCALES = ['en', 'es', 'fr', 'de', 'it', 'ru', 'zh']
 
 export const LANGUAGES = {
   en: { name: 'English', code: 'en', flag: 'gb' },
@@ -10,6 +10,7 @@ export const LANGUAGES = {
   de: { name: 'Deutsch', code: 'de', flag: 'de' },
   it: { name: 'Italiano', code: 'it', flag: 'it' },
   ru: { name: 'Русский', code: 'ru', flag: 'ru' },
+  zh: { name: '中文', code: 'zh', flag: 'cn' },
 }
 
 export function setupI18n(options = { locale: 'en' }) {
