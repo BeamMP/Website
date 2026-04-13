@@ -1,0 +1,242 @@
+{
+  "message": {
+    "theme": {
+      "light": "明亮模式",
+      "dark": "黑暗模式",
+      "system": "跟随系统"
+    },
+    "nav": {
+      "home": "主页",
+      "forums": "论坛",
+      "docs": "文档",
+      "communities": "社区",
+      "partners": "托管合作伙伴",
+      "servers": "服务器",
+      "statistics": "统计",
+      "store": "周边商店",
+      "github": "GitHub",
+      "language": "选择语言",
+      "theme": {
+        "light": "明亮主题",
+        "dark": "黑暗主题",
+        "system": "跟随系统"
+      }
+    },
+    "footer": {
+      "about": "关于我们",
+      "privacy_policy": "隐私政策",
+      "terms_conditions": "条款与细则"
+    },
+    "404": {
+      "title": "找不到页面",
+      "description": "此页面不存在，\n此页面可能不存在或已经被删除"
+    },
+    "home": {
+      "hero": {
+      },
+      "metrics": {
+        "all_servers": "所有服务器"
+      },
+      "why_beammp": "为什么选择BeamMP？",
+      "features": {
+        "stable_servers": {
+        },
+        "beamng": {
+        },
+        "standalone": {
+        },
+        "sync": {
+        }
+      },
+      "communities": {
+        "description": "探索数千个独特服务器上的多样化游戏体验",
+        "racing": {
+        },
+        "roleplay": {
+        },
+        "crash": {
+        },
+        "freeroam": {
+          "name": "自由漫游与自定义服务器",
+          "description": "探索开放世界服务器，或使用自定义脚本、地图和模组构建你自己的服务器。"
+        }
+      },
+      "find": {
+        "points": {
+        }
+      },
+      "devFeatures": {
+        "lua": {
+          "title": "Lua API",
+          "description": "强大的服务器端Lua脚本支持，用于实现自定义游戏模式与功能。"
+        },
+        "docs": {
+          "title": "文档",
+          "description": "面向服务器开发的详尽指南与API参考文档"
+        },
+        "openSource": {
+          "title": "开源",
+          "description": "采用社区驱动开发模式，并在GitHub上开源"
+        },
+        "learn_more": "了解更多",
+        "host": {
+          "title": "准备搭建您的专属服务器了吗？",
+          "description": "下载服务器文件，即可打造您独特的BeamMP游戏体验。",
+          "windows": "Windows 服务器端",
+          "linux": "Linux 服务器端",
+          "partners": {
+            "description": "通过我们可信赖的托管合作伙伴快速上手，享受无忧设置、24/7技术支持和优化性能。",
+            "view_partners": "查看托管合作伙伴"
+          },
+          "self_host": {
+            "title": "或者自托管"
+          }
+        }
+      },
+      "faq": {
+        "title": "常见问题回答",
+        "0": {
+          "question": "服务器列表没有显示！",
+          "answer": "如果遇到此问题，可尝试重启BeamMP客户端。若仍未解决，请在官方论坛发帖或加入Discord支持频道寻求帮助。"
+        },
+        "1": {
+          "question": "若遇到问题或有疑问，如何提交工单？",
+          "answer": "请查看Discord及官方论坛中的#how-to-use频道。详细描述您已尝试的操作步骤，以便支持团队能够快速有效地为您提供帮助。"
+        },
+        "2": {
+          "question": "求助！我遇到错误代码了",
+          "answer": "请前往我们的论坛查看是否有人遇到过相同问题。很可能已有其他用户遇到过类似情况，回复中通常也会附有解决方案。或者可以访问我们的Discord频道，那里是目前更活跃的社区，大家都很热心帮助。"
+        },
+        "3": {
+          "question": "我可以在盗版的BeamNG.Drive上玩吗？",
+          "answer": "我们尚不确定其是否兼容BeamNG.drive的盗版版本，但对于非正版游戏副本，我们将不提供任何技术支持，也不会兼容它"
+        },
+        "4": {
+          "question": "如何托管服务器？",
+          "answer": "托管服务器所需的文件可在本页顶部客户端下载下方找到。同时您需要在Keymaster获取认证密钥。更多设置相关信息请查阅我们的官方文档。"
+        },
+        "5": {
+          "question": "我可以使用模组吗？",
+          "answer": "模组是支持的，这些安装在服务器上。请查看我们的文档以获取更多信息。"
+        }
+      },
+      "stats": {
+        "active_players": "活跃玩家",
+        "global_servers": "全球服务器",
+        "total_downloads": "总下载量"
+      }
+    },
+    "communities": {
+      "title": "社区",
+      "description": "发现围绕BeamMP建立的繁荣社区。从竞技赛车联盟到休闲自由漫游会话，找到您完美的玩伴群组。",
+      "starting": {
+        "title": "想要创建您自己的社区吗？",
+        "description": "托管您自己的BeamMP服务器，并围绕您钟爱的游戏模式建立社区。",
+        "setup_guide": "服务器设置指南",
+        "join_discord": "加入我们的Discord"
+      }
+    },
+    "partners": {
+      "title": "托管合作伙伴",
+      "description": "选择我们值得信赖的托管合作伙伴。简单的设置、优化的性能和支持，以确保您的BeamMP服务器运行顺畅。",
+      "from_price": "从 {price}",
+      "visit_website": "访问网站",
+      "error_loading": "无法获取合作伙伴信息"
+    },
+    "servers": {
+      "title": "服务器",
+      "description": "探索并加入来自全球的BeamMP服务器。在此一站式发现您钟爱的游戏模式、活跃社群与丰富玩法。",
+      "show_only": "仅显示:",
+      "loading_servers": "加载服务器中...",
+      "server_count": "0 个发现的服务器 | 1 个发现的服务器 | {count} 发现的服务器",
+      "players_found": "0 个玩家 | 1 个玩家 | {count} 个玩家",
+      "filters": {
+        "hide_empty": "隐藏空服务器",
+        "hide_full": "隐藏爆满服务器",
+        "search": "搜索服务器中",
+        "hide_password": "隐藏受密码保护的服务器",
+        "show_official": "官方服务器",
+        "show_partner": "合作伙伴服务器",
+        "show_featured": "推荐服务器"
+      },
+      "table_headers": {
+        "location": "位置",
+        "name": "服务器名称",
+        "map": "地图",
+        "players": "玩家",
+        "mods": "模组",
+        "status": "状态"
+      }
+    },
+    "statistics": {
+      "title": "统计数据",
+      "description": "提供活跃服务器的实时快照指标与玩家数量时间线。支持在图表上标注版本发布日期。",
+      "loading": "加载中...",
+      "peak": "峰值: {count}",
+      "current_players": "当前玩家",
+      "current_servers": "当前服务器",
+      "avg_players_per_server": "服务器平均玩家数量",
+      "official_servers": "官方服务器",
+      "partner_servers": "合作伙伴服务器",
+      "player_volume": "在线人数时间轴",
+      "hint": "版本发布标记显示为橙色垂直虚线（例如 v3.0.0、v4.0.0）。悬停鼠标至数据点可查看详细信息。",
+      "server_volume": "服务器数量时间轴",
+      "server_hint": "服务器数量呈现相似趋势。发布标记指示主要版本发布。"
+    },
+    "about": {
+      "title": "关于BeamMP",
+      "description": "BeamMP可为BeamNG.drive带来多人游戏体验。它由社区共建、为社区服务，注重稳定性与性能，致力于让您与朋友共享真实的驾驶体验。",
+      "note": {
+        "title": "开发者的话",
+        "content": "BeamMP 始于一个简单的想法：我想和我的兄弟们一起玩BeamNG.drive。这个最初作为实验的项目，迅速成长为一个社区驱动的倡议，专注于实现多人游戏体验与乐趣。我们深切关注于提供尽可能最佳的用户体验，并让玩家能够轻松加入，享受共同驾驶的快乐。该项目向所有技能水平的贡献者开放——无论您是编写代码、管理服务器、设计场景，还是帮助他人完成设置，您的努力都是 BeamMP 蓬勃发展的关键部分。感谢您的参与，帮助我们共同构建这个非凡的项目。"
+      },
+      "provides": {
+        "title": "BeamMP的功能与服务",
+        "points": {
+          "0": "提供BeamNG.drive的多人联机会话，支持服务器浏览器与筛选功能。",
+          "1": "服务器端管理工具与配置选项",
+          "2": "模组支持与付费内容保护机制",
+          "3": "活跃的社区（论坛、Discord），可以提供帮助与协作支持。"
+        }
+      },
+      "project": {
+        "title": "项目价值观",
+        "points": {
+          "0": "社区优先：决策由真实玩家/服务器需求引导",
+          "1": "可靠性：我们始终把游戏稳定性、数据同步精度和性能表现放在首位，能优化到的地方都全力以赴。",
+          "2": "开放：欢迎贡献、反馈与透明",
+          "3": "安全：促进公平游戏和尊重互动"
+        }
+      },
+      "get_involved": {
+        "title": "参与进来",
+        "description": "参与的方式有很多种——比如加入讨论、反馈问题、贡献代码，或者通过捐赠等途径给项目提供财务支持。",
+        "patreon": "Patreon",
+        "forum": "论坛",
+        "docs": "文档",
+        "github": "GitHub",
+        "discord": "Discord"
+      },
+      "funding": {
+        "title": "资金与可持续发展",
+        "description": "BeamMP的发展离不开社区的支持。捐款将用于支付服务器等基础设施、带宽、工具及开发时间的成本。如果您认可本项目并愿意支持我们持续成长，请考虑为我们提供捐助。",
+        "patreon": "在Patreon上支持我们",
+        "learn": "了解更多内容请访问GitHub"
+      },
+      "credits": {
+        "title": "致谢与贡献者",
+        "description": "BeamMP项目由模组团队及一众优秀的社区贡献者共同维护。我们同时感谢所有服务器所有者、模组创作者、测试人员以及积极反馈问题的用户——你们的时间与热情是项目持续前进的动力。",
+        "desc_2": "衷心感谢BeamNG.drive的开发团队，他们打造的卓越平台为多人游戏功能的实现奠定了坚实基础。",
+        "desc_3": "同时衷心感谢以下现任与曾经的社区成员，感谢他们多年来对BeamMP项目作出的重大贡献：",
+        "mentions": {
+          "0": "Jojos38（联合创始人）—感谢他早期在设计各方面的工作，帮助将想法变为现实。",
+          "1": "Jetta（jetta.cat）—负责标志的设计与制作。",
+          "2": "Anonymous275 与 Lionkor — 在项目重构期间负责使用 C++ 重写代码的工作。",
+          "3": "Tixx — 感谢他对整个项目代码库作出的重大贡献。",
+          "4": "以及更多未列名的贡献者—衷心感谢每一位以各种方式支持过本项目的朋友！"
+        },
+        "thank_you": "我们正在共同打造一个独特的作品—真诚感谢您成为BeamMP社区的一员！"
+      }
+    }
+  }
+}
