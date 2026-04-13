@@ -25,13 +25,13 @@ const isLoading = ref(true)
 const heroImageLoaded = ref(false)
 const heroImageSrc = ref(landingLq)
 const installerDownloadUrl = computed(() => {
-  //const base = import.meta.env.BASE_URL || '/'
-  /*if (base === './') {
+  const base = import.meta.env.BASE_URL || '/'
+  if (base === './') {
     return '/installer/BeamMP_Installer.exe'
   }
   return `${base.replace(/\/$/, '')}/installer/BeamMP_Installer.exe`
-  */
-  return 'https://github.com/BeamMP/BeamMP-Launcher/releases/download/v2.8.0/BeamMP_Installer.exe'
+  
+  //return 'https://github.com/BeamMP/BeamMP-Launcher/releases/download/v2.8.0/BeamMP_Installer.exe'
 })
 
 onMounted(async () => {
