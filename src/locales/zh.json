@@ -15,6 +15,7 @@
       "statistics": "统计",
       "store": "周边商店",
       "github": "GitHub",
+      "patreon": "在 Patreon 上为我们捐献",
       "language": "选择语言",
       "theme": {
         "light": "明亮主题",
@@ -23,38 +24,62 @@
       }
     },
     "footer": {
+      "support_on_patreon": "Patreon",
       "about": "关于我们",
       "privacy_policy": "隐私政策",
       "terms_conditions": "条款与细则"
     },
     "404": {
       "title": "找不到页面",
-      "description": "此页面不存在，\n此页面可能不存在或已经被删除"
+      "description": "此页面不存在，\n此页面可能不存在或已经被删除",
+      "return_home": "返回首页"
     },
     "home": {
       "hero": {
+        "title": "为BeamNG.Drive 提供多人游戏",
+        "subtitle": "联机体验软体物理引擎\n和朋友一起赛车 角色扮演或闲逛",
+        "download_now": "现在下载",
+        "browse_servers": "查看服务器"
       },
       "metrics": {
+        "active_players": "活跃玩家",
+        "players_online": "在线玩家",
+        "public_servers": "公开服务器",
         "all_servers": "所有服务器"
       },
       "why_beammp": "为什么选择BeamMP？",
       "features": {
         "stable_servers": {
+          "title": "稳定",
+          "description": "BeamMP在全球开设服务器 提供稳定体验"
         },
         "beamng": {
+          "title": "易用",
+          "description": "BeamMP与BeamNG使用相同的地图 车辆和模组 无需学习新东西"
         },
         "standalone": {
+          "title": "独立",
+          "description": "BeamMP不会修改你的BeamNG 你可以无缝使用单机和联机"
         },
         "sync": {
+          "title": "流畅",
+          "description": "BeamMP 每秒更新~50次同步 带来流畅的联机体验"
         }
       },
       "communities": {
+        "join": "加入这个充满活力的社区",
         "description": "探索数千个独特服务器上的多样化游戏体验",
         "racing": {
+          "name": "赛车",
+          "description": "为全球玩家提供联机赛车与计时赛"
         },
         "roleplay": {
+          "name": "角色扮演",
+          "description": "从警匪追逐到货运模拟都能获得沉浸的体验"
         },
         "crash": {
+          "name": "破坏",
+          "description": "以德比和破坏为玩法的主题玩法"
         },
         "freeroam": {
           "name": "自由漫游与自定义服务器",
@@ -62,10 +87,21 @@
         }
       },
       "find": {
+        "title": "寻找你的完美服务器",
+        "description": "查看数百个活跃服务器 拥有不同的游戏模式 模组和社区 从竞速到休闲 每个人都能在这里找到适合自己的服务器",
         "points": {
-        }
+          "custom": "独特体验",
+          "custom_desc": "每个玩法都由社区创造",
+          "moderation": "环境友好",
+          "moderation_desc": "安全友好的游戏环境",
+          "global": "极低延迟",
+          "global_desc": "全球服务器实现低延迟"
+        },
+        "browse_all_servers": "浏览全部服务器"
       },
       "devFeatures": {
+        "title": "为开发者而生",
+        "description": "打造独特游戏规则 开设自己的服务器 为项目做出贡献",
         "lua": {
           "title": "Lua API",
           "description": "强大的服务器端Lua脚本支持，用于实现自定义游戏模式与功能。"
