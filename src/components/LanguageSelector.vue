@@ -38,7 +38,8 @@ const toggleDropdown = () => {
 }
 
 const getFlagUrl = (flagName) => {
-  return new URL(`../assets/flags/${flagName}.png`, import.meta.url).href
+  //return new URL(`../assets/flags/${flagName}.png`, import.meta.url).href
+  return `/flags/${flagName}.png`
 }
 
 onMounted(async () => {
