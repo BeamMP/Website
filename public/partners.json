@@ -1,11 +1,5 @@
 [
   {
-    "name": "Horizon Hosting",
-    "website": "https://hrzn.link/beammp",
-    "from": "$3.34/mo",
-    "logo": "https://hrznhosting.com/assets/logo.svg"
-  },
-  {
     "name": "RackGenius",
     "website": "https://rackgeni.us/beammp-plans",
     "from": "$0.5/mo",
@@ -58,12 +52,6 @@
     "website": "https://fourseasonshosting.com",
     "from": "$3.00/mo",
     "logo": "https://fourseasonshosting.com/_next/image?url=%2Flogo.png&w=256&q=75"
-  },
-  {
-    "name": "Vertuo Hosting",
-    "website": "https://vertuohosting.com",
-    "from": "$1.99/mo",
-    "logo": "https://vertuohosting.com/assets/img/logo.png"
   },
   {
     "name": "Winheberg",
