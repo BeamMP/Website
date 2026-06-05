@@ -70,5 +70,11 @@
     "website": "https://iceline-hosting.com/games/beammp",
     "from": "$3.64/mo",
     "logo": "https://iceline-hosting.com/_astro/logo.DTnWV5zL_157TDr.webp"
+  },
+  {
+    "name": "AxentHost",
+    "website": "https://axenthost.com/games/beamng/",
+    "from": "$0/mo",
+    "logo": "https://axenthost.com/img/axenthost/logo.svg"
   }
 ]
