@@ -11,18 +11,18 @@ async function loadPartners() {
     if (!res.ok) throw new Error(`Failed to load partners (${res.status})`)
     const data = await res.json()
     const partnersArray = Array.isArray(data) ? data : []
-    
+
     // Create a seed based on the current date (YYYY-MM-DD)
     const today = new Date().toISOString().split('T')[0]
     const seed = today.split('-').reduce((acc, val) => acc + parseInt(val), 0)
-    
+
     // Simple seeded shuffle using the date as seed
     const shuffled = [...partnersArray]
     for (let i = shuffled.length - 1; i > 0; i--) {
-      const j = Math.floor(((seed * (i + 1) * 9301 + 49297) % 233280) / 233280 * (i + 1))
+      const j = Math.floor((((seed * (i + 1) * 9301 + 49297) % 233280) / 233280) * (i + 1))
       ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
     }
-    
+
     partners.value = shuffled
   } catch (e) {
     error.value = e.message || 'Unable to fetch partners'
@@ -70,7 +70,10 @@ onMounted(loadPartners)
           :key="idx"
           class="shadow-md hover:-translate-y-1 duration-150 group rounded-xl border border-neutral-200 dark:border-neutral-800 dark:bg-neutral-900/50 hover:border-beammp-orange dark:hover:border-beammp-orange hover:shadow-xl transition-all"
         >
-          <div class="flex items-center justify-center min-h-16 mb-4 p-6 bg-neutral-900/80 border-b border-beammp-orange border-b-2 rounded-t-xl" style="height: 114px;">
+          <div
+            class="flex items-center justify-center min-h-16 mb-4 p-6 bg-neutral-900/80 border-b border-beammp-orange border-b-2 rounded-t-xl"
+            style="height: 114px"
+          >
             <img :src="p.logo" :alt="p.name" class="max-h-16 object-contain" />
           </div>
           <div class="p-6">

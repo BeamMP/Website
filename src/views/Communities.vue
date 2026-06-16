@@ -251,7 +251,9 @@ const communities = computed(() => [
     <!-- CTA Section -->
     <section class="text-center py-16 bg-neutral-50 dark:bg-neutral-900/30 -mx-4 px-4 rounded-xl">
       <div class="max-w-2xl mx-auto space-y-6">
-        <h2 class="text-3xl md:text-4xl font-bold">{{ $t('message.communities.starting.title') }}</h2>
+        <h2 class="text-3xl md:text-4xl font-bold">
+          {{ $t('message.communities.starting.title') }}
+        </h2>
         <p class="text-lg text-neutral-600 dark:text-neutral-400">
           {{ $t('message.communities.starting.description') }}
         </p>

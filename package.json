@@ -1,7 +1,7 @@
 {
   "name": "beammp-website",
   "private": true,
-  "version": "2.4.24",
+  "version": "2.5.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,11 +11,13 @@
     "format": "prettier --write \"src/**/*.{js,vue,css,json}\""
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.20",
     "@tailwindcss/vite": "^4.1.17",
     "@vueuse/core": "^14.1.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-vue-next": "^0.555.0",
+    "marked": "^18.0.5",
     "reka-ui": "^2.7.0",
     "tailwind-merge": "^3.4.0",
     "tailwindcss": "^4.1.17",

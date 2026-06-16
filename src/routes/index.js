@@ -65,6 +65,27 @@ const baseRoutes = [
       requiresAuth: false,
     },
   },
+
+  {
+    path: 'privacy',
+    name: 'Privacy',
+    component: () => import('@/views/Privacy.vue'),
+    meta: {
+      title: 'Privacy Policy - BeamMP',
+      description: 'Read our privacy policy',
+      requiresAuth: false,
+    },
+  },
+  {
+    path: 'terms',
+    name: 'Terms',
+    component: () => import('@/views/Terms.vue'),
+    meta: {
+      title: 'Terms of Service - BeamMP',
+      description: 'Read our terms of service',
+      requiresAuth: false,
+    },
+  },
 ]
 
 const routes = [
@@ -106,6 +127,12 @@ const router = createRouter({
 
 // Global navigation guard for meta data and locale
 router.beforeEach(async (to, from, next) => {
+  // If the path has no locale prefix (e.g. /servers), redirect to /<lang>/servers
+  if (!to.params.locale && to.path !== '/') {
+    const locale = localStorage.getItem('lang') || 'en'
+    return next(`/${locale}${to.path}`)
+  }
+
   const paramsLocale = to.params.locale || 'en'
   const i18n = window.i18n
 

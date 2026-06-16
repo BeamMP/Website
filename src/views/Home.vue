@@ -30,7 +30,7 @@ const installerDownloadUrl = computed(() => {
     return '/installer/BeamMP_Installer.exe'
   }
   return `${base.replace(/\/$/, '')}/installer/BeamMP_Installer.exe`
-  
+
   //return 'https://github.com/BeamMP/BeamMP-Launcher/releases/download/v2.8.0/BeamMP_Installer.exe'
 })
 
@@ -231,7 +231,9 @@ const faqs = computed(() => [
                   {{ stat.value }} </span
                 >{{ stat.suffix }}
               </div>
-              <div class="text-sm md:text-base text-neutral-700 dark:text-neutral-300 mt-1">{{ stat.label }}</div>
+              <div class="text-sm md:text-base text-neutral-700 dark:text-neutral-300 mt-1">
+                {{ stat.label }}
+              </div>
             </div>
           </div>
         </div>
@@ -293,7 +295,7 @@ const faqs = computed(() => [
         </div>
         <div class="text-center mt-8">
           <RouterLink
-            style="display: none;"
+            style="display: none"
             :to="`/${$i18n.locale}/communities`"
             class="inline-flex items-center gap-2 bg-beammp-orange hover:bg-beammp-orange/90 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
           >

@@ -1,17 +1,18 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
+@plugin "@tailwindcss/typography";
 @plugin "tailwindcss-animate";
-@import "tw-animate-css";
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-beammp-orange: #F36D24;
-  --color-beammp-white: #FFFFFF;
+  --color-beammp-orange: #f36d24;
+  --color-beammp-white: #ffffff;
   --color-beammp-black: #000000;
   --color-beammp-gray: #333333;
-  --color-beammp-green: #1D9749;
-  --color-beammp-blue: #4470B6;
+  --color-beammp-green: #1d9749;
+  --color-beammp-blue: #4470b6;
 }
 
 @theme inline {

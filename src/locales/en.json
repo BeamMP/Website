@@ -133,33 +133,27 @@
         "title": "Frequently Asked Questions",
         "0": {
           "question": "The server list is not showing up!",
-          "answer":
-            "Try restarting BeamMP as this can sometimes happen. If this fails to fix your issue please create a topic on our forum or visit the support channel on our discord."
+          "answer": "Try restarting BeamMP as this can sometimes happen. If this fails to fix your issue please create a topic on our forum or visit the support channel on our discord."
         },
         "1": {
           "question": "How do I open a ticket in case something doesn't work or I have questions?",
-          "answer":
-            "Please check the #how-to-use channel in Discord and on our forum. Please give an accurate description of what you have done so the support team will help you in a fast and effective way."
+          "answer": "Please check the #how-to-use channel in Discord and on our forum. Please give an accurate description of what you have done so the support team will help you in a fast and effective way."
         },
         "2": {
           "question": "Help! I'm getting error codes",
-          "answer":
-            "Please head over to our forum and see if anyone has had the issue before. It is likely that someone else has at some point and therefore there will also probably be a solution posted with it too in the replies. Alternatively visit our discord where the larger portion of community is currently based."
+          "answer": "Please head over to our forum and see if anyone has had the issue before. It is likely that someone else has at some point and therefore there will also probably be a solution posted with it too in the replies. Alternatively visit our discord where the larger portion of community is currently based."
         },
         "3": {
           "question": "Does this work with pirated versions of BeamNG.drive?",
-          "answer":
-            "We don't know if it works with pirated versions of BeamNG.drive, but we will not provide any support to non legit copies of the game. Nor will we change to support it."
+          "answer": "We don't know if it works with pirated versions of BeamNG.drive, but we will not provide any support to non legit copies of the game. Nor will we change to support it."
         },
         "4": {
           "question": "How do I host a server?",
-          "answer":
-            "The server files required for hosting your own server can be found at the top of this page below the client download. You will also require an authentication key which can be found from keymaster. Further information around the setup can be found on our docs."
+          "answer": "The server files required for hosting your own server can be found at the top of this page below the client download. You will also require an authentication key which can be found from keymaster. Further information around the setup can be found on our docs."
         },
         "5": {
           "question": "Can I use mods?",
-          "answer":
-            "Mods are supported. These are installed on the server. See our docs for more information."
+          "answer": "Mods are supported. These are installed on the server. See our docs for more information."
         }
       },
       "stats": {
@@ -225,7 +219,7 @@
       "server_volume": "Server Volume Over Time",
       "server_hint": "Server count follows similar trends. Release markers indicate major version launches."
     },
-    "about":{
+    "about": {
       "title": "About BeamMP",
       "description": "BeamMP brings multiplayer to BeamNG.drive. It’s built by and for the community, focusing on stability, performance, and an authentic driving experience shared with friends.",
       "note": {

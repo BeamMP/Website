@@ -198,7 +198,7 @@ const TikTokIcon = createLucideIcon('TikTok', [
             </RouterLink>
             <span>&middot;</span>
             <a
-              href="https://forum.beammp.com/topic/95/privacy-policy-v1-0"
+              href="https://beammp.com/privacy"
               target="_blank"
               rel="noopener noreferrer"
               class="text-neutral-700 hover:text-beammp-blue transition-colors dark:text-neutral-500 dark:hover:text-blue-400"
@@ -207,7 +207,7 @@ const TikTokIcon = createLucideIcon('TikTok', [
             </a>
             <span>&middot;</span>
             <a
-              href="https://forum.beammp.com/topic/94/terms-of-use-v1-0"
+              href="https://beammp.com/terms"
               target="_blank"
               rel="noopener noreferrer"
               class="text-neutral-700 hover:text-beammp-blue transition-colors dark:text-neutral-500 dark:hover:text-blue-400"

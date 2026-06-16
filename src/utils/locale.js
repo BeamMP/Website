@@ -31,12 +31,12 @@ export function getLocalizedPath(route, locale = null) {
 export function switchLocale(newLocale, currentPath) {
   // Split path from query string
   const [pathOnly] = currentPath.split('?')
-  
+
   // Remove locale from the beginning: /en/servers -> /servers, /en/ -> /
   const pathWithoutLocale = pathOnly.replace(/^\/[a-z]{2}(?:\/|$)/, '/')
-  
+
   // Remove trailing slashes and ensure we have the right format
   const cleanPath = pathWithoutLocale.replace(/\/+/g, '/').replace(/\/$/, '') || ''
-  
+
   return `/${newLocale}${cleanPath}`.replace(/\/+/g, '/')
 }

@@ -2,7 +2,9 @@
   <div class="servers-container">
     <div class="servers-header">
       <h1 class="text-4xl font-bold">{{ $t('message.servers.title') }}</h1>
-      <p class="text-base servers-subtitle text-neutral-600 dark:text-neutral-400">{{ $t('message.servers.description') }}</p>
+      <p class="text-base servers-subtitle text-neutral-600 dark:text-neutral-400">
+        {{ $t('message.servers.description') }}
+      </p>
     </div>
 
     <div class="servers-filters">
@@ -47,7 +49,9 @@
       </div>
 
       <div class="server-count">
-        {{ $t('message.servers.server_count', { count: filteredServers.length }) }} ({{ $t('message.servers.players_found', { count: totalPlayers }) }})
+        {{ $t('message.servers.server_count', { count: filteredServers.length }) }} ({{
+          $t('message.servers.players_found', { count: totalPlayers })
+        }})
       </div>
     </div>
 
