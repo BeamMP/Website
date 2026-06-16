@@ -1,7 +1,7 @@
 # Terms of Service (Websites, Forum, Services)
-**Version 2026.1 – United Kingdom**
+**Version 2026.6 – United Kingdom**
 
-**Effective date:** 1 January 2026
+**Effective date:** 18 June 2026
 
 These Terms of Service (“**Terms**”) govern your access to and use of our websites, community forum, and related online services (collectively, the “**Services**”).
 This includes our Discord Server and the provided "Official Servers".
@@ -14,9 +14,9 @@ By accessing or using the Services, you agree to these Terms.
 “**We**”, “**us**”, or “**our**” refers to the operator of the Services.
 
 **Contact:**  
-[Insert legal entity name]  
-[Insert contact email]  
-[Insert postal address]
+Legal Name: `BeamMP Ltd.`
+Email: `contact@beammp.com`
+Address: `2 Queens Road, Boston, PE21 9AA, United Kingdom`
 
 ---
 
@@ -58,7 +58,7 @@ We grant you a limited, personal, non-exclusive, non-transferable, revocable lic
    - Mods, scripts, maps, files, or data made available
    - Compliance with applicable laws and regulations
    - Moderation, security, and user safety
-5. You agree to indemnify BeamMP and its owners of any responsibility or liability.
+5. You agree to indemnify us against any liability arising from your use of user-hosted servers.
 
 ---
 
@@ -133,7 +133,7 @@ We may remove infringing material and take action at our discretion.
 ## 11. Enforcement and Moderation
 1. We may remove content, restrict features, suspend, or terminate accounts for violation of our Terms, Rules or Policies.
 2. We cooperate with law enforcement when legally required or where justifiable at our discretion in the interest of user and platform safety.
-3. We make a reasonable effort to proactively monitor all content on our Services using a combination of community reports, automated tools and active moderation.
+3. We make a reasonable effort to proactively monitor content on our Services using a combination of community reports, automated tools and active moderation.
 
 ---
 

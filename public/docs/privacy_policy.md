@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated: January 2026**
+**Last updated: June 2026**
 
 This Privacy Policy describes how BeamMP Ltd. (“we”, “us”, or “our”) collects, uses, and protects information when you use the BeamMP website, accounts, forum, mod, server, launcher, and related online services (collectively, the “**Services**”).
 
@@ -52,9 +52,8 @@ We do **not** sell personal information.
 Where applicable, we process personal data under the following legal bases:
 - **Consent** (e.g., account registration, optional profile information)
 - **Contractual necessity** (providing Services access and functionality)
-- **Legitimate interests** (security, moderation, abuse prevention, site improvement & anonymised analytics)
+- **Legitimate interests** (security, moderation, abuse prevention, site improvement & anonymised analytics, Preserving conversational data, FAQ or documentation though the means of data anonymisation)
 - **Legal obligation** (compliance with applicable laws)
-- **Data Continuity** (Preserving conversational data, FAQ or documentation though the means of data anonimisation)
 
 ---
 
@@ -143,6 +142,14 @@ Continued use of our Services after changes are posted constitutes acceptance of
 
 ---
 
-## 13. Contact Us
+## 13. Right to complain
+
+If you have concerns about how we handle your personal data, please contact us first so we can try to resolve the issue. You also have the right to lodge a complaint with the Information Commissioner's Office (ICO), the UK supervisory authority for data protection matters.
+
+You can contact the ICO via the ICO website or by calling their helpline.
+
+---
+
+## 14. Contact Us
 
 If you have questions about this Privacy Policy or wish to exercise your privacy rights, please contact the BeamMP team via email at `dpo@beammp.com`.
