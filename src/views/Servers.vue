@@ -945,28 +945,25 @@ function joinServer(server) {
   color: var(--text-muted, #666);
 }
 
-:global(.dark) .servers-container,
-@media (prefers-color-scheme: dark) {
-  .servers-container {
-    --text-color: #e0e0e0;
-    --text-muted: #999999;
-    --card-bg: #2a2a2a;
-    --border-color: #404040;
-    --input-bg: #1a1a1a;
-    --tag-bg: #404040;
-    --primary-color: #5d9cec;
-    --header-bg: #1f1f1f;
-    --hover-bg: #333333;
-    --active-bg: #2a3f5f;
-    --details-bg: #252525;
-    --filters-bg: linear-gradient(135deg, rgba(30, 30, 30, 0.95) 0%, rgba(20, 20, 20, 0.98) 100%);
-    --filters-border: rgba(255, 106, 0, 0.2);
-    --filters-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    --checkbox-bg: rgba(255, 255, 255, 0.05);
-    --checkbox-border: rgba(255, 255, 255, 0.15);
-    --checkbox-hover-shadow: rgba(255, 106, 0, 0.15);
-    --placeholder-color: #666666;
-  }
+:global(.dark) .servers-container {
+  --text-color: #e0e0e0;
+  --text-muted: #999999;
+  --card-bg: #2a2a2a;
+  --border-color: #404040;
+  --input-bg: #1a1a1a;
+  --tag-bg: #404040;
+  --primary-color: #5d9cec;
+  --header-bg: #1f1f1f;
+  --hover-bg: #333333;
+  --active-bg: #2a3f5f;
+  --details-bg: #252525;
+  --filters-bg: linear-gradient(135deg, rgba(30, 30, 30, 0.95) 0%, rgba(20, 20, 20, 0.98) 100%);
+  --filters-border: rgba(255, 106, 0, 0.2);
+  --filters-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --checkbox-bg: rgba(255, 255, 255, 0.05);
+  --checkbox-border: rgba(255, 255, 255, 0.15);
+  --checkbox-hover-shadow: rgba(255, 106, 0, 0.15);
+  --placeholder-color: #666666;
 }
 
 /* Mobile responsive */
@@ -1013,23 +1010,3 @@ function joinServer(server) {
   }
 }
 </style>
-  
-    /* Light theme defaults */
-    --text-color: #1a1a1a;
-    --text-muted: #666666;
-    --card-bg: #ffffff;
-    --border-color: #e0e0e0;
-    --input-bg: #ffffff;
-    --tag-bg: #e8e8e8;
-    --primary-color: #5d9cec;
-    --header-bg: #f5f5f5;
-    --hover-bg: #f9f9f9;
-    --active-bg: #f0f7ff;
-    --details-bg: #fafafa;
-    --filters-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(249, 249, 249, 0.95) 100%);
-    --filters-border: var(--border-color, #e0e0e0);
-    --filters-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    --checkbox-bg: #ffffff;
-    --checkbox-border: #d0d0d0;
-    --checkbox-hover-shadow: rgba(255, 106, 0, 0.1);
-    --placeholder-color: var(--text-muted, #999999);

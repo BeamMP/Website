@@ -90,7 +90,7 @@ function localRoute(path) {
                 </RouterLink>
               </NavigationMenuLink>
             </NavigationMenuItem>
-            <!--<NavigationMenuItem>
+            <NavigationMenuItem>
               <NavigationMenuLink as-child>
                 <RouterLink
                   :to="localRoute('servers')"
@@ -104,7 +104,7 @@ function localRoute(path) {
                   {{ $t('message.nav.servers') }}
                 </RouterLink>
               </NavigationMenuLink>
-            </NavigationMenuItem>-->
+            </NavigationMenuItem>
             <!--<NavigationMenuItem>
               <NavigationMenuLink as-child>
                 <RouterLink
