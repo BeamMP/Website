@@ -86,6 +86,22 @@ const baseRoutes = [
       requiresAuth: false,
     },
   },
+
+  // Redirect route for old keymaster
+  {
+    path: 'keymaster',
+    redirect: (to) => {
+      window.location.replace('https://keymaster.beammp.com/')
+      return `/${to.params.locale || 'en'}`
+    },
+  },
+  {
+    path: 'k/dashboard',
+    redirect: (to) => {
+      window.location.replace('https://keymaster.beammp.com/')
+      return `/${to.params.locale || 'en'}`
+    },
+  },
 ]
 
 const routes = [
