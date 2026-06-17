@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated: June 2026**
+**Last updated:** 18th June 2026
 
 This Privacy Policy describes how BeamMP Ltd. (“we”, “us”, or “our”) collects, uses, and protects information when you use the BeamMP website, accounts, forum, mod, server, launcher, and related online services (collectively, the “**Services**”).
 
@@ -52,7 +52,7 @@ We do **not** sell personal information.
 Where applicable, we process personal data under the following legal bases:
 - **Consent** (e.g., account registration, optional profile information)
 - **Contractual necessity** (providing Services access and functionality)
-- **Legitimate interests** (security, moderation, abuse prevention, site improvement & anonymised analytics, Preserving conversational data, FAQ or documentation though the means of data anonymisation)
+- **Legitimate interests** (security, moderation, abuse prevention, site improvement & anonymised analytics, Preserving conversational data, FAQ or documentation through the means of data anonymisation)
 - **Legal obligation** (compliance with applicable laws)
 
 ---
@@ -76,7 +76,7 @@ Where required by law and appropriate, cookie consent mechanisms are employed.
 
 We retain personal data only as long as necessary for the purposes described in this policy:
 
-- **Server logs and IP addresses (non-account related):** typically retained up to 90 days and a maximum of 180 days
+- **Server logs and IP addresses (non-account related):** typically retained for 90 days and a maximum of 180 days
 - **Account-related IP addresses and logs relevant to moderation purposes:** retained up to 5 years
 - **Account information, moderation actions and posted content:** retained until the account is deleted or content is removed, unless retention is required for moderation, security, continuity, or legal purposes
 - **Right to Erasure & Data Deletion Requests:** You may request the deletion of your data through your profile within our Services. Accounts with posted content and/or moderator actions require a specific request to `dpo@beammp.com` for review on a case by case basis. Requests will be processed within 28 days in accordance with legal requirements.

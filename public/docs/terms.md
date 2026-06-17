@@ -1,7 +1,7 @@
 # Terms of Service (Websites, Forum, Services)
 **Version 2026.6 – United Kingdom**
 
-**Effective date:** 18 June 2026
+**Effective date:** 18th June 2026
 
 These Terms of Service (“**Terms**”) govern your access to and use of our websites, community forum, and related online services (collectively, the “**Services**”).
 This includes our Discord Server and the provided "Official Servers".
@@ -118,7 +118,7 @@ All intellectual property rights in the Services (including software, branding, 
 ---
 
 ## 10. Copyright and Takedowns
-If you believe content infringes your copyright, patent or intellectual rights, contact us with:
+If you believe content infringes your copyright or other intellectual property rights, contact us with:
 
 - Identification of the content or works  
 - Location of the infringing material  
@@ -128,11 +128,14 @@ If you believe content infringes your copyright, patent or intellectual rights, 
 
 We may remove infringing material and take action at our discretion.
 
+If your content is removed and you believe this was an error, you may submit a counter-notice to contact@beammp.com including the removed content's details, your contact information, and a good-faith explanation. 
+We will review and may reinstate where appropriate.
+
 ---
 
 ## 11. Enforcement and Moderation
 1. We may remove content, restrict features, suspend, or terminate accounts for violation of our Terms, Rules or Policies.
-2. We cooperate with law enforcement when legally required or where justifiable at our discretion in the interest of user and platform safety.
+2. We cooperate with law enforcement where legally required, and may share information voluntarily where we reasonably consider it necessary to protect the safety of users or the public, or to prevent or detect crime, in line with our Privacy Policy and applicable data-protection law.
 3. We make a reasonable effort to proactively monitor content on our Services using a combination of community reports, automated tools and active moderation.
 
 ---
