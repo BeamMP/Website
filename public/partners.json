@@ -51,13 +51,13 @@
     "name": "Four Seasons Hosting",
     "website": "https://fourseasonshosting.com",
     "from": "$3.00/mo",
-    "logo": "https://fourseasonshosting.com/_next/image?url=%2Flogo.png&w=256&q=75"
+    "logo": "/partner_logos/four_seasons.png"
   },
   {
     "name": "Winheberg",
     "website": "https://winheberg.fr/offres/gaming/beammp",
     "from": "$2.99/mo",
-    "logo": "https://winheberg.fr/img/logo-white.png"
+    "logo": "/partner_logos/winheberg.svg"
   },
   {
     "name": "Wabbanode",
@@ -76,5 +76,11 @@
     "website": "https://tlsservers.com/beammp",
     "from": "$2.00/mo",
     "logo": "/partner_logos/TLS_Servers-Studios.png"
+  }
+    {
+    "name": "RaveNodes",
+    "website": "https://www.ravenodes.com/beammp-hosting",
+    "from": "$1.00/mo",
+    "logo": "/partner_logos/RaveNodes.png"
   }
 ]
