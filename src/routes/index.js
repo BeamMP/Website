@@ -143,13 +143,20 @@ const router = createRouter({
 
 // Global navigation guard for meta data and locale
 router.beforeEach(async (to, from, next) => {
+  // The language is the first part of the address. The not-found route matches
+  // anything, so it has no `locale` param even for /en/nope: read the language
+  // from the path itself, or /en/nope would look like it has none and be sent
+  // to /en/en/nope, then /en/en/en/nope, and never finish.
+  const firstSegment = to.path.split('/')[1]
+  const pathLocale = SUPPORT_LOCALES.includes(firstSegment) ? firstSegment : null
+
   // If the path has no locale prefix (e.g. /servers), redirect to /<lang>/servers
-  if (!to.params.locale && to.path !== '/') {
+  if (!to.params.locale && !pathLocale && to.path !== '/') {
     const locale = localStorage.getItem('lang') || 'en'
     return next(`/${locale}${to.path}`)
   }
 
-  const paramsLocale = to.params.locale || 'en'
+  const paramsLocale = to.params.locale || pathLocale || 'en'
   const i18n = window.i18n
 
   // Ensure i18n is available
