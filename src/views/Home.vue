@@ -16,7 +16,7 @@ import {
 import { useI18n } from 'vue-i18n'
 import landingLq from '@/assets/landing-lq.jpg'
 import landingHq from '@/assets/landing_hq.png'
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
 const onlinePlayers = ref('...')
 const onlineServers = ref('...')
@@ -37,13 +37,13 @@ const installerDownloadUrl = computed(() => {
 onMounted(async () => {
   try {
     const response = await fetch('https://api.beammp.com/metrics')
-    // beammp_players_online 2783 
-    // beammp_public_servers 2959 
+    // beammp_players_online 2783
+    // beammp_public_servers 2959
     // beammp_all_servers 4663
 
     const data = await response.text()
     const lines = data.split('\n')
-    const values = lines.map(line => line.split(' '))
+    const values = lines.map((line) => line.split(' '))
     if (values.length >= 3) {
       onlinePlayers.value = values[0][1]
       onlineServers.value = values[1][1]
@@ -123,7 +123,6 @@ const devFeatures = computed(() => [
     description: t('message.home.devFeatures.lua.description'),
     link:
       'https://docs.beammp.com/' +
-      // eslint-disable-next-line no-undef
       (locale.value == 'en' ? '' : locale.value + '/') +
       'scripting/mod-reference/',
   },
@@ -131,7 +130,6 @@ const devFeatures = computed(() => [
     icon: BookOpen,
     title: t('message.home.devFeatures.docs.title'),
     description: t('message.home.devFeatures.docs.description'),
-    // eslint-disable-next-line no-undef
     link: 'https://docs.beammp.com/' + (locale.value == 'en' ? '' : locale.value + '/'),
   },
   {

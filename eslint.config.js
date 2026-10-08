@@ -34,6 +34,7 @@ export default [
         alert: 'readonly',
         prompt: 'readonly',
         getComputedStyle: 'readonly',
+        Image: 'readonly',
         // Node globals
         process: 'readonly',
         __dirname: 'readonly',
