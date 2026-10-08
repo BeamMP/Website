@@ -72,4 +72,24 @@ export default [
       'no-var': 'error',
     },
   },
+  // Tests: Vitest's globals (vitest.config.js sets `globals: true`) and the
+  // browser classes jsdom provides.
+  {
+    files: ['tests/**/*.js', 'vitest.config.js'],
+    languageOptions: {
+      globals: {
+        describe: 'readonly',
+        test: 'readonly',
+        it: 'readonly',
+        expect: 'readonly',
+        vi: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+        globalThis: 'readonly',
+        HTMLCanvasElement: 'readonly',
+      },
+    },
+  },
 ]
