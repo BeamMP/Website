@@ -289,7 +289,7 @@ const filteredServers = computed(() => {
     if (searchQuery.value) {
       const query = searchQuery.value.toLowerCase()
       const matchesSearch =
-        cleanServerName(server.sname).toLowerCase().includes(query) ||
+        plainServerName(server.sname).toLowerCase().includes(query) ||
         (server.sdesc && server.sdesc.toLowerCase().includes(query)) ||
         formatMapName(server.map).toLowerCase().includes(query) ||
         server.owner.toLowerCase().includes(query)
@@ -352,7 +352,23 @@ function applyCode(string, codes) {
   }
   // eslint-disable-next-line no-control-regex
   string = string.replace(/\x00*/g, '')
-  return `<span style="${style}">${string}</span>`
+  // The name is set by whoever hosts the server and is shown as HTML (v-html)
+  // so the colours can apply: the text must be escaped, never trusted.
+  return `<span style="${style}">${escapeHtml(string)}</span>`
+}
+
+function escapeHtml(text) {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+}
+
+// The name as plain text, colour codes removed: what the search looks through.
+function plainServerName(name) {
+  return name.replace(/\^.{1}/g, '')
 }
 
 function cleanServerName(name) {
