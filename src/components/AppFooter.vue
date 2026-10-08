@@ -1,5 +1,5 @@
 <script setup>
-import { Github, Facebook, Instagram, createLucideIcon } from 'lucide-vue-next'
+import { Github, Facebook, Instagram, Twitch, createLucideIcon } from 'lucide-vue-next'
 import { getLocalizedPath } from '@/utils/locale'
 import { RouterLink, useRoute } from 'vue-router'
 
@@ -142,6 +142,16 @@ const TikTokIcon = createLucideIcon('TikTok', [
             aria-label="Bluesky"
           >
             <BlueskyIcon class="w-5 h-5" />
+          </a>
+          <!-- Twitch -->
+          <a
+            href="https://www.twitch.tv/beammpofficial"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-neutral-500 hover:text-beammp-blue transition-colors dark:text-neutral-400 dark:hover:text-blue-400"
+            aria-label="Twitch"
+          >
+            <Twitch class="w-5 h-5" />
           </a>
           <!-- Instagram -->
           <a
