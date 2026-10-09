@@ -28,9 +28,7 @@ function flatten(obj, prefix = '') {
 // Texts that are known to be untranslated, so the test can pass today and still
 // catch anything new. Translate one and delete it from here: the "still
 // missing" test below fails if an entry is left behind.
-const KNOWN_UNTRANSLATED = {
-  'message.nav.store': ['de', 'es', 'fr', 'it', 'ru'],
-}
+const KNOWN_UNTRANSLATED = {}
 
 const english = flatten(read('en'))
 const others = SUPPORT_LOCALES.filter((code) => code !== 'en')
