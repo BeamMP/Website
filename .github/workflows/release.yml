@@ -5,7 +5,26 @@ on:
     types: [published]
 
 jobs:
+  # Nothing is built and pushed unless the same checks the CI workflow runs pass first.
+  checks:
+    if: "!github.event.release.prerelease"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Lint
+        run: npm run lint:check
+      - name: Tests
+        run: npm test
+      - name: Build
+        run: npm run build
+
   docker:
+    needs: checks
     if: "!github.event.release.prerelease"
     runs-on: ubuntu-latest
     steps:
