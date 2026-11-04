@@ -11,11 +11,13 @@ import {
 import { cn } from '@/lib/utils'
 import ThemeToggle from '@/components/ThemeToggle.vue'
 import LanguageSelector from '@/components/LanguageSelector.vue'
-import { Menu, X } from 'lucide-vue-next'
+import { Menu, X, CircleUser } from 'lucide-vue-next'
 import { getLocalizedPath } from '@/utils/locale'
 
 const mobileMenuOpen = ref(false)
 const route = useRoute()
+
+const ACCOUNTS_URL = 'https://accounts.beammp.com'
 
 function toggleMobileMenu() {
   mobileMenuOpen.value = !mobileMenuOpen.value
@@ -212,6 +214,13 @@ function localRoute(path) {
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
+        <a
+          :href="ACCOUNTS_URL"
+          class="inline-flex items-center gap-2 shrink-0 whitespace-nowrap rounded-md bg-beammp-orange px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-beammp-orange/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-beammp-orange focus-visible:ring-offset-2 dark:focus-visible:ring-offset-neutral-900"
+        >
+          <CircleUser class="w-4 h-4" aria-hidden="true" />
+          {{ $t('message.nav.account') }}
+        </a>
         <div class="flex items-center gap-1 sm:gap-2 flex-shrink-0">
           <LanguageSelector />
           <ThemeToggle />
@@ -310,6 +319,14 @@ function localRoute(path) {
             @click="closeMobileMenu"
           >
             {{ $t('message.nav.patreon') }}
+          </a>
+          <a
+            :href="ACCOUNTS_URL"
+            class="mt-2 flex items-center justify-center gap-2 px-4 py-3 rounded-md bg-beammp-orange font-semibold text-white hover:bg-beammp-orange/90 transition-colors"
+            @click="closeMobileMenu"
+          >
+            <CircleUser class="w-5 h-5" aria-hidden="true" />
+            {{ $t('message.nav.account') }}
           </a>
         </div>
       </div>

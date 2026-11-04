@@ -237,7 +237,7 @@ describe('getting around', () => {
     }
   })
 
-  test('the navigation bar links out to the docs, the store, GitHub and Patreon', async () => {
+  test('the navigation bar links out to the docs, the store, GitHub, Patreon and the accounts portal', async () => {
     stubFetch()
     wrapper = await openPage('/en')
     const hrefs = wrapper.findAll('nav a, header a').map((a) => a.attributes('href'))
@@ -246,6 +246,7 @@ describe('getting around', () => {
       'https://store.beammp.com',
       'https://github.com/BeamMP/BeamMP',
       'https://www.patreon.com/BeamMP',
+      'https://accounts.beammp.com',
     ]) {
       expect(hrefs, url).toContain(url)
     }
