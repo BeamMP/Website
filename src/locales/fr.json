@@ -22,7 +22,8 @@
         "light": "Thème clair",
         "dark": "Thème sombre",
         "system": "Thème système"
-      }
+      },
+      "events": "Événements"
     },
     "footer": {
       "support_on_patreon": "Soutenez-nous sur notre Patreon",
@@ -273,6 +274,62 @@
           "4": "Et bien d'autres — merci à tous pour vos contributions !"
         },
         "thank_you": "Ensemble, nous construisons quelque chose de spécial. Merci de faire partie de la communauté BeamMP !"
+      }
+    },
+    "events": {
+      "title": "Événements",
+      "description": "Suivez les classements des événements BeamMP, regroupés depuis tous les serveurs participants.",
+      "loading": "Chargement des événements…",
+      "empty": "Aucun événement n'a encore été créé.",
+      "viewTop": "Voir le top {count} →",
+      "ranked": "Pilotes classés: {count}",
+      "servers": "Serveurs: {count}",
+      "back": "← Tous les événements",
+      "loadingEvent": "Chargement de l'événement…",
+      "standings": "Classement général",
+      "topDrivers": "Top {count} pilotes",
+      "statDrivers": "Pilotes classés",
+      "statLaps": "Tours enregistrés",
+      "statServers": "Serveurs",
+      "statPlace": "Place {count}",
+      "standingsTitle": "Classement",
+      "search": "Rechercher un pilote…",
+      "pos": "Pos",
+      "driver": "Pilote",
+      "bestLap": "Meilleur tour",
+      "gap": "Écart",
+      "pen": "Pén.",
+      "server": "Serveur",
+      "leader": "Leader",
+      "noMatch": "Aucun pilote correspondant.",
+      "waiting": "En attente des premiers résultats des serveurs de l'événement.",
+      "sources": "Serveurs sources",
+      "lastResult": "Dernier résultat : {when}",
+      "none": "aucun pour l'instant",
+      "noServers": "Aucun serveur n'a encore rejoint l'événement.",
+      "live": "Mise à jour automatique à mesure que les serveurs envoient des tours.",
+      "lost": "Connexion perdue. Nouvelle tentative…",
+      "lastShown": "Affichage des derniers résultats reçus.",
+      "rules": "Règles de l'événement",
+      "r1t": "Pilotes enregistrés uniquement.",
+      "r1": "Les invités ne sont pas classés.",
+      "r2t": "Temps tels qu'enregistrés.",
+      "r2": "Les pénalités sont appliquées par le serveur de jeu ; le temps affiché est celui qu'il a transmis.",
+      "r3t": "Une place par pilote.",
+      "r3": "Meilleur tour sur tous les serveurs de l'événement.",
+      "r4t": "Vérification.",
+      "r4": "Le staff peut exclure des pilotes après examen.",
+      "status": {
+        "qualifying": "Qualifications",
+        "live": "Événement en direct",
+        "upcoming": "À venir",
+        "finished": "Terminé"
+      },
+      "errors": {
+        "notFound": "Cet événement n'est pas disponible.",
+        "rateLimited": "Trop de requêtes. Nouvelle tentative sous peu.",
+        "unavailable": "Les résultats de l'événement sont indisponibles.",
+        "timeout": "Délai de connexion dépassé. Nouvelle tentative automatique."
       }
     }
   }

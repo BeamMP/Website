@@ -22,7 +22,8 @@
         "light": "Helles Theme",
         "dark": "Dunkles Theme",
         "system": "System-Theme"
-      }
+      },
+      "events": "Events"
     },
     "footer": {
       "support_on_patreon": "Unterstütze uns auf Patreon",
@@ -273,6 +274,62 @@
           "4": "Und viele mehr – danke an alle, die in irgendeiner Form beigetragen haben!"
         },
         "thank_you": "Gemeinsam bauen wir etwas Besonderes. Danke, dass du Teil der BeamMP-Community bist!"
+      }
+    },
+    "events": {
+      "title": "Events",
+      "description": "Verfolge die aktuellen Ranglisten der BeamMP-Events, zusammengeführt von allen teilnehmenden Servern.",
+      "loading": "Events werden geladen…",
+      "empty": "Es wurden noch keine Events eingerichtet.",
+      "viewTop": "Top {count} ansehen →",
+      "ranked": "Gewertete Fahrer: {count}",
+      "servers": "Server: {count}",
+      "back": "← Alle Events",
+      "loadingEvent": "Event wird geladen…",
+      "standings": "Gesamtwertung",
+      "topDrivers": "Top {count} Fahrer",
+      "statDrivers": "Gewertete Fahrer",
+      "statLaps": "Erfasste Runden",
+      "statServers": "Server",
+      "statPlace": "Platz {count}",
+      "standingsTitle": "Rangliste",
+      "search": "Fahrer suchen…",
+      "pos": "Pos",
+      "driver": "Fahrer",
+      "bestLap": "Beste Runde",
+      "gap": "Abstand",
+      "pen": "Str.",
+      "server": "Server",
+      "leader": "Führender",
+      "noMatch": "Keine passenden Fahrer.",
+      "waiting": "Warte auf die ersten Ergebnisse der Event-Server.",
+      "sources": "Server-Quellen",
+      "lastResult": "Letztes Ergebnis: {when}",
+      "none": "noch keins",
+      "noServers": "Noch kein Server ist beigetreten.",
+      "live": "Wird automatisch aktualisiert, sobald Server Runden melden.",
+      "lost": "Verbindung verloren. Neuer Versuch…",
+      "lastShown": "Zeige die zuletzt empfangenen Ergebnisse.",
+      "rules": "Event-Regeln",
+      "r1t": "Nur registrierte Fahrer.",
+      "r1": "Gäste werden nicht gewertet.",
+      "r2t": "Zeiten wie aufgezeichnet.",
+      "r2": "Strafen werden vom Spielserver verhängt; die angezeigte Zeit ist die von ihm gemeldete.",
+      "r3t": "Ein Platz pro Fahrer.",
+      "r3": "Beste Runde über alle Event-Server.",
+      "r4t": "Prüfung.",
+      "r4": "Das Team kann Fahrer nach einer Prüfung ausschließen.",
+      "status": {
+        "qualifying": "Qualifying",
+        "live": "Live-Event",
+        "upcoming": "Demnächst",
+        "finished": "Beendet"
+      },
+      "errors": {
+        "notFound": "Dieses Event ist nicht verfügbar.",
+        "rateLimited": "Zu viele Anfragen. Neuer Versuch in Kürze.",
+        "unavailable": "Die Event-Ergebnisse sind nicht verfügbar.",
+        "timeout": "Zeitüberschreitung. Automatischer neuer Versuch."
       }
     }
   }

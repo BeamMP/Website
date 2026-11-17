@@ -22,7 +22,8 @@
         "light": "Light Theme",
         "dark": "Dark Theme",
         "system": "System Theme"
-      }
+      },
+      "events": "Events"
     },
     "footer": {
       "support_on_patreon": "Support us on Patreon",
@@ -273,6 +274,62 @@
           "4": "And many more—thank you to everyone who has contributed in any way!"
         },
         "thank_you": "Together, we’re building something special. Thank you for being part of the BeamMP community!"
+      }
+    },
+    "events": {
+      "title": "Events",
+      "description": "Follow the latest standings for BeamMP events, combined across every server taking part.",
+      "loading": "Loading events…",
+      "empty": "No events have been set up yet.",
+      "viewTop": "View top {count} →",
+      "ranked": "Ranked drivers: {count}",
+      "servers": "Servers: {count}",
+      "back": "← All events",
+      "loadingEvent": "Loading event…",
+      "standings": "Global standings",
+      "topDrivers": "Top {count} drivers",
+      "statDrivers": "Ranked drivers",
+      "statLaps": "Recorded laps",
+      "statServers": "Servers",
+      "statPlace": "Place {count}",
+      "standingsTitle": "Standings",
+      "search": "Search drivers…",
+      "pos": "Pos",
+      "driver": "Driver",
+      "bestLap": "Best lap",
+      "gap": "Gap",
+      "pen": "Pen.",
+      "server": "Server",
+      "leader": "Leader",
+      "noMatch": "No matching drivers.",
+      "waiting": "Waiting for the first results from event servers.",
+      "sources": "Server sources",
+      "lastResult": "Last result: {when}",
+      "none": "none yet",
+      "noServers": "No servers have joined yet.",
+      "live": "Updates automatically as servers report laps.",
+      "lost": "Connection lost. Retrying…",
+      "lastShown": "Showing the last received results.",
+      "rules": "Event rules",
+      "r1t": "Registered drivers only.",
+      "r1": "Guests are not ranked.",
+      "r2t": "Times as recorded.",
+      "r2": "Penalties are applied by the game server; the time shown is the time it reported.",
+      "r3t": "One place per driver.",
+      "r3": "Best lap across all event servers.",
+      "r4t": "Review.",
+      "r4": "Staff can exclude drivers after review.",
+      "status": {
+        "qualifying": "Qualifying",
+        "live": "Live event",
+        "upcoming": "Upcoming",
+        "finished": "Finished"
+      },
+      "errors": {
+        "notFound": "This event is not available.",
+        "rateLimited": "Too many requests. Retrying shortly.",
+        "unavailable": "Event results are unavailable.",
+        "timeout": "Connection timed out. Retrying automatically."
       }
     }
   }

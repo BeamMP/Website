@@ -22,7 +22,8 @@
         "light": "明亮主题",
         "dark": "黑暗主题",
         "system": "跟随系统"
-      }
+      },
+      "events": "赛事"
     },
     "footer": {
       "support_on_patreon": "Patreon",
@@ -273,6 +274,62 @@
           "4": "以及更多未列名的贡献者—衷心感谢每一位以各种方式支持过本项目的朋友！"
         },
         "thank_you": "我们正在共同打造一个独特的作品—真诚感谢您成为BeamMP社区的一员！"
+      }
+    },
+    "events": {
+      "title": "赛事",
+      "description": "查看 BeamMP 赛事的最新排名，汇总所有参赛服务器的成绩。",
+      "loading": "正在加载赛事…",
+      "empty": "尚未创建任何赛事。",
+      "viewTop": "查看前 {count} 名 →",
+      "ranked": "已排名车手: {count}",
+      "servers": "服务器: {count}",
+      "back": "← 全部赛事",
+      "loadingEvent": "正在加载赛事…",
+      "standings": "总排名",
+      "topDrivers": "前 {count} 名车手",
+      "statDrivers": "已排名车手",
+      "statLaps": "已记录圈数",
+      "statServers": "服务器",
+      "statPlace": "第 {count} 名",
+      "standingsTitle": "排名",
+      "search": "搜索车手…",
+      "pos": "名次",
+      "driver": "车手",
+      "bestLap": "最佳圈速",
+      "gap": "差距",
+      "pen": "罚",
+      "server": "服务器",
+      "leader": "领先",
+      "noMatch": "没有匹配的车手。",
+      "waiting": "正在等待赛事服务器的首批成绩。",
+      "sources": "服务器来源",
+      "lastResult": "最近成绩：{when}",
+      "none": "暂无",
+      "noServers": "尚无服务器加入。",
+      "live": "服务器上报圈速后自动更新。",
+      "lost": "连接已断开，正在重试…",
+      "lastShown": "显示最近收到的成绩。",
+      "rules": "赛事规则",
+      "r1t": "仅限注册车手。",
+      "r1": "访客不计入排名。",
+      "r2t": "按记录计时。",
+      "r2": "处罚由游戏服务器执行；显示的是其上报的时间。",
+      "r3t": "每位车手一个名次。",
+      "r3": "取所有赛事服务器中的最佳圈速。",
+      "r4t": "审核。",
+      "r4": "工作人员可在审核后排除车手。",
+      "status": {
+        "qualifying": "排位赛",
+        "live": "直播赛事",
+        "upcoming": "即将开始",
+        "finished": "已结束"
+      },
+      "errors": {
+        "notFound": "此赛事不可用。",
+        "rateLimited": "请求过多，稍后重试。",
+        "unavailable": "赛事成绩暂不可用。",
+        "timeout": "连接超时，正在自动重试。"
       }
     }
   }

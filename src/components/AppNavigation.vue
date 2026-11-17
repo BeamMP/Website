@@ -95,6 +95,21 @@ function localRoute(path) {
             <NavigationMenuItem>
               <NavigationMenuLink as-child>
                 <RouterLink
+                  :to="localRoute('events')"
+                  :class="
+                    cn(
+                      navigationMenuTriggerStyle(),
+                      'bg-transparent text-neutral-900 hover:bg-neutral-100 hover:text-neutral-900 dark:bg-transparent dark:text-white dark:hover:bg-neutral-800 dark:hover:text-white'
+                    )
+                  "
+                >
+                  {{ $t('message.nav.events') }}
+                </RouterLink>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuLink as-child>
+                <RouterLink
                   :to="localRoute('servers')"
                   :class="
                     cn(
@@ -269,6 +284,13 @@ function localRoute(path) {
             @click="closeMobileMenu"
           >
             {{ $t('message.nav.partners') }}
+          </RouterLink>
+          <RouterLink
+            :to="localRoute('events')"
+            class="block px-4 py-3 text-neutral-900 dark:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md transition-colors"
+            @click="closeMobileMenu"
+          >
+            {{ $t('message.nav.events') }}
           </RouterLink>
           <RouterLink
             :to="localRoute('servers')"

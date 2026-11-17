@@ -67,6 +67,27 @@ const baseRoutes = [
   },
 
   {
+    path: 'events',
+    name: 'Events',
+    component: () => import('@/views/events/EventList.vue'),
+    meta: {
+      title: 'Events - BeamMP',
+      description: 'Live standings for BeamMP events',
+      requiresAuth: false,
+    },
+  },
+  {
+    path: 'events/:eventId',
+    name: 'EventDetail',
+    component: () => import('@/views/events/EventDetail.vue'),
+    meta: {
+      title: 'Event standings - BeamMP',
+      description: 'Live standings for a BeamMP event',
+      requiresAuth: false,
+    },
+  },
+
+  {
     path: 'privacy',
     name: 'Privacy',
     component: () => import('@/views/Privacy.vue'),
